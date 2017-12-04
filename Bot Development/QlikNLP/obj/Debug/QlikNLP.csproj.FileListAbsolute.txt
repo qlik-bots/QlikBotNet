@@ -1,0 +1,19 @@
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikNLP\bin\Debug\QlikNLP.dll
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikNLP\bin\Debug\QlikNLP.pdb
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikNLP\obj\Debug\QlikNLP.csprojResolveAssemblyReference.cache
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikNLP\obj\Debug\QlikNLP.dll
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikNLP\obj\Debug\QlikNLP.pdb
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikNLP\bin\Debug\QlikNLP.dll.config
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikNLP\bin\Debug\ApiAiSDK.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikNLP\bin\Debug\Newtonsoft.Json.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikNLP\bin\Debug\Newtonsoft.Json.xml
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikNLP\obj\Debug\QlikNLP.csprojResolveAssemblyReference.cache
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikNLP\obj\Debug\QlikNLP.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikNLP\obj\Debug\QlikNLP.pdb
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikNLP\bin\Debug\QlikNLP.dll.config
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikNLP\bin\Debug\QlikNLP.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikNLP\bin\Debug\QlikNLP.pdb
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikNLP\bin\Debug\ApiAiSDK.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikNLP\bin\Debug\Microsoft.Cognitive.LUIS.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikNLP\bin\Debug\Newtonsoft.Json.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikNLP\bin\Debug\Newtonsoft.Json.xml

@@ -1,0 +1,47 @@
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\obj\Debug\QlikConversationService.csprojResolveAssemblyReference.cache
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\QlikConversationService.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\QlikConversationService.pdb
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\QlikNLP.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\QlikSenseEasy.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\ApiAiSDK.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\Qlik.Engine.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\Qlik.Sense.Client.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\NinjaNye.SearchExtensions.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\Qlik.Sense.JsonRpc.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\Newtonsoft.Json.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\Qlik.Sense.Communication.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\Qlik.Engine.Extensions.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\BouncyCastle.CryptoExt.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\QlikNLP.pdb
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\QlikSenseEasy.pdb
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\Qlik.Engine.xml
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\Qlik.Sense.Client.xml
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\Qlik.Sense.JsonRpc.xml
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\Newtonsoft.Json.xml
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\obj\Debug\QlikConversationService.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikLanguageParsing\obj\Debug\QlikConversationService.pdb
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\obj\Debug\QlikConversationService.csprojResolveAssemblyReference.cache
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\obj\Debug\QlikConversationService.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\obj\Debug\QlikConversationService.pdb
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\obj\Debug\QlikConversationService.Multilanguage.StringResources.resources
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\obj\Debug\QlikConversationService.csproj.GenerateResource.Cache
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\QlikConversationService.dll.config
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\QlikConversationService.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\QlikConversationService.pdb
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\QlikNLP.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\QlikSenseEasy.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\ApiAiSDK.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\Newtonsoft.Json.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\Qlik.Engine.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\Qlik.Sense.Client.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\NinjaNye.SearchExtensions.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\Qlik.Sense.JsonRpc.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\Qlik.Sense.Communication.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\Qlik.Engine.Extensions.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\BouncyCastle.CryptoExt.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\QlikNLP.pdb
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\QlikSenseEasy.pdb
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\Newtonsoft.Json.xml
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\Qlik.Engine.xml
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\Qlik.Sense.Client.xml
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\bin\Debug\Qlik.Sense.JsonRpc.xml

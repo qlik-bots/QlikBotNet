@@ -1,0 +1,11 @@
+2017-11-19 18:25:36:	Starting Log...
+2017-11-19 18:25:36:	Started and Callback set for Bot WZQlikCoolBot
+2017-11-19 18:30:43:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-11-19 18:30:53:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-11-19 18:31:45:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-11-19 18:31:51:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-11-19 18:31:56:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-11-19 18:33:08:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-11-19 18:33:13:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-11-19 18:33:23:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-11-19 18:33:28:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs

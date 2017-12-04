@@ -1,0 +1,6 @@
+2017-12-04 17:59:14:	Starting Log...
+2017-12-04 17:59:14:	logInfo	ID:485420868	First:Qlik Cool Bot	Last:	UserName:WZQlikCoolBot	<Timer for alerts started with 60 seconds>
+2017-12-04 17:59:14:	Starting Log...
+2017-12-04 17:59:14:	Started and Callback set for Bot 
+2017-12-04 17:59:23:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-04 17:59:36:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs

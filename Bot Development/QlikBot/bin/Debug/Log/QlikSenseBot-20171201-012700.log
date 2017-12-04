@@ -1,0 +1,6 @@
+2017-12-01 01:27:00:	Starting Log...
+2017-12-01 01:27:00:	logInfo	ID:485420868	First:Qlik Cool Bot	Last:	UserName:WZQlikCoolBot	<Timer for alerts started with 60 seconds>
+2017-12-01 01:27:00:	Starting Log...
+2017-12-01 01:27:00:	Started and Callback set for Bot WZQlikCoolBot
+2017-12-01 01:27:01:	logInfo	Message Received from 481378768: ok
+2017-12-01 01:27:01:	logInfo	ID:481378768	First:wuzhong	Last:zhu	UserName:	<Could not connect to the Qlik Sense server: http://desktop-e106r7e for user 481378768 (wuzhong zhu)>

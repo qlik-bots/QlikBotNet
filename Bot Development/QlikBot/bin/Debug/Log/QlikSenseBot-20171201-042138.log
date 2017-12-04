@@ -1,0 +1,9 @@
+2017-12-01 04:21:38:	Starting Log...
+2017-12-01 04:21:38:	logInfo	ID:485420868	First:Qlik Cool Bot	Last:	UserName:WZQlikCoolBot	<Timer for alerts started with 60 seconds>
+2017-12-01 04:21:38:	Starting Log...
+2017-12-01 04:21:38:	Started and Callback set for Bot WZQlikCoolBot
+2017-12-01 04:21:39:	logInfo	Message Received from 481378768: ok
+2017-12-01 04:21:39:	logInfo	ID:481378768	First:wuzhong	Last:zhu	UserName:	<Could not connect to the Qlik Sense server: http://desktop-e106r7e for user 481378768 (wuzhong zhu)>
+2017-12-01 04:22:22:	logError	General Error in BotOnMessageReceived: System.NullReferenceException: Object reference not set to an instance of an object.
+   at QlikTelegram.Bot.<BotOnMessageReceived>d__44.MoveNext() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\Bot.cs:line 663
+2017-12-01 04:22:23:	logInfo	Message Received from 481378768: hello

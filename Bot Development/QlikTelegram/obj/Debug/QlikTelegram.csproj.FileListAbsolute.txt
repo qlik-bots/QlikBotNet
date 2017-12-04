@@ -1,0 +1,106 @@
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\QlikTelegram.dll.config
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\QlikTelegram.dll
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\QlikTelegram.pdb
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\Newtonsoft.Json.dll
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\QlikLog.dll
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\QlikNLP.dll
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Web.Http.dll
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\Telegram.Bot.dll
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\QlikLog.pdb
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\QlikNLP.pdb
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\Newtonsoft.Json.xml
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Web.Http.xml
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\obj\Debug\QlikTelegram.csprojResolveAssemblyReference.cache
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\obj\Debug\QlikTelegram.dll
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikTelegram\obj\Debug\QlikTelegram.pdb
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.AppContext.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Console.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Globalization.Calendars.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.IO.Compression.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.IO.Compression.ZipFile.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.IO.FileSystem.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Net.Http.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Net.Sockets.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\QlikConversationService.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\QlikSenseEasy.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\ApiAiSDK.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\Qlik.Engine.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\Qlik.Sense.Client.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\NinjaNye.SearchExtensions.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\Qlik.Sense.JsonRpc.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\Qlik.Sense.Communication.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\Qlik.Engine.Extensions.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\BouncyCastle.CryptoExt.dll
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\QlikConversationService.pdb
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\QlikSenseEasy.pdb
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\Qlik.Engine.xml
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\Qlik.Sense.Client.xml
+C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikTelegram\bin\Debug\Qlik.Sense.JsonRpc.xml
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\QlikTelegram.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\QlikTelegram.pdb
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\Newtonsoft.Json.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\QlikConversationService.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\QlikLog.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\QlikNLP.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.AppContext.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Console.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Globalization.Calendars.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.IO.Compression.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.IO.Compression.ZipFile.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.IO.FileSystem.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Net.Http.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Net.Sockets.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Web.Http.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\Telegram.Bot.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\QlikSenseEasy.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\ApiAiSDK.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\Qlik.Engine.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\Qlik.Sense.Client.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\NinjaNye.SearchExtensions.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\Qlik.Sense.JsonRpc.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\Qlik.Sense.Communication.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\Qlik.Engine.Extensions.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\BouncyCastle.CryptoExt.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\QlikConversationService.pdb
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\QlikLog.pdb
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\QlikNLP.pdb
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\Newtonsoft.Json.xml
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Web.Http.xml
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\QlikSenseEasy.pdb
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\Qlik.Engine.xml
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\Qlik.Sense.Client.xml
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\Qlik.Sense.JsonRpc.xml
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\obj\Debug\QlikTelegram.csprojResolveAssemblyReference.cache
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\obj\Debug\QlikTelegram.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\obj\Debug\QlikTelegram.pdb
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\bin\Debug\QlikTelegram.dll.config
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\obj\Debug\QlikTelegram.Multilanguage.StringResources.resources
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\obj\Debug\QlikTelegram.csproj.GenerateResource.Cache

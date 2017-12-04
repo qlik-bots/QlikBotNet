@@ -1,0 +1,81 @@
+2017-12-01 04:55:44:	Starting Log...
+2017-12-01 04:55:44:	logInfo	ID:485420868	First:Qlik Cool Bot	Last:	UserName:WZQlikCoolBot	<Timer for alerts started with 60 seconds>
+2017-12-01 04:55:44:	Starting Log...
+2017-12-01 04:55:44:	Started and Callback set for Bot 
+2017-12-01 04:55:45:	logInfo	Message Received from 481378768: ji
+2017-12-01 04:55:45:	logInfo	ID:481378768	First:wuzhong	Last:zhu	UserName:	<Could not connect to the Qlik Sense server: http://desktop-e106r7e for user 481378768 (wuzhong zhu)>
+2017-12-01 04:56:03:	logError	General Error in BotOnMessageReceived: System.NullReferenceException: Object reference not set to an instance of an object.
+   at QlikTelegram.Bot.<BotOnMessageReceived>d__44.MoveNext() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\Bot.cs:line 730
+2017-12-01 04:56:04:	logError	ID:485420868	First:Qlik Cool Bot	Last:	UserName:WZQlikCoolBot	<Error opening the Qlik Sense app : Qlik.Sense.JsonRpc.CommunicationErrorException: Connection failed after 4 attempts. Error message:
+  Could not load file or assembly 'Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da' or one of its dependencies. The system cannot find the file specified. ---> System.IO.FileNotFoundException: Could not load file or assembly 'Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da' or one of its dependencies. The system cannot find the file specified. ---> System.IO.FileNotFoundException: Could not load file or assembly 'Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da' or one of its dependencies. The system cannot find the file specified.
+   --- End of inner exception stack trace ---
+   at Qlik.Sense.JsonRpc.WebSocketFactory.<>c.<GetWebSocketFactory>b__3_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Qlik.Sense.JsonRpc.Location.GetDefaultSecurityConfiguration()
+   at Qlik.Sense.JsonRpc.Location.get_Security()
+   at Qlik.Sense.JsonRpc.Location.GetWebSocketSessionContainer(ISession session)
+   at Qlik.Sense.JsonRpc.RpcConnection.<OpenAsync>d__43.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Qlik.Sense.JsonRpc.RpcConnection.<EnsureConnectionIsOpen>d__54.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Qlik.Sense.JsonRpc.RpcConnection.<SendAsync>d__52.MoveNext()
+   --- End of inner exception stack trace ---
+   at Qlik.Engine.Communication.QlikConnection.AwaitResponseTask[T](T task, String methodName, CancellationToken cancellationToken)
+   at Qlik.Engine.Communication.QlikConnection.Ping(Nullable`1 noVersionCheck)
+   at Qlik.Engine.LocationExtensions.Hub(ILocation location, ISession session, Nullable`1 noVersionCheck)
+   at Qlik.Engine.LocationExtensions.GetAppIdentifiers(ILocation location, Nullable`1 noVersionCheck)
+   at Qlik.Engine.LocationExtensions.AppWithIdOrDefault(ILocation location, String appId, Nullable`1 noVersionCheck)
+   at QlikSenseEasy.QSApp.QSOpenApp() in C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikSenseEasy\QSEasy.cs:line 353
+   at QlikTelegram.Bot..ctor() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\Bot.cs:line 162>
+2017-12-01 04:56:04:	logInfo	ID:485420868	First:Qlik Cool Bot	Last:	UserName:WZQlikCoolBot	<Created a conversation with Google Api.Ai.>
+2017-12-01 04:56:04:	logInfo	Message Received from 481378768: hi
+2017-12-01 04:57:21:	logError	General Error in BotOnMessageReceived: System.Resources.MissingManifestResourceException: Could not find any resources appropriate for the specified culture or the neutral culture.  Make sure "Conversation.Multilanguage.StringResources.resources" was correctly embedded or linked into assembly "QlikConversationService" at compile time, or that all the satellite assemblies required are loadable and fully signed.
+   at System.Resources.ManifestBasedResourceGroveler.HandleResourceStreamMissing(String fileName)
+   at System.Resources.ManifestBasedResourceGroveler.GrovelForResourceSet(CultureInfo culture, Dictionary`2 localResourceSets, Boolean tryParents, Boolean createIfNotExists, StackCrawlMark& stackMark)
+   at System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo requestedCulture, Boolean createIfNotExists, Boolean tryParents, StackCrawlMark& stackMark)
+   at System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo culture, Boolean createIfNotExists, Boolean tryParents)
+   at System.Resources.ResourceManager.GetString(String name, CultureInfo culture)
+   at QlikConversationService.Multilanguage.StringResources.get_nlMessageNotManaged() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\Multilanguage\StringResources.Designer.cs:line 1041
+   at QlikConversationService.TelegramConversation.<Reply>d__11.MoveNext() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\TelegramConversation.cs:line 607
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at QlikTelegram.Bot.<BotOnMessageReceived>d__44.MoveNext() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\Bot.cs:line 730
+2017-12-01 04:57:22:	logInfo	Message Received from 481378768: hi
+2017-12-01 04:57:31:	logError	General Error in BotOnMessageReceived: System.Resources.MissingManifestResourceException: Could not find any resources appropriate for the specified culture or the neutral culture.  Make sure "Conversation.Multilanguage.StringResources.resources" was correctly embedded or linked into assembly "QlikConversationService" at compile time, or that all the satellite assemblies required are loadable and fully signed.
+   at System.Resources.ManifestBasedResourceGroveler.HandleResourceStreamMissing(String fileName)
+   at System.Resources.ManifestBasedResourceGroveler.GrovelForResourceSet(CultureInfo culture, Dictionary`2 localResourceSets, Boolean tryParents, Boolean createIfNotExists, StackCrawlMark& stackMark)
+   at System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo requestedCulture, Boolean createIfNotExists, Boolean tryParents, StackCrawlMark& stackMark)
+   at System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo culture, Boolean createIfNotExists, Boolean tryParents)
+   at System.Resources.ResourceManager.GetString(String name, CultureInfo culture)
+   at QlikConversationService.Multilanguage.StringResources.get_nlMessageNotManaged() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\Multilanguage\StringResources.Designer.cs:line 1041
+   at QlikConversationService.TelegramConversation.<Reply>d__11.MoveNext() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\TelegramConversation.cs:line 607
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at QlikTelegram.Bot.<BotOnMessageReceived>d__44.MoveNext() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\Bot.cs:line 730
+2017-12-01 04:57:32:	logInfo	Message Received from 481378768: hi
+2017-12-01 04:57:33:	logError	General Error in BotOnMessageReceived: System.Resources.MissingManifestResourceException: Could not find any resources appropriate for the specified culture or the neutral culture.  Make sure "Conversation.Multilanguage.StringResources.resources" was correctly embedded or linked into assembly "QlikConversationService" at compile time, or that all the satellite assemblies required are loadable and fully signed.
+   at System.Resources.ManifestBasedResourceGroveler.HandleResourceStreamMissing(String fileName)
+   at System.Resources.ManifestBasedResourceGroveler.GrovelForResourceSet(CultureInfo culture, Dictionary`2 localResourceSets, Boolean tryParents, Boolean createIfNotExists, StackCrawlMark& stackMark)
+   at System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo requestedCulture, Boolean createIfNotExists, Boolean tryParents, StackCrawlMark& stackMark)
+   at System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo culture, Boolean createIfNotExists, Boolean tryParents)
+   at System.Resources.ResourceManager.GetString(String name, CultureInfo culture)
+   at QlikConversationService.Multilanguage.StringResources.get_nlMessageNotManaged() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\Multilanguage\StringResources.Designer.cs:line 1041
+   at QlikConversationService.TelegramConversation.<Reply>d__11.MoveNext() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\TelegramConversation.cs:line 607
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at QlikTelegram.Bot.<BotOnMessageReceived>d__44.MoveNext() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\Bot.cs:line 730
+2017-12-01 04:57:38:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs

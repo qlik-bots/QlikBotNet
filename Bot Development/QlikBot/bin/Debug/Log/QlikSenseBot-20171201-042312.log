@@ -1,0 +1,63 @@
+2017-12-01 04:23:12:	Starting Log...
+2017-12-01 04:23:12:	logInfo	ID:485420868	First:Qlik Cool Bot	Last:	UserName:WZQlikCoolBot	<Timer for alerts started with 60 seconds>
+2017-12-01 04:23:12:	Starting Log...
+2017-12-01 04:23:12:	Started and Callback set for Bot WZQlikCoolBot
+2017-12-01 04:23:15:	logInfo	Message Received from 481378768: ok
+2017-12-01 04:23:15:	logInfo	ID:481378768	First:wuzhong	Last:zhu	UserName:	<Could not connect to the Qlik Sense server: http://desktop-e106r7e for user 481378768 (wuzhong zhu)>
+2017-12-01 04:23:24:	logError	General Error in BotOnMessageReceived: System.NullReferenceException: Object reference not set to an instance of an object.
+   at QlikTelegram.Bot.<BotOnMessageReceived>d__44.MoveNext() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\Bot.cs:line 663
+2017-12-01 04:23:25:	logInfo	Message Received from 481378768: hello
+2017-12-01 04:23:32:	logError	General Error in BotOnMessageReceived: System.NullReferenceException: Object reference not set to an instance of an object.
+   at QlikTelegram.Bot.<BotOnMessageReceived>d__44.MoveNext() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\Bot.cs:line 663
+2017-12-01 04:23:33:	logInfo	Message Received from 481378768: hello
+2017-12-01 04:23:34:	logError	General Error in BotOnMessageReceived: System.NullReferenceException: Object reference not set to an instance of an object.
+   at QlikTelegram.Bot.<BotOnMessageReceived>d__44.MoveNext() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\Bot.cs:line 663
+2017-12-01 04:23:35:	logInfo	Message Received from 481378768: ji
+2017-12-01 04:23:37:	logError	General Error in BotOnMessageReceived: System.NullReferenceException: Object reference not set to an instance of an object.
+   at QlikTelegram.Bot.<BotOnMessageReceived>d__44.MoveNext() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\Bot.cs:line 663
+2017-12-01 04:23:38:	logInfo	Message Received from 481378768: hi
+2017-12-01 04:23:39:	logError	General Error in BotOnMessageReceived: System.NullReferenceException: Object reference not set to an instance of an object.
+   at QlikTelegram.Bot.<BotOnMessageReceived>d__44.MoveNext() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\Bot.cs:line 663
+2017-12-01 04:23:40:	logInfo	Message Received from 481378768: hello
+2017-12-01 04:23:42:	logError	General Error in BotOnMessageReceived: System.NullReferenceException: Object reference not set to an instance of an object.
+   at QlikTelegram.Bot.<BotOnMessageReceived>d__44.MoveNext() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\Bot.cs:line 663
+2017-12-01 04:23:47:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-01 04:23:50:	logInfo	Message Received from 481378768: hi
+2017-12-01 04:24:42:	logError	General Error in BotOnMessageReceived: System.NullReferenceException: Object reference not set to an instance of an object.
+   at QlikTelegram.Bot.<BotOnMessageReceived>d__44.MoveNext() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\Bot.cs:line 663
+2017-12-01 04:24:42:	logError	Telegram.Bot.Exceptions.ApiRequestException: Request timed out ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpContent.<LoadIntoBufferAsyncCore>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Net.Http.HttpClient.<FinishSendAsync>d__58.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at Telegram.Bot.TelegramBotClient.<SendWebRequestAsync>d__109`1.MoveNext()
+   --- End of inner exception stack trace ---
+   at Telegram.Bot.TelegramBotClient.<SendWebRequestAsync>d__109`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at QlikTelegram.Bot.<BotShowTypingState>d__48.MoveNext() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\Bot.cs:line 824 Exception caught.
+2017-12-01 04:24:47:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-01 04:24:52:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-01 04:24:57:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-01 04:25:02:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-01 04:25:07:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-01 04:25:12:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-01 04:25:17:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-01 04:25:22:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-01 04:25:27:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-01 04:25:32:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-01 04:25:37:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-01 04:25:42:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-01 04:25:47:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-01 04:25:52:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-01 04:25:57:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-01 04:26:01:	logInfo	Message Received from 481378768: ji

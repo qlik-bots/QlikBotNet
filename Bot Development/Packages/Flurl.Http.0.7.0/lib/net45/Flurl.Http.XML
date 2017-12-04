@@ -1,0 +1,1756 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Flurl.Http</name>
+    </assembly>
+    <members>
+        <member name="M:Flurl.Http.DownloadExtensions.DownloadFileAsync(Flurl.Http.FlurlClient,System.String,System.String,System.Int32)">
+            <summary>
+            Asynchronously downloads a file at the specified URL.
+            </summary>
+            <param name="localFolderPath">Path of local folder where file is to be downloaded.</param>
+            <param name="localFileName">Name of local file. If not specified, the source filename (last segment of the URL) is used.</param>
+            <param name="bufferSize">Buffer size in bytes. Default is 4096.</param>
+            <returns>A Task whose result is the local path of the downloaded file.</returns>
+        </member>
+        <member name="M:Flurl.Http.DownloadExtensions.DownloadFileAsync(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Asynchronously downloads a file at the specified URL.
+            </summary>
+            <param name="localFolderPath">Path of local folder where file is to be downloaded.</param>
+            <param name="localFileName">Name of local file. If not specified, the source filename (last segment of the URL) is used.</param>
+            <param name="bufferSize">Buffer size in bytes. Default is 4096.</param>
+            <returns>A Task whose result is the local path of the downloaded file.</returns>
+        </member>
+        <member name="M:Flurl.Http.DownloadExtensions.DownloadFileAsync(Flurl.Url,System.String,System.String,System.Int32)">
+            <summary>
+            Asynchronously downloads a file at the specified URL.
+            </summary>
+            <param name="localFolderPath">Path of local folder where file is to be downloaded.</param>
+            <param name="localFileName">Name of local file. If not specified, the source filename (last segment of the URL) is used.</param>
+            <param name="bufferSize">Buffer size in bytes. Default is 4096.</param>
+            <returns>A Task whose result is the local path of the downloaded file.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithClient(Flurl.Url,Flurl.Http.FlurlClient)">
+            <summary>
+            Fluently specify that an existing FlurlClient should be used to call the Url, rather than creating a new one.
+            Enables re-using the underlying HttpClient.
+            </summary>
+            <param name="fc">The FlurlClient to use in calling the Url</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithClient(System.String,Flurl.Http.FlurlClient)">
+            <summary>
+            Fluently specify that an existing FlurlClient should be used to call the Url, rather than creating a new one.
+            Enables re-using the underlying HttpClient.
+            </summary>
+            <param name="fc">The FlurlClient to use in calling the Url</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithUrl(Flurl.Http.FlurlClient,Flurl.Url)">
+            <summary>
+            Fluently specify the URL to be called with the current FlurlClient instance.
+            </summary>
+            <param name="url">The Url to call.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.ConfigureClient(Flurl.Http.FlurlClient,System.Action{Flurl.Http.Configuration.FlurlHttpSettings})">
+            <summary>
+            Change FlurlHttpSettings for this client instance.
+            </summary>
+            <param name="action">Action defining the settings changes.</param>
+            <returns>The FlurlClient with the modified HttpClient</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.ConfigureClient(Flurl.Url,System.Action{Flurl.Http.Configuration.FlurlHttpSettings})">
+            <summary>
+            Creates a FlurlClient from the URL and allows changing the FlurlHttpSettings associated with the instance.
+            </summary>
+            <param name="action">Action defining the settings changes.</param>
+            <returns>The FlurlClient with the modified HttpClient</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.ConfigureClient(System.String,System.Action{Flurl.Http.Configuration.FlurlHttpSettings})">
+            <summary>
+            Creates a FlurlClient from the URL and allows changing the FlurlHttpSettings associated with the instance.
+            </summary>
+            <param name="action">Action defining the settings changes.</param>
+            <returns>The FlurlClient with the modified HttpClient</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.ConfigureHttpClient(Flurl.Http.FlurlClient,System.Action{System.Net.Http.HttpClient})">
+            <summary>
+            Provides access to modifying the underlying HttpClient.
+            </summary>
+            <param name="action">Action to perform on the HttpClient.</param>
+            <returns>The FlurlClient with the modified HttpClient</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.ConfigureHttpClient(Flurl.Url,System.Action{System.Net.Http.HttpClient})">
+            <summary>
+            Creates a FlurlClient from the URL and provides access to modifying the underlying HttpClient.
+            </summary>
+            <param name="action">Action to perform on the HttpClient.</param>
+            <returns>The FlurlClient with the modified HttpClient</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.ConfigureHttpClient(System.String,System.Action{System.Net.Http.HttpClient})">
+            <summary>
+            Creates a FlurlClient from the URL and provides access to modifying the underlying HttpClient.
+            </summary>
+            <param name="action">Action to perform on the HttpClient.</param>
+            <returns>The FlurlClient with the modified HttpClient</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithTimeout(Flurl.Http.FlurlClient,System.TimeSpan)">
+            <summary>
+            Sets the client timout to the specified timespan.
+            </summary>
+            <param name="timespan">Time to wait before the request times out.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithTimeout(Flurl.Url,System.TimeSpan)">
+            <summary>
+            Creates a FlurlClient from the URL and sets the client timout to the specified timespan.
+            </summary>
+            <param name="timespan">Time to wait before the request times out.</param>
+            <returns>The created FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithTimeout(System.String,System.TimeSpan)">
+            <summary>
+            Creates a FlurlClient from the URL and sets the client timout to the specified timespan.
+            </summary>
+            <param name="timespan">Time to wait before the request times out.</param>
+            <returns>The created FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithTimeout(Flurl.Http.FlurlClient,System.Int32)">
+            <summary>
+            Sets the client timout to the specified number of seconds.
+            </summary>
+            <param name="seconds">Number of seconds to wait before the request times out.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithTimeout(Flurl.Url,System.Int32)">
+            <summary>
+            Creates a FlurlClient from the URL and sets the client timout to the specified number of seconds.
+            </summary>
+            <param name="seconds">Number of seconds to wait before the request times out.</param>
+            <returns>The created FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithTimeout(System.String,System.Int32)">
+            <summary>
+            Creates a FlurlClient from the URL and sets the client timout to the specified number of seconds.
+            </summary>
+            <param name="seconds">Number of seconds to wait before the request times out.</param>
+            <returns>The created FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithHeader(Flurl.Http.FlurlClient,System.String,System.Object)">
+            <summary>
+            Sets an HTTP header to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="name">HTTP header name.</param>
+            <param name="value">HTTP header value.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithHeader(Flurl.Url,System.String,System.Object)">
+            <summary>
+            Creates a FlurlClient from the URL and sets an HTTP header to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="name">HTTP header name.</param>
+            <param name="value">HTTP header value.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithHeader(System.String,System.String,System.Object)">
+            <summary>
+            Creates a FlurlClient from the URL and sets an HTTP header to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="name">HTTP header name.</param>
+            <param name="value">HTTP header value.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithHeaders(Flurl.Http.FlurlClient,System.Object)">
+            <summary>
+            Sets HTTP headers based on property names/values of the provided object, or keys/values if object is a dictionary, to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="headers">Names/values of HTTP headers to set. Typically an anonymous object or IDictionary.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithHeaders(Flurl.Url,System.Object)">
+            <summary>
+            Creates a FlurlClient from the URL and sets HTTP headers based on property names/values of the provided object, or keys/values if object is a dictionary, to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="headers">Names/values of HTTP headers to set. Typically an anonymous object or IDictionary.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithHeaders(System.String,System.Object)">
+            <summary>
+            Creates a FlurlClient from the URL and sets HTTP headers based on property names/values of the provided object, or keys/values if object is a dictionary, to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="headers">Names/values of HTTP headers to set. Typically an anonymous object or IDictionary.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithBasicAuth(Flurl.Http.FlurlClient,System.String,System.String)">
+            <summary>
+            Sets HTTP authorization header according to Basic Authentication protocol to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="username">Username of authenticating user.</param>
+            <param name="password">Password of authenticating user.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithBasicAuth(Flurl.Url,System.String,System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sets HTTP authorization header according to Basic Authentication protocol to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="username">Username of authenticating user.</param>
+            <param name="password">Password of authenticating user.</param>
+            <returns>The new FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithBasicAuth(System.String,System.String,System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sets HTTP authorization header according to Basic Authentication protocol to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="username">Username of authenticating user.</param>
+            <param name="password">Password of authenticating user.</param>
+            <returns>The new FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithOAuthBearerToken(Flurl.Http.FlurlClient,System.String)">
+            <summary>
+            Sets HTTP authorization header with acquired bearer token according to OAuth 2.0 specification to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="token">The acquired bearer token to pass.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithOAuthBearerToken(Flurl.Url,System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sets HTTP authorization header with acquired bearer token according to OAuth 2.0 specification to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="token">The acquired bearer token to pass.</param>
+            <returns>The new FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.WithOAuthBearerToken(System.String,System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sets HTTP authorization header with acquired bearer token according to OAuth 2.0 specification to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="token">The acquired bearer token to pass.</param>
+            <returns>The new FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.AllowHttpStatus(Flurl.Http.FlurlClient,System.String)">
+            <summary>
+            Adds a pattern representing an HTTP status code or range of codes which (in addtion to 2xx) will NOT result in a FlurlHttpException being thrown.
+            </summary>
+            <param name="pattern">Examples: "3xx", "100,300,600", "100-299,6xx"</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.AllowHttpStatus(Flurl.Url,System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and adds a pattern representing an HTTP status code or range of codes which (in addtion to 2xx) will NOT result in a FlurlHttpException being thrown.
+            </summary>
+            <param name="pattern">Examples: "3xx", "100,300,600", "100-299,6xx"</param>
+            <returns>The new FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.AllowHttpStatus(System.String,System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and adds a pattern representing an HTTP status code or range of codes which (in addtion to 2xx) will NOT result in a FlurlHttpException being thrown.
+            </summary>
+            <param name="pattern">Examples: "3xx", "100,300,600", "100-299,6xx"</param>
+            <returns>The new FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.AllowHttpStatus(Flurl.Http.FlurlClient,System.Net.HttpStatusCode[])">
+            <summary>
+            Adds an <see cref="T:System.Net.HttpStatusCode"/> which (in addtion to 2xx) will NOT result in a FlurlHttpException being thrown.
+            </summary>
+            <param name="statusCodes">Examples: HttpStatusCode.NotFound</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.AllowHttpStatus(Flurl.Url,System.Net.HttpStatusCode[])">
+            <summary>
+            Adds an <see cref="T:System.Net.HttpStatusCode"/> which (in addtion to 2xx) will NOT result in a FlurlHttpException being thrown.
+            </summary>
+            <param name="statusCodes">Examples: HttpStatusCode.NotFound</param>
+            <returns>The new FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.AllowHttpStatus(System.String,System.Net.HttpStatusCode[])">
+            <summary>
+            Adds an <see cref="T:System.Net.HttpStatusCode"/> which (in addtion to 2xx) will NOT result in a FlurlHttpException being thrown.
+            </summary>
+            <param name="statusCodes">Examples: HttpStatusCode.NotFound</param>
+            <returns>The new FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.AllowAnyHttpStatus(Flurl.Http.FlurlClient)">
+            <summary>
+            Prevents a FlurlHttpException from being thrown on any completed response, regardless of the HTTP status code.
+            </summary>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.AllowAnyHttpStatus(Flurl.Url)">
+            <summary>
+            Creates a FlurlClient from the URL and prevents a FlurlHttpException from being thrown on any completed response, regardless of the HTTP status code.
+            </summary>
+            <returns>The new FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.ClientConfigExtensions.AllowAnyHttpStatus(System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and prevents a FlurlHttpException from being thrown on any completed response, regardless of the HTTP status code.
+            </summary>
+            <returns>The new FlurlClient.</returns>
+        </member>
+        <member name="T:Flurl.Http.Configuration.DefaultHttpClientFactory">
+            <summary>
+            Default implementation of IHttpClientFactory used by FlurlHttp. The created HttpClient includes hooks
+            that enable FlurlHttp's testing features and respect its configuration settings. Therefore, custom factories
+            should inherit from this class, rather than implementing IHttpClientFactory directly.
+            </summary>
+        </member>
+        <member name="T:Flurl.Http.Configuration.IHttpClientFactory">
+            <summary>
+            Interface defining creation of HttpClient and HttpMessageHandler used in all Flurl HTTP calls.
+            Implementation can be added via FlurlHttp.Configure. However, in order not to lose much of
+            Flurl.Http's functionality, it's almost always best to inherit DefaultHttpClientFactory and
+            extend the base implementations, rather than implementing this interface directly.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.Configuration.DefaultHttpClientFactory.CreateClient(Flurl.Url,System.Net.Http.HttpMessageHandler)">
+            <summary>
+            Override in custom factory to customize the creation of HttpClient used in all Flurl HTTP calls.
+            In order not to lose Flurl.Http functionality, it is recommended to call base.CreateClient and
+            customize the result.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.Configuration.DefaultHttpClientFactory.CreateMessageHandler">
+            <summary>
+            Override in custom factory to customize the creation of HttpClientHandler used in all Flurl HTTP calls.
+            In order not to lose Flurl.Http functionality, it is recommended to call base.CreateMessageHandler and
+            customize the result.
+            </summary>
+        </member>
+        <member name="T:Flurl.Http.Configuration.FlurlHttpSettings">
+            <summary>
+            A set of properties that affect Flurl.Http behavior. Generally set via static FlurlHttp.Configure method.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.Configuration.FlurlHttpSettings.ResetDefaults">
+            <summary>
+            Clear all custom global options and set default values.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.Configuration.FlurlHttpSettings.DefaultTimeout">
+            <summary>
+            Gets or sets the default timeout for every HTTP request.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.Configuration.FlurlHttpSettings.AllowedHttpStatusRange">
+            <summary>
+            Gets or sets a pattern representing a range of HTTP status codes which (in addtion to 2xx) will NOT result in Flurl.Http throwing an Exception.
+            Examples: "3xx", "100,300,600", "100-299,6xx", "*" (allow everything)
+            2xx will never throw regardless of this setting.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.Configuration.FlurlHttpSettings.HttpClientFactory">
+            <summary>
+            Gets or sets a factory used to create HttpClient object used in Flurl HTTP calls. Default value
+            is an instance of DefaultHttpClientFactory. Custom factory implementations should generally
+            inherit from DefaultHttpClientFactory, call base.CreateClient, and manipulate the returned HttpClient,
+            otherwise functionality such as callbacks and most testing features will be lost.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.Configuration.FlurlHttpSettings.JsonSerializer">
+            <summary>
+            Gets or sets object used to serialize and deserialize JSON. Default implementation uses Newtonsoft Json.NET.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.Configuration.FlurlHttpSettings.UrlEncodedSerializer">
+            <summary>
+            Gets or sets object used to serialize URL-encoded data. (Deserialization not supported in default implementation.)
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.Configuration.FlurlHttpSettings.BeforeCall">
+            <summary>
+            Gets or sets a callback that is called immediately before every HTTP request is sent.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.Configuration.FlurlHttpSettings.BeforeCallAsync">
+            <summary>
+            Gets or sets a callback that is asynchronously called immediately before every HTTP request is sent.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.Configuration.FlurlHttpSettings.AfterCall">
+            <summary>
+            Gets or sets a callback that is called immediately after every HTTP response is received.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.Configuration.FlurlHttpSettings.AfterCallAsync">
+            <summary>
+            Gets or sets a callback that is asynchronously called immediately after every HTTP response is received.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.Configuration.FlurlHttpSettings.OnError">
+            <summary>
+            Gets or sets a callback that is called when an error occurs during any HTTP call, including when any non-success
+            HTTP status code is returned in the response. Response should be null-checked if used in the event handler.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.Configuration.FlurlHttpSettings.OnErrorAsync">
+            <summary>
+            Gets or sets a callback that is asynchronously called when an error occurs during any HTTP call, including when any non-success
+            HTTP status code is returned in the response. Response should be null-checked if used in the event handler.
+            </summary>
+        </member>
+        <member name="T:Flurl.Http.Configuration.FlurlMessageHandler">
+            <summary>
+            HTTP message handler used by default in all Flurl-created HttpClients.
+            </summary>
+        </member>
+        <member name="T:Flurl.Http.Configuration.ISerializer">
+            <summary>
+            Contract for serializing and deserializing objects.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.Configuration.ISerializer.Serialize(System.Object)">
+            <summary>
+            Serializes an object to a string representation.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.Configuration.ISerializer.Deserialize``1(System.String)">
+            <summary>
+            Deserializes an object from a string representation.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.Configuration.ISerializer.Deserialize``1(System.IO.Stream)">
+            <summary>
+            Deserializes an object from a stream representation.
+            </summary>
+        </member>
+        <member name="T:Flurl.Http.Configuration.NewtonsoftJsonSerializer">
+            <summary>
+            ISerializer implementation that uses Newtonsoft Json.NET.
+            Default serializer used in calls to GetJsonAsync, PostJsonAsync, etc.
+            </summary>
+        </member>
+        <member name="T:Flurl.Http.Configuration.DefaultUrlEncodedSerializer">
+            <summary>
+            ISerializer implementation that converts an object representing name/value pairs to a URL-encoded string.
+            Default serializer used in calls to PostUrlEncodedAsync, etc. 
+            </summary>
+        </member>
+        <member name="T:Flurl.Http.Content.CapturedUrlEncodedContent">
+            <summary>
+            Provides HTTP content based on object serialized to URL-encoded name-value, with the with the captured to a property
+            so it can be read without affecting the read-once content stream.
+            </summary>
+        </member>
+        <member name="T:Flurl.Http.Content.CapturedStringContent">
+            <summary>
+            Provides HTTP content based on a string, with the string itself captured to a property
+            so it can be read without affecting the read-once content stream.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.Content.CapturedStringContent.Content">
+            <summary>
+            The content body captured as a string. Can be read multiple times (unlike the content stream).
+            </summary>
+        </member>
+        <member name="T:Flurl.Http.Content.CapturedJsonContent">
+            <summary>
+            Provides HTTP content based on a serialized JSON object, with the JSON string captured to a property
+            so it can be read without affecting the read-once content stream.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.CookieExtensions.GetCookies(Flurl.Http.FlurlClient)">
+            <summary>
+            Gets a collection of cookies that will be sent in calls using this client. (Use FlurlClient.WithCookie/WithCookies to set cookies.)
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.CookieExtensions.EnableCookies(Flurl.Http.FlurlClient)">
+            <summary>
+            Allows cookies to be sent and received in calls made with this client. Not necessary to call when setting cookies via WithCookie/WithCookies.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.CookieExtensions.EnableCookies(Flurl.Url)">
+            <summary>
+            Allows cookies to be sent and received in calls made to this Url. Not necessary to call when setting cookies via WithCookie/WithCookies.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.CookieExtensions.EnableCookies(System.String)">
+            <summary>
+            Allows cookies to be sent and received in calls made to this Url. Not necessary to call when setting cookies via WithCookie/WithCookies.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.CookieExtensions.WithCookie(Flurl.Http.FlurlClient,System.Net.Cookie)">
+            <summary>
+            Sets an HTTP cookie to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="cookie">the cookie to set.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.CookieExtensions.WithCookie(System.String,System.Net.Cookie)">
+            <summary>
+            Creates a FlurlClient from the URL and sets an HTTP cookie to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="cookie">the cookie to set.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.CookieExtensions.WithCookie(Flurl.Url,System.Net.Cookie)">
+            <summary>
+            Creates a FlurlClient from the URL and sets an HTTP cookie to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="cookie">the cookie to set.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.CookieExtensions.WithCookie(Flurl.Http.FlurlClient,System.String,System.Object,System.Nullable{System.DateTime})">
+            <summary>
+            Sets an HTTP cookie to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="name">cookie name.</param>
+            <param name="value">cookie value.</param>
+            <param name="expires">cookie expiration (optional). If excluded, cookie only lives for duration of session.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.CookieExtensions.WithCookie(System.String,System.String,System.Object,System.Nullable{System.DateTime})">
+            <summary>
+            Creates a FlurlClient from the URL and sets an HTTP cookie to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="name">cookie name.</param>
+            <param name="value">cookie value.</param>
+            <param name="expires">cookie expiration (optional). If excluded, cookie only lives for duration of session.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.CookieExtensions.WithCookie(Flurl.Url,System.String,System.Object,System.Nullable{System.DateTime})">
+            <summary>
+            Creates a FlurlClient from the URL and sets an HTTP cookie to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="name">cookie name.</param>
+            <param name="value">cookie value.</param>
+            <param name="expires">cookie expiration (optional). If excluded, cookie only lives for duration of session.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.CookieExtensions.WithCookies(Flurl.Http.FlurlClient,System.Object,System.Nullable{System.DateTime})">
+            <summary>
+            Sets HTTP cookies based on property names/values of the provided object, or keys/values if object is a dictionary, to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="cookies">Names/values of HTTP cookies to set. Typically an anonymous object or IDictionary.</param>
+            <param name="expires">Expiration for all cookies (optional). If excluded, cookies only live for duration of session.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.CookieExtensions.WithCookies(Flurl.Url,System.Object,System.Nullable{System.DateTime})">
+            <summary>
+            Creates a FlurlClient from the URL and sets HTTP cookies based on property names/values of the provided object, or keys/values if object is a dictionary, to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="cookies">Names/values of HTTP cookies to set. Typically an anonymous object or IDictionary.</param>
+            <param name="expires">Expiration for all cookies (optional). If excluded, cookies only live for duration of session.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="M:Flurl.Http.CookieExtensions.WithCookies(System.String,System.Object,System.Nullable{System.DateTime})">
+            <summary>
+            Creates a FlurlClient from the URL and sets HTTP cookies based on property names/values of the provided object, or keys/values if object is a dictionary, to be sent with all requests made with this FlurlClient.
+            </summary>
+            <param name="cookies">Names/values of HTTP cookies to set. Typically an anonymous object or IDictionary.</param>
+            <param name="expires">Expiration for all cookies (optional). If excluded, cookies only live for duration of session.</param>
+            <returns>The modified FlurlClient.</returns>
+        </member>
+        <member name="T:Flurl.Http.FlurlClient">
+            <summary>
+            A chainable wrapper around HttpClient and Flurl.Url.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.FlurlClient.SendAsync(System.Net.Http.HttpMethod,System.Net.Http.HttpContent,System.Nullable{System.Threading.CancellationToken},System.Net.Http.HttpCompletionOption)">
+            <summary>
+            Creates and asynchronously sends an HttpRequestMethod, disposing HttpClient if AutoDispose it true.
+            Mainly used to implement higher-level extension methods (GetJsonAsync, etc).
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.FlurlClient.Dispose">
+            <summary>
+            Disposes the underlying HttpClient and HttpMessageHandler, setting both properties to null.
+            This FlurlClient can still be reused, but those underlying objects will be re-created as needed. Previously set headers, etc, will be lost.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.FlurlClient.Settings">
+            <summary>
+            Gets or sets the FlurlHttpSettings object used by this client.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.FlurlClient.Url">
+            <summary>
+            Gets or sets the URL to be called.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.FlurlClient.AutoDispose">
+            <summary>
+            Gets a value indicating whether the underlying HttpClient
+            should be disposed immediately after the first HTTP call is made.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.FlurlClient.HttpClient">
+            <summary>
+            Gets the HttpClient to be used in subsequent HTTP calls. Creation (when necessary) is delegated
+            to FlurlHttp.HttpClientFactory. Reused for the life of the FlurlClient.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.FlurlClient.HttpMessageHandler">
+            <summary>
+            Gets the HttpMessageHandler to be used in subsequent HTTP calls. Creation (when necessary) is delegated
+            to FlurlHttp.HttpClientFactory.
+            </summary>
+        </member>
+        <member name="T:Flurl.Http.FlurlHttp">
+            <summary>
+            A static container for global configuration settings affecting Flurl.Http behavior.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.FlurlHttp.Configure(System.Action{Flurl.Http.Configuration.FlurlHttpSettings})">
+            <summary>
+            Provides thread-safe accesss to Flurl.Http's global configuration settings. Should only be called once at application startup.
+            </summary>
+            <param name="configAction"></param>
+        </member>
+        <member name="P:Flurl.Http.FlurlHttp.GlobalSettings">
+            <summary>
+            Globally configured Flurl.Http settings. Should normally be written to by calling FlurlHttp.Configure once application at startup.
+            </summary>
+        </member>
+        <member name="T:Flurl.Http.FlurlHttpException">
+            <summary>
+            An exception that is thrown when an HTTP call made by Flurl.Http fails, including when the response
+            indicates an unsuccessful HTTP status code.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.FlurlHttpException.GetResponseString">
+            <summary>
+            Gets the response body of the failed call.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.FlurlHttpException.GetResponseJson``1">
+            <summary>
+            Deserializes the JSON response body to an object of the given type.
+            </summary>
+            <typeparam name="T">A type whose structure matches the expected JSON response.</typeparam>
+            <returns>An object containing data in the response body.</returns>
+        </member>
+        <member name="M:Flurl.Http.FlurlHttpException.GetResponseJson">
+            <summary>
+            Deserializes the JSON response body to a dynamic object.
+            </summary>
+            <returns>An object containing data in the response body.</returns>
+        </member>
+        <member name="P:Flurl.Http.FlurlHttpException.Call">
+            <summary>
+            An object containing details about the failed HTTP call
+            </summary>
+        </member>
+        <member name="T:Flurl.Http.FlurlHttpTimeoutException">
+            <summary>
+            An exception that is thrown when an HTTP call made by Flurl.Http times out.
+            </summary>
+        </member>
+        <member name="T:Flurl.Http.HttpCall">
+            <summary>
+            Encapsulates request, response, and other details associated with an HTTP call. Useful for diagnostics and available in
+            global event handlers and FlurlHttpException.Call.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.HttpCall.Request">
+            <summary>
+            HttpRequestMessage associated with the call.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.HttpCall.RequestBody">
+            <summary>
+            Captured request body. More reliably available than HttpRequestMessage.Content, which is a forward-only, read-once stream.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.HttpCall.Response">
+            <summary>
+            HttpResponseMessage associated with the call if the call completed, otherwise null.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.HttpCall.Exception">
+            <summary>
+            Exception that occurred while sending the HttpRequestMessage.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.HttpCall.ExceptionHandled">
+            <summary>
+            User code should set this to true inside global event handlers (OnError, etc) to indicate
+            that the exception was handled and should not be propagated further.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.HttpCall.StartedUtc">
+            <summary>
+            DateTime the moment the request was sent.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.HttpCall.EndedUtc">
+            <summary>
+            DateTime the moment a response was received.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.HttpCall.Duration">
+            <summary>
+            Total duration of the call if it completed, otherwise null.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.HttpCall.Url">
+            <summary>
+            Absolute URI being called.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.HttpCall.Completed">
+            <summary>
+            True if a response was received, regardless of whether it is an error status.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.HttpCall.Succeeded">
+            <summary>
+            True if a response with a successful HTTP status was received.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.HttpCall.HttpStatus">
+            <summary>
+            HttpStatusCode of the response if the call completed, otherwise null.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.HttpCall.ErrorResponseBody">
+            <summary>
+            Body of the HTTP response if unsuccessful, otherwise null. (Successful responses are not captured as strings, mainly for performance reasons.)
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetAsync(Flurl.Http.FlurlClient,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetAsync(Flurl.Http.FlurlClient)">
+            <summary>
+            Sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonAsync``1(Flurl.Http.FlurlClient,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the JSON response body deserialized to an object of type T.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonAsync``1(Flurl.Http.FlurlClient)">
+            <summary>
+            Sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the JSON response body deserialized to an object of type T.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonAsync(Flurl.Http.FlurlClient,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the JSON response body deserialized to a dynamic.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonAsync(Flurl.Http.FlurlClient)">
+            <summary>
+            Sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the JSON response body deserialized to a dynamic.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonListAsync(Flurl.Http.FlurlClient,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the JSON response body deserialized to a list of dynamics.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonListAsync(Flurl.Http.FlurlClient)">
+            <summary>
+            Sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the JSON response body deserialized to a list of dynamics.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetStringAsync(Flurl.Http.FlurlClient,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the response body as a string.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetStringAsync(Flurl.Http.FlurlClient)">
+            <summary>
+            Sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the response body as a string.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetStreamAsync(Flurl.Http.FlurlClient,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the response body as a Stream.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetStreamAsync(Flurl.Http.FlurlClient)">
+            <summary>
+            Sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the response body as a Stream.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetBytesAsync(Flurl.Http.FlurlClient,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the response body as a byte array.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetBytesAsync(Flurl.Http.FlurlClient)">
+            <summary>
+            Sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the response body as a byte array.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetAsync(Flurl.Url,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetAsync(Flurl.Url)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonAsync``1(Flurl.Url,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the JSON response body deserialized to an object of type T.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonAsync``1(Flurl.Url)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the JSON response body deserialized to an object of type T.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonAsync(Flurl.Url,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the JSON response body deserialized to a dynamic.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonAsync(Flurl.Url)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the JSON response body deserialized to a dynamic.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonListAsync(Flurl.Url,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the JSON response body deserialized to a list of dynamics.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonListAsync(Flurl.Url)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the JSON response body deserialized to a list of dynamics.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetStringAsync(Flurl.Url,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the response body as a string.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetStringAsync(Flurl.Url)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the response body as a string.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetStreamAsync(Flurl.Url,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the response body as a Stream.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetStreamAsync(Flurl.Url)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the response body as a Stream.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetBytesAsync(Flurl.Url,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the response body as a byte array.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetBytesAsync(Flurl.Url)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the response body as a byte array.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetAsync(System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonAsync``1(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the JSON response body deserialized to an object of type T.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonAsync``1(System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the JSON response body deserialized to an object of type T.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the JSON response body deserialized to a dynamic.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonAsync(System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the JSON response body deserialized to a dynamic.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonListAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the JSON response body deserialized to a list of dynamics.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetJsonListAsync(System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the JSON response body deserialized to a list of dynamics.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetStringAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the response body as a string.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetStringAsync(System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the response body as a string.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetStreamAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the response body as a Stream.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetStreamAsync(System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the response body as a Stream.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetBytesAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the response body as a byte array.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.GetBytesAsync(System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous GET request.
+            </summary>
+            <returns>A Task whose result is the response body as a byte array.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostAsync(Flurl.Http.FlurlClient,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous POST request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostAsync(Flurl.Http.FlurlClient)">
+            <summary>
+            Sends an asynchronous POST request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostAsync(Flurl.Url,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous POST request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostAsync(Flurl.Url)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous POST request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous POST request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostAsync(System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous POST request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostJsonAsync(Flurl.Http.FlurlClient,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostJsonAsync(Flurl.Http.FlurlClient,System.Object)">
+            <summary>
+            Sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostJsonAsync(Flurl.Url,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostJsonAsync(Flurl.Url,System.Object)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostJsonAsync(System.String,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostJsonAsync(System.String,System.Object)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostStringAsync(Flurl.Http.FlurlClient,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostStringAsync(Flurl.Http.FlurlClient,System.String)">
+            <summary>
+            Sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostStringAsync(Flurl.Url,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostStringAsync(Flurl.Url,System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostStringAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostStringAsync(System.String,System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostUrlEncodedAsync(Flurl.Http.FlurlClient,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostUrlEncodedAsync(Flurl.Http.FlurlClient,System.Object)">
+            <summary>
+            Sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostUrlEncodedAsync(Flurl.Url,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostUrlEncodedAsync(Flurl.Url,System.Object)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostUrlEncodedAsync(System.String,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PostUrlEncodedAsync(System.String,System.Object)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous POST request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.HeadAsync(Flurl.Http.FlurlClient,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous HEAD request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.HeadAsync(Flurl.Http.FlurlClient)">
+            <summary>
+            Sends an asynchronous HEAD request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.HeadAsync(Flurl.Url,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous HEAD request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.HeadAsync(Flurl.Url)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous HEAD request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.HeadAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous HEAD request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.HeadAsync(System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous HEAD request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutAsync(Flurl.Http.FlurlClient,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous PUT request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutAsync(Flurl.Http.FlurlClient)">
+            <summary>
+            Sends an asynchronous PUT request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutAsync(Flurl.Url,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PUT request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutAsync(Flurl.Url)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PUT request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PUT request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutAsync(System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PUT request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutJsonAsync(Flurl.Http.FlurlClient,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutJsonAsync(Flurl.Http.FlurlClient,System.Object)">
+            <summary>
+            Sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutJsonAsync(Flurl.Url,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutJsonAsync(Flurl.Url,System.Object)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutJsonAsync(System.String,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutJsonAsync(System.String,System.Object)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutStringAsync(Flurl.Http.FlurlClient,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutStringAsync(Flurl.Http.FlurlClient,System.String)">
+            <summary>
+            Sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutStringAsync(Flurl.Url,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutStringAsync(Flurl.Url,System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutStringAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutStringAsync(System.String,System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutUrlEncodedAsync(Flurl.Http.FlurlClient,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutUrlEncodedAsync(Flurl.Http.FlurlClient,System.Object)">
+            <summary>
+            Sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutUrlEncodedAsync(Flurl.Url,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutUrlEncodedAsync(Flurl.Url,System.Object)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutUrlEncodedAsync(System.String,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PutUrlEncodedAsync(System.String,System.Object)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PUT request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.DeleteAsync(Flurl.Http.FlurlClient,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous DELETE request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.DeleteAsync(Flurl.Http.FlurlClient)">
+            <summary>
+            Sends an asynchronous DELETE request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.DeleteAsync(Flurl.Url,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous DELETE request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.DeleteAsync(Flurl.Url)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous DELETE request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.DeleteAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous DELETE request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.DeleteAsync(System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous DELETE request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchAsync(Flurl.Http.FlurlClient,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous PATCH request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchAsync(Flurl.Http.FlurlClient)">
+            <summary>
+            Sends an asynchronous PATCH request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchAsync(Flurl.Url,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PATCH request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchAsync(Flurl.Url)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PATCH request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PATCH request.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchAsync(System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PATCH request.
+            </summary>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchJsonAsync(Flurl.Http.FlurlClient,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchJsonAsync(Flurl.Http.FlurlClient,System.Object)">
+            <summary>
+            Sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchJsonAsync(Flurl.Url,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchJsonAsync(Flurl.Url,System.Object)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchJsonAsync(System.String,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchJsonAsync(System.String,System.Object)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchStringAsync(Flurl.Http.FlurlClient,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchStringAsync(Flurl.Http.FlurlClient,System.String)">
+            <summary>
+            Sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchStringAsync(Flurl.Url,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchStringAsync(Flurl.Url,System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchStringAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchStringAsync(System.String,System.String)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchUrlEncodedAsync(Flurl.Http.FlurlClient,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchUrlEncodedAsync(Flurl.Http.FlurlClient,System.Object)">
+            <summary>
+            Sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchUrlEncodedAsync(Flurl.Url,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchUrlEncodedAsync(Flurl.Url,System.Object)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchUrlEncodedAsync(System.String,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpExtensions.PatchUrlEncodedAsync(System.String,System.Object)">
+            <summary>
+            Creates a FlurlClient from the URL and sends an asynchronous PATCH request.
+            </summary>
+            <param name="data">Contents of the request body.</param>
+            <returns>A Task whose result is the received HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Flurl.Http.HttpRequestMessageExtensions.GetFlurlSettings(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Gets the FlurlSettings object associated with this HttpRequestMessage.
+            </summary>
+        </member>
+        <member name="T:Flurl.Http.HttpResponseMessageExtensions">
+            <summary>
+            Async extension methods that can be chained off Task&lt;HttpResponseMessage&gt;, avoiding nested awaits.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.HttpResponseMessageExtensions.ReceiveJson``1(System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage})">
+            <summary>
+            Deserializes JSON-formatted HTTP response body to object of type T. Intended to chain off an async HTTP.
+            </summary>
+            <typeparam name="T">A type whose structure matches the expected JSON response.</typeparam>
+            <returns>A Task whose result is an object containing data in the response body.</returns>
+            <example>x = await url.PostAsync(data).ReceiveJson&lt;T&gt;()</example>
+        </member>
+        <member name="M:Flurl.Http.HttpResponseMessageExtensions.ReceiveJson(System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage})">
+            <summary>
+            Deserializes JSON-formatted HTTP response body to a dynamic object. Intended to chain off an async call.
+            </summary>
+            <returns>A Task whose result is a dynamic object containing data in the response body.</returns>
+            <example>d = await url.PostAsync(data).ReceiveJson()</example>
+        </member>
+        <member name="M:Flurl.Http.HttpResponseMessageExtensions.ReceiveJsonList(System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage})">
+            <summary>
+            Deserializes JSON-formatted HTTP response body to a list of dynamic objects. Intended to chain off an async call.
+            </summary>
+            <returns>A Task whose result is a list of dynamic objects containing data in the response body.</returns>
+            <example>d = await url.PostAsync(data).ReceiveJsonList()</example>
+        </member>
+        <member name="M:Flurl.Http.HttpResponseMessageExtensions.ReceiveString(System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage})">
+            <summary>
+            Returns HTTP response body as a string. Intended to chain off an async call.
+            </summary>
+            <returns>A Task whose result is the response body as a string.</returns>
+            <example>s = await url.PostAsync(data).ReceiveString()</example>
+        </member>
+        <member name="M:Flurl.Http.HttpResponseMessageExtensions.ReceiveStream(System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage})">
+            <summary>
+            Returns HTTP response body as a stream. Intended to chain off an async call.
+            </summary>
+            <returns>A Task whose result is the response body as a stream.</returns>
+            <example>stream = await url.PostAsync(data).ReceiveStream()</example>
+        </member>
+        <member name="M:Flurl.Http.HttpResponseMessageExtensions.ReceiveBytes(System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage})">
+            <summary>
+            Returns HTTP response body as a byte array. Intended to chain off an async call.
+            </summary>
+            <returns>A Task whose result is the response body as a byte array.</returns>
+            <example>bytes = await url.PostAsync(data).ReceiveBytes()</example>
+        </member>
+        <member name="T:Flurl.Http.Testing.FakeHttpMessageHandler">
+            <summary>
+            An HTTP message handler that prevents actual HTTP calls from being made and instead returns
+            responses from a provided response factory.
+            </summary>
+        </member>
+        <member name="T:Flurl.Http.Testing.HttpCallAssertException">
+            <summary>
+            An exception thrown by HttpTest's assertion methods to indicate that the assertion failed.
+            </summary>
+        </member>
+        <member name="T:Flurl.Http.Testing.HttpCallAssertion">
+            <summary>
+            Provides fluent helpers for asserting against (faked) HTTP calls. This class is normally not
+            instantiated directly; you can get an instance via HttpTest.ShouldHaveCalled or
+            HttpTest.ShouldNotHaveCalled
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.Testing.HttpCallAssertion.#ctor(System.Collections.Generic.IEnumerable{Flurl.Http.HttpCall},System.Boolean)">
+            <param name="loggedCalls">Set of calls (usually from HttpTest.CallLog) to assert against.</param>
+            <param name="negate">if true, assertions pass when calls matching criteria were NOT made.</param>
+        </member>
+        <member name="M:Flurl.Http.Testing.HttpCallAssertion.Times(System.Int32)">
+            <summary>
+            Assert whether calls matching specified criteria were made a specific number of times. (When not specified,
+            assertions verify whether any calls matching criteria were made.)
+            </summary>
+            <param name="expectedCount">Exact numnber of expected calls</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flurl.Http.Testing.HttpCallAssertion.WithUrlPattern(System.String)">
+            <summary>
+            Asserts whether calls were made matching given URL or URL pattern.
+            </summary>
+            <param name="urlPattern">Can contain * wildcard.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flurl.Http.Testing.HttpCallAssertion.WithRequestBody(System.String)">
+            <summary>
+            Asserts wheter calls were made containing given request body or request body pattern.
+            </summary>
+            <param name="bodyPattern">Can contain * wildcard.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flurl.Http.Testing.HttpCallAssertion.WithVerb(System.Net.Http.HttpMethod)">
+            <summary>
+            Asserts whether calls were made with given HTTP verb.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Flurl.Http.Testing.HttpCallAssertion.WithContentType(System.String)">
+            <summary>
+            Asserts whether calls were made with a request body of the given content (MIME) type.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Flurl.Http.Testing.HttpCallAssertion.With(System.Func{Flurl.Http.HttpCall,System.Boolean})">
+            <summary>
+            Asserts whether calls were made matching a given predicate function.
+            </summary>
+            <param name="match">Predicate (usually a lambda expression) that tests an HttpCall and returns a bool.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Flurl.Http.Testing.HttpTest">
+            <summary>
+            An object whose existence puts Flurl.Http into test mode where actual HTTP calls are faked. Provides a response
+            queue, call log, and assertion helpers for use in Arrange/Act/Assert style tests.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.Testing.HttpTest.RespondWith(System.Int32,System.String)">
+            <summary>
+            Adds an HttpResponseMessage to the response queue with the given HTTP status code and content body.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.Testing.HttpTest.RespondWith(System.String)">
+            <summary>
+            Adds an HttpResponseMessage to the response queue with a 200 (OK) status code and the given content body.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.Testing.HttpTest.RespondWithJson(System.Int32,System.Object)">
+            <summary>
+            Adds an HttpResponseMessage to the response queue with the given HTTP status code and the given data serialized to JSON as the content body.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.Testing.HttpTest.RespondWithJson(System.Object)">
+            <summary>
+            Adds an HttpResponseMessage to the response queue with a 200 (OK) status code and the given data serialized to JSON as the content body.
+            </summary>
+        </member>
+        <member name="M:Flurl.Http.Testing.HttpTest.SimulateTimeout">
+            <summary>
+            Adds a simulated timeout response to the response queue.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Flurl.Http.Testing.HttpTest.ShouldHaveCalled(System.String)">
+            <summary>
+            Throws an HttpCallAssertException if a URL matching the given pattern was not called.
+            </summary>
+            <param name="urlPattern">URL that should have been called. Can include * wildcard character.</param>
+        </member>
+        <member name="M:Flurl.Http.Testing.HttpTest.ShouldNotHaveCalled(System.String)">
+            <summary>
+            Throws an HttpCallAssertException if a URL matching the given pattern was called.
+            </summary>
+            <param name="urlPattern">URL that should not have been called. Can include * wildcard character.</param>
+        </member>
+        <member name="P:Flurl.Http.Testing.HttpTest.ResponseQueue">
+            <summary>
+            Queue of HttpResponseMessages to be returned in place of real responses during testing.
+            </summary>
+        </member>
+        <member name="P:Flurl.Http.Testing.HttpTest.CallLog">
+            <summary>
+            List of all (fake) HTTP calls made since this HttpTest was created.
+            </summary>
+        </member>
+    </members>
+</doc>

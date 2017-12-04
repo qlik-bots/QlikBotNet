@@ -1,0 +1,842 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Qlik.Sense.JsonRpc</name>
+    </assembly>
+    <members>
+        <member name="T:Qlik.Sense.JsonRpc.CommunicationErrorEventArgs">
+            <summary>
+            Communication error received during connection to a Qlik Sense instance
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.CommunicationErrorEventArgs.Exception">
+            <summary>
+            The exception thrown by the connection process
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.CommunicationErrorEventArgs.#ctor(System.Exception)">
+            <summary>
+            Creates a new instance with the thrown Exception
+            </summary>
+            <param name="exception">The exception</param>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.CommunicationErrorException">
+            <summary>
+            Exception thrown when an attempt to open a websocket connection fails.
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.CommunicationErrorException.#ctor">
+            <summary>
+            Initializes a new instance of the CommunicationErrorException class.
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.CommunicationErrorException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the CommunicationErrorException class
+            with a specified error message.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.CommunicationErrorException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the CommunicationErrorException class
+            with a specified error message and a reference to the inner exception
+            that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception. 
+            Null refence if no inner exception is specified.</param>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.ILocation">
+            <summary>
+            Interface for Qlik Sense instance location handling
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.ILocation.SessionCookie">
+            <summary>
+            Gets the session value cookie of the Qlik Sense instance.
+            </summary>
+            <returns>The value of the cookie</returns>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.ILocation.ServerUri">
+            <summary>
+            The Uri of the Qlik Sense server
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.ILocation.CustomUserCookies">
+            <summary>
+            Property for custom user cookies
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.ILocation.CustomUserHeaders">
+            <summary>
+            Property for custom user headers
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.ILocation.CustomUserUrlParameters">
+            <summary>
+            Property for custom url parameters
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.ILocation.VirtualProxyPath">
+            <summary>
+            Virtual path to the proxy
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.ILocation.GetWebSocketSessionContainer(Qlik.Sense.JsonRpc.ISession)">
+            <summary>
+            Method for retreiving a WebSocketSessionContainer based on the current location and the argument session.
+            </summary>
+            <param name="session">Defines a specific app session, that can be connected to.</param>
+            <returns>The WebSocketSessionContainer instance.</returns>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.ILocation.AsDirectConnectionAsync(System.String,System.String,System.Boolean,System.Boolean,System.Security.Cryptography.X509Certificates.X509Certificate2Collection)">
+            <summary>
+            Defining the location as a direct connection to Qlik Sense using a specific user
+            </summary>
+            <param name="userDirectory">User directory name</param>
+            <param name="userId">User id</param>
+            <param name="extendedSecurityEnvironment">Indicates if extendedSecurityEnvironment is enabled</param>
+            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+            <param name="certificateCollection">Collection of certificates to use when connecting</param>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.ILocation.AsDirectConnectionToPersonalEditionAsync">
+            <summary>
+            Defining the location as a direct connection to Qlik Sense Personal
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.ILocation.AsDirectConnectionAsync(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Security.Cryptography.X509Certificates.X509Certificate2Collection)">
+            <summary>
+            Defining the location as a direct connection to Qlik Sense using a specific user, proxy session and proxy package
+            </summary>
+            <param name="userDirectory">User directory name</param>
+            <param name="userId">User id</param>
+            <param name="proxySessionId">Id of proxy session</param>
+            <param name="proxyPackageId">Id of proxy package</param>
+            <param name="extendedSecurityEnvironment">Indicates if extendedSecurityEnvironment is enabled</param>
+            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+            <param name="certificateCollection">Collection of certificates to use when connecting</param>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.ILocation.AsAnonymousUserViaProxyAsync(System.Boolean,System.Boolean)">
+            <summary>
+            Defining the location as a connection to Qlik Sense as an anonymous user
+            </summary>
+            <param name="proxyUsesSsl">Indicates if proxy uses SSL</param>
+            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.ILocation.AsExistingSessionViaProxyAsync(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Defining the location as a connection to Qlik Sense using an existing session
+            </summary>
+            <param name="sessionId">The sessionId</param>
+            <param name="cookieHeaderName">The name of the cookie specified in the QMC</param>
+            <param name="proxyUsesSsl">Indicates if proxy uses SSL</param>
+            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.ILocation.AsNtlmUserViaProxyAsync(System.Boolean,System.Net.NetworkCredential,System.Boolean)">
+            <summary>
+            Defining the location as a connection to Qlik Sense using NTLM Authentication
+            </summary>
+            <param name="proxyUsesSsl">Indicates if proxy uses SSL</param>
+            <param name="loginCredentials">Authentication with custom credentials</param>
+            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.ILocation.AsStaticHeaderUserViaProxyAsync(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Defining the location as a connection to Qlik Sense using a specific user
+            </summary>
+            <param name="headerUserId">User id</param>
+            <param name="headerAuthenticationHeaderName">Authentication header name need to be specified if different from default. See settings in the management console</param>
+            <param name="proxyUsesSsl">Indicates if proxy uses SSL</param>
+            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.IRpcConnection">
+            <summary>
+            RpcConnection is responsible for handling the JsonRpc traffic to and from a a Qlik Sense instance.
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.IRpcConnection.SendAsync(Qlik.Sense.JsonRpc.Request)">
+            <summary>
+            Sends a request asynchronously to a Qlik Sense instance.
+            </summary>
+            <param name="request">Request to send</param>
+            <returns>A Task without deserialized response</returns>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.IRpcConnection.SendAsync``1(Qlik.Sense.JsonRpc.Request,System.Func{Qlik.Sense.JsonRpc.Response,``0})">
+            <summary>
+            Sends a request asynchronously to a Qlik Sense instance with a specified response handler.
+            </summary>
+            <param name="request">Request to send</param>
+            <param name="continueWith">Response handler that is used to change the Response object into an instance of T</param>
+            <typeparam name="T">Dynamic type that should be returned</typeparam>
+            <returns>Task that will resolve into a handled instance of T</returns>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.IRpcConnection.Deserialize``1(Newtonsoft.Json.Linq.JToken)">
+            <summary>
+            Deserialize a token to a specific type.
+            </summary>
+            <typeparam name="T">The type to deserialize to.</typeparam>
+            <param name="token">The Json token to deserialize.</param>
+            <returns>The token deserialized as a an object of type T.</returns>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.ISession">
+            <summary>
+            Contains Information to attach to a specific qlik engine session
+            When connecting to a Qlik Sense app you can work with sessions. 
+            Sessions specify who should see changes in an app, and are based on combining userId and session key.
+            </summary>
+            <remarks>Only one app can be open in a session at a time</remarks>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.ISession.ApplicationPath">
+            <summary>
+            Application path
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.ISession.SessionToken">
+            <summary>
+            Session token
+            </summary>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.WebSocketConnectionResults">
+            <summary>
+            Enumeration type used to indicate result of an attempt to open a web socket connection.
+            </summary>
+        </member>
+        <member name="F:Qlik.Sense.JsonRpc.WebSocketConnectionResults.Connected">
+            <summary>
+            Connection succeeded.
+            </summary>
+        </member>
+        <member name="F:Qlik.Sense.JsonRpc.WebSocketConnectionResults.Failed">
+            <summary>
+            Connection failed.
+            </summary>
+        </member>
+        <member name="F:Qlik.Sense.JsonRpc.WebSocketConnectionResults.Timeout">
+            <summary>
+            Connection timed out.
+            </summary>
+        </member>
+        <member name="F:Qlik.Sense.JsonRpc.WebSocketConnectionResults.Cancelled">
+            <summary>
+            Connection cancelled by cansellation token.
+            </summary>
+        </member>
+        <member name="F:Qlik.Sense.JsonRpc.WebSocketConnectionResults.AlreadyOpen">
+            <summary>
+            Connection already open.
+            </summary>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.IWebSocketSessionContainer">
+            <summary>
+            Interface used for managing web socket connections to Qlik Sense.
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.IWebSocketSessionContainer.IsConnected">
+            <summary>
+            True if websocket connection is open
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.IWebSocketSessionContainer.OpenAsync(System.Action{System.String},System.Action{System.Exception},System.Threading.CancellationToken)">
+            <summary>
+            Open a connection to a Qlik Sense instance based on the current location configuration and the argument session.
+            </summary>
+            <param name="onMessage">Callback to active when messages are received from Qlik Sense.</param>
+            <param name="onError">Callback to activate when an exception has occured on the web socket connection to Qlik Sense.</param>
+            <param name="cancellationToken">The token used to synchronize shutdown events.</param>
+            <returns>A task with the completion status of the connect operation as result.</returns>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.IWebSocketSessionContainer.Close">
+            <summary>
+            Close an open connection to a Qlik Sense instance. Operation has no effect if the connection is not open.
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.IWebSocketSessionContainer.SendMessage(System.String,System.Action{System.Exception})">
+            <summary>
+            Send a message to a Qlik Sense instance.
+            </summary>
+            <param name="message">The message to send.</param>
+            <param name="onError">Callback when an error occurs during the send operation. Note that this callback
+            is activated only if the send operation it self triggers an error. Errors returned by Qlik Sense as part
+            of a response to a message should be captured by the onMessage callback provided as argument to <see cref="M:Qlik.Sense.JsonRpc.IWebSocketSessionContainer.OpenAsync(System.Action{System.String},System.Action{System.Exception},System.Threading.CancellationToken)"/>.</param>
+            <exception cref="T:Qlik.Sense.JsonRpc.CommunicationErrorException">Thrown if connection is not open.</exception>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.Location">
+            <summary>
+            Handles the location of the Qlik Sense instance
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.Location.SessionCookie">
+            <summary>
+            Gets the session value cookie of the Qlik Sense instance.
+            </summary>
+            <returns>The value of the cookie</returns>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Location.FromUri(System.Uri)">
+            <summary>
+            Gets a reference to a Qlik Sense instance at a specific Uri
+            </summary>
+            <param name="uri">The Uri</param>
+            <returns>A reference to the location</returns>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Location.FromUri(System.String)">
+            <summary>
+            Gets a reference to a remote Qlik Sense instance at a specific Uri
+            </summary>
+            <param name="uri">The Uri</param>
+            <returns>A reference to the location</returns>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.Location.ServerUri">
+            <summary>
+            The Uri of the Qlik Sense server
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.Location.CustomUserCookies">
+            <summary>
+            Property for custom user cookies
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.Location.CustomUserHeaders">
+            <summary>
+            Property for custom user headers
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.Location.CustomUserUrlParameters">
+            <summary>
+            Property for custom url parameters
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.Location.VirtualProxyPath">
+            <summary>
+            Virtual path to the proxy
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Location.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Location.GetWebSocketSessionContainer(Qlik.Sense.JsonRpc.ISession)">
+            <summary>
+            Method for retreiving a WebSocketSessionContainer based on the current location and the argument session.
+            </summary>
+            <param name="session">Defines a specific app session, that can be connected to.</param>
+            <returns>The IWebSocketSessionContainer instance.</returns>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Location.AsDirectConnectionAsync(System.String,System.String,System.Boolean,System.Boolean,System.Security.Cryptography.X509Certificates.X509Certificate2Collection)">
+            <summary>
+            Defining the location as a direct connection to Qlik Sense using a specific user
+            </summary>
+            <param name="userDirectory">User directory name</param>
+            <param name="userId">User id</param>
+            <param name="extendedSecurityEnvironment">Indicates if extendedSecurityEnvironment is enabled</param>
+            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+            <param name="certificateCollection">Collection of certificates to use when connecting</param>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Location.AsDirectConnectionToPersonalEditionAsync">
+            <summary>
+             Defining the location as a direct connection to Qlik Sense Personal
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Location.AsDirectConnectionAsync(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Security.Cryptography.X509Certificates.X509Certificate2Collection)">
+            <summary>
+            Defining the location as a direct connection to Qlik Sense using a specific user, proxy session and proxy package
+            </summary>
+            <param name="userDirectory">User directory name</param>
+            <param name="userId">User id</param>
+            <param name="proxySessionId">Id of proxy session</param>
+            <param name="proxyPackageId">Id of proxy package</param>
+            <param name="extendedSecurityEnvironment">Indicates if extendedSecurityEnvironment is enabled</param>
+            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+            <param name="certificateCollection">Collection of certificates to use when connecting</param>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Location.AsAnonymousUserViaProxyAsync(System.Boolean,System.Boolean)">
+            <summary>
+            Defining the location as a connection to Qlik Sense as an anonymous user
+            </summary>
+            <param name="proxyUsesSsl">Indicates if proxy uses SSL</param>
+            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Location.AsExistingSessionViaProxyAsync(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Defining the location as a connection to Qlik Sense using an existing session
+            </summary>
+            <param name="sessionId">The sessionId</param>
+            <param name="cookieHeaderName">The name of the cookie specified in the QMC</param>
+            <param name="proxyUsesSsl">Indicates if proxy uses SSL</param>
+            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Location.AsNtlmUserViaProxyAsync(System.Boolean,System.Net.NetworkCredential,System.Boolean)">
+            <summary>
+            Defining the location as a connection to Qlik Sense using NTLM Authentication
+            </summary>
+            <param name="proxyUsesSsl">Indicates if proxy uses SSL</param>
+            <param name="loginCredentials">Authentication with custom credentials</param>
+            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Location.AsStaticHeaderUserViaProxyAsync(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Defining the location as a connection to Qlik Sense using a specific user
+            </summary>
+            <param name="headerUserId">User id</param>
+            <param name="headerAuthenticationHeaderName">Authentication header name need to be specified if different from default. See settings in the management console</param>
+            <param name="proxyUsesSsl">Indicates if proxy uses SSL</param>
+            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.MethodInvocationErrorEventArgs">
+            <summary>
+            Contains Method invocation error attributes used to intercept a MethodInvocationException before its thrown.
+            </summary>
+            <remarks>Makes it possible to resend request if needed, this makes it possible to seamless mitigate errors on the fly.</remarks>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.MethodInvocationErrorEventArgs.#ctor(Qlik.Sense.JsonRpc.IRpcConnection,System.Threading.Tasks.TaskCompletionSource{Qlik.Sense.JsonRpc.Response},Qlik.Sense.JsonRpc.Request,Qlik.Sense.JsonRpc.MethodInvocationException)">
+            <summary>
+            
+            </summary>
+            <param name="session"></param>
+            <param name="taskCompletionSource"></param>
+            <param name="request"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.MethodInvocationErrorEventArgs.ResendRequest">
+            <summary>
+            Resends the Request, rebinding the response to the original requesting async method call
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.MethodInvocationErrorEventArgs.ErrorHandled">
+            <summary>
+            Indicator if the Error was handled or if an Exception should be thrown.
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.MethodInvocationErrorEventArgs.InvocationError">
+            <summary>
+            The Error received from the Qlik Sense instance.
+            </summary>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.MethodInvocationException">
+            <summary>
+            The Exception thrown when a method has gone wrong on the server during execution.
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.MethodInvocationException.InvocationError">
+            <summary>
+            Gets the Qlik Sense error that caused the current exception
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.MethodInvocationException.Data">
+            <summary>
+            Gets a collection of key/value pairs that provide additional user-defined information about the exception.
+            </summary>
+            <returns>
+            An object that implements the <see cref="T:System.Collections.IDictionary"/> interface and contains a collection of user-defined key/value pairs. The default is an empty collection.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.MethodInvocationException.#ctor(System.String,Qlik.Sense.JsonRpc.MethodInvocationException.Error)">
+            <summary>
+            Initializes a new instance of the MethodInvocationException class with a specified error message and a reference to the Qlik Sense error that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="error">The Qlik Sense error that is the cause of this exception.</param>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.MethodInvocationException.Error">
+            <summary>
+            Qlik Sense error
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.MethodInvocationException.Error.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the Error class with a specified error code, message and optional parameter.
+            </summary>
+            <param name="errorCode">The specified error code</param>
+            <param name="message">The optional error message</param>
+            <param name="parameter">The optional error parameter</param>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.MethodInvocationException.Error.Code">
+            <summary>
+            Error code
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.MethodInvocationException.Error.Message">
+            <summary>
+            Error message
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.MethodInvocationException.Error.Parameter">
+            <summary>
+            Additional data
+            </summary>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.PushMessageEventArgs">
+            <summary>
+            EventArgs for a response from the server without specific receiver.
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.PushMessageEventArgs.#ctor(Qlik.Sense.JsonRpc.Response)">
+            <summary>
+            Creates a new instance with the structure specified
+            </summary>
+            <param name="response">The response object</param>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.PushMessageEventArgs.Message">
+            <summary>
+            The actual message
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.PushMessageEventArgs.Response">
+            <summary>
+            The response object
+            </summary>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.Request">
+            <summary>
+            Class representing a request to send on a web socket connectoin.
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Request.ResetId">
+            <summary>
+            Resets the global Request Id counter
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.Request.Id">
+            <summary>
+            Unique request id, used to match requests with responses
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Request.#ctor(System.Int32,System.String,System.Collections.Generic.IEnumerable{System.String},System.Object[])">
+            <summary>
+            Creates a request object.
+            </summary>
+            <param name="wsHandle">A unique ID for the request.</param>
+            <param name="wsMethod">The name of the server method to call.</param>
+            <param name="argumentNames">Positional argument names for the method</param>
+            <param name="arguments">The set of arguments for the method.</param>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Request.#ctor(System.Int32,System.String,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.Object[])">
+            <summary>
+            Creates a request object.
+            </summary>
+            <param name="wsHandle">A unique ID for the request.</param>
+            <param name="wsMethod">The name of the server method to call.</param>
+            <param name="wsDelta">If true, the server will return only the delta between this and the last delta request to the same method.</param>
+            <param name="argumentNames">Positional argument names for the method</param>
+            <param name="arguments">The set of arguments for the method.</param>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.Response">
+            <summary>
+            Class representing a response received on a web socket connection.
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Response.Value``1(System.String,System.Func{Newtonsoft.Json.Linq.JToken,``0})">
+            <summary>
+            Gets custom value from a json response.
+            </summary>
+            <typeparam name="T">The type to which the json response should be deserialized.</typeparam>
+            <param name="name">The property of the response to deserialized.</param>
+            <param name="deserializer">The method to use to translate a token to the target type.</param>
+            <returns>The deserialized value.</returns>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Response.Result``1(System.String,System.Func{Newtonsoft.Json.Linq.JToken,``0})">
+            <summary>
+            Gets custom result from a json response. Wrapper for <see cref="M:Qlik.Sense.JsonRpc.Response.Value``1(System.String,System.Func{Newtonsoft.Json.Linq.JToken,``0})"/> that assumes
+            the property to deserialize is found in the result part of the response.
+            </summary>
+            <typeparam name="T">The type to which the json response should be deserialized.</typeparam>
+            <param name="name">The property of the result entry in the json response to deserialized</param>
+            <param name="deserializer">The method to use to translate a token to the target type.</param>
+            <returns>The deserialized value.</returns>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Response.Return``1(System.Func{Newtonsoft.Json.Linq.JToken,``0})">
+            <summary>
+            Deserializes the return value of an RPC response. Equivalent to calling <see cref="M:Qlik.Sense.JsonRpc.Response.Result``1(System.String,System.Func{Newtonsoft.Json.Linq.JToken,``0})"/>
+            with parameter "name" set to "qReturn".
+            </summary>
+            <param name="deserializer">The method to use to translate a token to the target type.</param>
+            <typeparam name="T">The type to which the json response should be deserialized.</typeparam>
+            <returns>A task that resolves the deserialized value.</returns>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Response.ValueAsync``1(System.String,System.Func{Newtonsoft.Json.Linq.JToken,System.Threading.Tasks.Task{``0}})">
+            <summary>
+            Gets custom value from a json response asynchronously.
+            </summary>
+            <typeparam name="T">The type to which the json response should be deserialized.</typeparam>
+            <param name="name">The property of the response to deserialized.</param>
+            <param name="deserializer">The method to use to translate a token to the target type.</param>
+            <returns>A task that resolves the deserialized value.</returns>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Response.ResultAsync``1(System.String,System.Func{Newtonsoft.Json.Linq.JToken,System.Threading.Tasks.Task{``0}})">
+            <summary>
+            Gets custom result from a json response. Wrapper for <see cref="M:Qlik.Sense.JsonRpc.Response.Value``1(System.String,System.Func{Newtonsoft.Json.Linq.JToken,``0})"/> that assumes
+            the property to deserialize is found in the result part of the response asynchronously.
+            </summary>
+            <typeparam name="T">The type to which the json response should be deserialized.</typeparam>
+            <param name="name">The property of the result entry in the json response to deserialized</param>
+            <param name="deserializer">The method to use to translate a token to the target type.</param>
+            <returns>A task that resolves the deserialized value.</returns>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Response.ReturnAsync``1(System.Func{Newtonsoft.Json.Linq.JToken,System.Threading.Tasks.Task{``0}})">
+            <summary>
+            Deserializes the return value of an RPC response. Equivalent to calling <see cref="M:Qlik.Sense.JsonRpc.Response.ResultAsync``1(System.String,System.Func{Newtonsoft.Json.Linq.JToken,System.Threading.Tasks.Task{``0}})"/>
+            with parameter "name" set to "qReturn".
+            </summary>
+            <param name="deserializer">The method to use to translate a token to the target type.</param>
+            <typeparam name="T">The type to which the json response should be deserialized.</typeparam>
+            <returns>A task that resolves the deserialized value.</returns>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Response.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+            <returns>
+            A string that represents the current object.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Response.ToString(Newtonsoft.Json.Formatting)">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+            <param name="formatting">Formatting options</param>
+            <returns>Returns a string that represents the current object.</returns>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Response.ToString(Newtonsoft.Json.Formatting,Newtonsoft.Json.JsonConverter[])">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+            <param name="formatting">Formatting options</param>
+            <param name="converters">Set of JsonConverters to use during serializations.</param>
+            <returns>Returns a string that represents the current object.</returns>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.RpcConnection">
+            <summary>
+            RpcConnection is responsible for handling the JsonRpc traffic to and from a a Qlik Sense instance.
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.RpcConnection.Location">
+            <summary>
+            The Qlik Sense location object.
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.RpcConnection.Session">
+            <summary>
+            The session specification.
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.RpcConnection.#ctor(Qlik.Sense.JsonRpc.ILocation,Qlik.Sense.JsonRpc.ISession)">
+            <summary>
+            Construct a new RpcConnection based on a Qlik Sense location object and a session specification.
+            </summary>
+            <param name="location">The location.</param>
+            <param name="session">The session.</param>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.RpcConnection.SendAsync(Qlik.Sense.JsonRpc.Request)">
+            <summary>
+            Sends a request asynchronously to a Qlik Sense instance
+            </summary>
+            <param name="request">Request to send</param>
+            <returns>A Task without deserialized response</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="request"/> is <c>null</c>.</exception>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.RpcConnection.SendAsync``1(Qlik.Sense.JsonRpc.Request,System.Func{Qlik.Sense.JsonRpc.Response,``0})">
+            <summary>
+            Sends a request asynchronously to a Qlik Sense instance with a specified response handler.
+            </summary>
+            <param name="request">Request to send</param>
+            <param name="continueWith">Response handler that is used to change the <see cref="T:Qlik.Sense.JsonRpc.Response"/> object into an instance of T.</param>
+            <typeparam name="T">Dynamic type that should be returned</typeparam>
+            <returns>Task that will resolve into a handled instance of T</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="request"/>is <c>null</c>.</exception>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.RpcConnection.InboundSerializer">
+            <summary>
+            The JsonSerializer used for deserializing incoming RPC messages.
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.RpcConnection.MakeInboundSerializer">
+            <summary>
+            Method for creating the JsonSerializer used to deserialize message received from
+            the RPC connection. The method is called the first time the property
+            <see cref="P:Qlik.Sense.JsonRpc.RpcConnection.InboundSerializer"/> is accessed, which is typically when
+            the method <see cref="M:Qlik.Sense.JsonRpc.RpcConnection.Deserialize``1(Newtonsoft.Json.Linq.JToken)"/> is called.
+            </summary>
+            <returns>The JsonSerializer instance.</returns>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.RpcConnection.OutboundSerializer">
+            <summary>
+            The JsonSerializer used for deserializing outgoing RPC messages.
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.RpcConnection.MakeOutboundSerializer">
+            <summary>
+            Method for creating the JsonSerializer used to serialize requests to an
+            the RPC connection. The method is called the first time the property
+            <see cref="P:Qlik.Sense.JsonRpc.RpcConnection.OutboundSerializer"/> is accessed, which is typically when
+            the method <see cref="M:Qlik.Sense.JsonRpc.RpcConnection.SendAsync``1(Qlik.Sense.JsonRpc.Request,System.Func{Qlik.Sense.JsonRpc.Response,``0})"/> is called.
+            </summary>
+            <returns>The JsonSerializer instance.</returns>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.RpcConnection.CancellationToken">
+            <summary>
+            The token used to synchronize shutdown events with all outstanding tasks
+            </summary>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.RpcConnection.PerformanceType">
+            <summary>
+            Performance log entry types
+            </summary>
+        </member>
+        <member name="F:Qlik.Sense.JsonRpc.RpcConnection.PerformanceType.SocketConnecting">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Qlik.Sense.JsonRpc.RpcConnection.PerformanceType.SocketConnected">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Qlik.Sense.JsonRpc.RpcConnection.PerformanceType.SocketClosed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Qlik.Sense.JsonRpc.RpcConnection.PerformanceType.MessageReceived">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Qlik.Sense.JsonRpc.RpcConnection.PerformanceType.MessageSent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.RpcConnection.Log(System.String)">
+            <summary>
+            Method to use when emitting a log message.
+            </summary>
+            <param name="message">The message to print.</param>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.RpcConnection.Timeout">
+            <summary>
+            Timeout value used for synchronous calls to engine. Usually used together
+            with <see cref="P:Qlik.Sense.JsonRpc.RpcConnection.CancellationToken"/>.
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.RpcConnection.RetryCountLimit">
+            <summary>
+            Maximum number of connection retry attemps performed when opening a websocket connection.
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.RpcConnection.OpenAsync">
+            <summary>
+            Open a websocket connection to a Qlik Sense instance based on the location and session associated with the RpcConnection instance.
+            </summary>
+            <exception cref="T:System.TimeoutException">Thrown if the establishing of a connection takes more time than the current
+            timeout setting as defined in the property <see cref="P:Qlik.Sense.JsonRpc.RpcConnection.Timeout"/>.</exception>
+        </member>
+        <member name="E:Qlik.Sense.JsonRpc.RpcConnection.ConnectionClosingEvent">
+            <summary>
+            Event that fires when a connection closes.
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.RpcConnection.EnsureConnectionIsOpen">
+            <summary>
+            
+            </summary>
+            <returns>Returns true if connection was opened and false if connection was already open.</returns>
+        </member>
+        <member name="E:Qlik.Sense.JsonRpc.RpcConnection.PushMessageEvent">
+            <summary>
+            Will catch all responses without registered receiver
+            </summary>
+        </member>
+        <member name="E:Qlik.Sense.JsonRpc.RpcConnection.ResponseEvent">
+            <summary>
+            Event that is fired when a response is received on the web socket.
+            </summary>
+        </member>
+        <member name="E:Qlik.Sense.JsonRpc.RpcConnection.CommunicationErrorEvent">
+            <summary>
+            Event that fires when an exception occors on the web socket.
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.RpcConnection.Deserialize``1(Newtonsoft.Json.Linq.JToken)">
+            <summary>
+            Deserialize a token to a specific type.
+            </summary>
+            <typeparam name="T">The type to deserialize to.</typeparam>
+            <param name="token">The Json token to deserialize.</param>
+            <returns>The token deserialized as a an object of type T.</returns>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.RpcConnection.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.Session">
+            <summary>
+            Contains Information to attach to a specific qlik engine session
+            When connecting to a Qlik Sense app you can work with sessions. 
+            Sessions specify who should see changes in an app, and are based on combining userId and session key.
+            </summary>
+            <remarks>Only one app can be open in a session at a time</remarks>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.Session.Default">
+            <summary>
+            Default session usable for connecting to the hub
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.Session.Random">
+            <summary>
+            Initializes a globally unique session.
+            </summary>
+            <remarks>Only available when not accessing qlik engine through a proxy</remarks>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.Session.ApplicationPath">
+            <summary>
+            Application path
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.Session.SessionToken">
+            <summary>
+            Session token
+            </summary>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.WebSocketSessionContainer">
+            <summary>
+            Class responsible for managing web socket connections to Qlik Sense.
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.WebSocketSessionContainer.IsConnected">
+            <summary>
+            True if websocket connection is open
+            </summary>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.WebSocketSessionContainer.OpenAsync(System.Action{System.String},System.Action{System.Exception},System.Threading.CancellationToken)">
+            <summary>
+            Open a connection to a Qlik Sense instance based on the current location configuration and the argument session.
+            </summary>
+            <param name="onMessage">Callback to active when messages are received from Qlik Sense.</param>
+            <param name="onError">Callback to activate when an exception has occured on the web socket connection to Qlik Sense.</param>
+            <param name="cancellationToken">The token used to synchronize shutdown events.</param>
+            <returns>A task with the completion status of the connect operation as result.</returns>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.WebSocketSessionContainer.SendMessage(System.String,System.Action{System.Exception})">
+            <summary>
+            Send a message to a Qlik Sense instance.
+            </summary>
+            <param name="message">The message to send.</param>
+            <param name="onError">Callback when an error occurs during the send operation. Note that this callback
+            is activated only if the send operation it self triggers an error. Errors returned by Qlik Sense as part
+            of a response to a message should be captured by the onMessage callback provided as argument to <see cref="M:Qlik.Sense.JsonRpc.WebSocketSessionContainer.OpenAsync(System.Action{System.String},System.Action{System.Exception},System.Threading.CancellationToken)"/>.</param>
+            <exception cref="T:Qlik.Sense.JsonRpc.CommunicationErrorException">Thrown if connection is not open.</exception>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.WebSocketSessionContainer.Close">
+            <summary>
+            Close an open connection to a Qlik Sense instance. Operation has no effect if the connection is not open.
+            </summary>
+        </member>
+    </members>
+</doc>

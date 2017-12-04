@@ -1,0 +1,5 @@
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\QlikLanguageParsing.dll
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikLanguageParsing\bin\Debug\QlikLanguageParsing.pdb
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikLanguageParsing\obj\Debug\QlikLanguageParsing.csprojResolveAssemblyReference.cache
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikLanguageParsing\obj\Debug\QlikLanguageParsing.dll
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikLanguageParsing\obj\Debug\QlikLanguageParsing.pdb

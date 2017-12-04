@@ -1,0 +1,13 @@
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikLog\bin\Debug\QlikLog.dll
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikLog\bin\Debug\QlikLog.pdb
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikLog\obj\Debug\QlikLog.csprojResolveAssemblyReference.cache
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikLog\obj\Debug\QlikLog.dll
+C:\Users\baz\Documents\Visual Studio 2015\Projects\QlikBot\QlikLog\obj\Debug\QlikLog.pdb
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLog\bin\Debug\QlikLog.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLog\bin\Debug\QlikLog.pdb
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLog\bin\Debug\Newtonsoft.Json.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLog\bin\Debug\Telegram.Bot.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLog\bin\Debug\Newtonsoft.Json.xml
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLog\obj\Debug\QlikLog.csprojResolveAssemblyReference.cache
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLog\obj\Debug\QlikLog.dll
+C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLog\obj\Debug\QlikLog.pdb
