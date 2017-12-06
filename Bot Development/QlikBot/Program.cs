@@ -27,7 +27,7 @@ namespace QlikBot
                 Console.WriteLine(e.ToString());
             }
 
-            Console.WriteLine("Type close to exit.");
+            Console.WriteLine("Type 'close' to exit.");
             bool goFlag = true;
             while (goFlag)
             {

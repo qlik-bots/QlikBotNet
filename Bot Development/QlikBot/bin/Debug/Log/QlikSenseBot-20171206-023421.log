@@ -1,0 +1,38 @@
+2017-12-06 02:34:21:	Starting Log...
+2017-12-06 02:34:21:	logInfo	ID:485420868	First:Qlik Cool Bot	Last:	UserName:WZQlikCoolBot	<Timer for alerts started with 60 seconds>
+2017-12-06 02:34:21:	Starting Log...
+2017-12-06 02:34:21:	Started and Callback set for Bot 
+2017-12-06 02:34:23:	logError	ID:485420868	First:Qlik Cool Bot	Last:	UserName:WZQlikCoolBot	<Error opening the Qlik Sense app : Qlik.Sense.JsonRpc.CommunicationErrorException: Connection failed after 4 attempts. Error message:
+  Could not load file or assembly 'Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da' or one of its dependencies. The system cannot find the file specified. ---> System.IO.FileNotFoundException: Could not load file or assembly 'Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da' or one of its dependencies. The system cannot find the file specified. ---> System.IO.FileNotFoundException: Could not load file or assembly 'Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da' or one of its dependencies. The system cannot find the file specified.
+   --- End of inner exception stack trace ---
+   at Qlik.Sense.JsonRpc.WebSocketFactory.<>c.<GetWebSocketFactory>b__3_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Qlik.Sense.JsonRpc.Location.GetDefaultSecurityConfiguration()
+   at Qlik.Sense.JsonRpc.Location.get_Security()
+   at Qlik.Sense.JsonRpc.Location.GetWebSocketSessionContainer(ISession session)
+   at Qlik.Sense.JsonRpc.RpcConnection.<OpenAsync>d__43.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Qlik.Sense.JsonRpc.RpcConnection.<EnsureConnectionIsOpen>d__54.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Qlik.Sense.JsonRpc.RpcConnection.<SendAsync>d__52.MoveNext()
+   --- End of inner exception stack trace ---
+   at Qlik.Engine.Communication.QlikConnection.AwaitResponseTask[T](T task, String methodName, CancellationToken cancellationToken)
+   at Qlik.Engine.Communication.QlikConnection.Ping(Nullable`1 noVersionCheck)
+   at Qlik.Engine.LocationExtensions.Hub(ILocation location, ISession session, Nullable`1 noVersionCheck)
+   at Qlik.Engine.LocationExtensions.GetAppIdentifiers(ILocation location, Nullable`1 noVersionCheck)
+   at Qlik.Engine.LocationExtensions.AppWithIdOrDefault(ILocation location, String appId, Nullable`1 noVersionCheck)
+   at QlikSenseEasy.QSApp.QSOpenApp() in C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikSenseEasy\QSEasy.cs:line 353
+   at QlikTelegram.Bot..ctor() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\Bot.cs:line 163>
+2017-12-06 02:34:23:	logInfo	ID:485420868	First:Qlik Cool Bot	Last:	UserName:WZQlikCoolBot	<Created a conversation with Google Api.Ai.>
+2017-12-06 02:34:26:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:34:31:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:34:36:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:34:41:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs

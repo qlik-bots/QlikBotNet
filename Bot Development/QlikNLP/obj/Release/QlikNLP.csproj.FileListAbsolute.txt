@@ -1,0 +1,10 @@
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikNLP\bin\Release\QlikNLP.dll.config
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikNLP\bin\Release\QlikNLP.dll
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikNLP\bin\Release\QlikNLP.pdb
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikNLP\bin\Release\ApiAiSDK.dll
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikNLP\bin\Release\Microsoft.Cognitive.LUIS.dll
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikNLP\bin\Release\Newtonsoft.Json.dll
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikNLP\bin\Release\Newtonsoft.Json.xml
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikNLP\obj\Release\QlikNLP.csprojResolveAssemblyReference.cache
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikNLP\obj\Release\QlikNLP.dll
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikNLP\obj\Release\QlikNLP.pdb

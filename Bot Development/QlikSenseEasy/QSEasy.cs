@@ -302,11 +302,15 @@ namespace QlikSenseEasy
                 string strUri = qsServer;
                 Uri uri = new Uri(strUri);
 
+                //zhu
                 qsLocation = Qlik.Engine.Location.FromUri(uri);
-                if (VirtualProxyPath.Trim() != "") qsLocation.VirtualProxyPath = VirtualProxyPath;
+                 if (VirtualProxyPath.Trim() != "") qsLocation.VirtualProxyPath = VirtualProxyPath;
+                //qsLocation = Qlik.Engine.Location.FromUri(new Uri("ws://127.0.0.1:4848"));
+                
 
+                //zhu
                 qsLocation.AsStaticHeaderUserViaProxy(UserId, HeaderAuthName, UseSSL);
-
+                //qsLocation.AsDirectConnectionToPersonalEdition();
                 qsLocation.IsVersionCheckActive = CheckSDKVersion;
                 IHub MyHub = qsLocation.Hub();
 

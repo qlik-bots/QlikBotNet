@@ -1,0 +1,72 @@
+2017-12-06 02:34:57:	Starting Log...
+2017-12-06 02:34:57:	logInfo	ID:485420868	First:Qlik Cool Bot	Last:	UserName:WZQlikCoolBot	<Timer for alerts started with 60 seconds>
+2017-12-06 02:34:57:	Starting Log...
+2017-12-06 02:34:57:	Started and Callback set for Bot 
+2017-12-06 02:34:59:	logError	ID:485420868	First:Qlik Cool Bot	Last:	UserName:WZQlikCoolBot	<Error opening the Qlik Sense app : Qlik.Sense.JsonRpc.CommunicationErrorException: Connection failed after 4 attempts. Error message:
+  Could not load file or assembly 'Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da' or one of its dependencies. The system cannot find the file specified. ---> System.IO.FileNotFoundException: Could not load file or assembly 'Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da' or one of its dependencies. The system cannot find the file specified. ---> System.IO.FileNotFoundException: Could not load file or assembly 'Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da' or one of its dependencies. The system cannot find the file specified.
+   --- End of inner exception stack trace ---
+   at Qlik.Sense.JsonRpc.WebSocketFactory.<>c.<GetWebSocketFactory>b__3_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Qlik.Sense.JsonRpc.Location.GetDefaultSecurityConfiguration()
+   at Qlik.Sense.JsonRpc.Location.get_Security()
+   at Qlik.Sense.JsonRpc.Location.GetWebSocketSessionContainer(ISession session)
+   at Qlik.Sense.JsonRpc.RpcConnection.<OpenAsync>d__43.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Qlik.Sense.JsonRpc.RpcConnection.<EnsureConnectionIsOpen>d__54.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Qlik.Sense.JsonRpc.RpcConnection.<SendAsync>d__52.MoveNext()
+   --- End of inner exception stack trace ---
+   at Qlik.Engine.Communication.QlikConnection.AwaitResponseTask[T](T task, String methodName, CancellationToken cancellationToken)
+   at Qlik.Engine.Communication.QlikConnection.Ping(Nullable`1 noVersionCheck)
+   at Qlik.Engine.LocationExtensions.Hub(ILocation location, ISession session, Nullable`1 noVersionCheck)
+   at Qlik.Engine.LocationExtensions.GetAppIdentifiers(ILocation location, Nullable`1 noVersionCheck)
+   at Qlik.Engine.LocationExtensions.AppWithIdOrDefault(ILocation location, String appId, Nullable`1 noVersionCheck)
+   at QlikSenseEasy.QSApp.QSOpenApp() in C:\Users\baz\documents\visual studio 2015\Projects\QlikBot\QlikSenseEasy\QSEasy.cs:line 353
+   at QlikTelegram.Bot..ctor() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikTelegram\Bot.cs:line 163>
+2017-12-06 02:34:59:	logInfo	ID:485420868	First:Qlik Cool Bot	Last:	UserName:WZQlikCoolBot	<Created a conversation with Google Api.Ai.>
+2017-12-06 02:35:02:	logInfo	Message Received from 481378768: hello how are you
+2017-12-06 02:35:02:	logInfo	ID:481378768	First:wuzhong	Last:zhu	UserName:	<Could not connect to the Qlik Sense server: https://sense-demo.qlik.com/site/ for user 481378768 (wuzhong zhu)>
+2017-12-06 02:35:04:	logInfo	Sent text message <Hi wuzhong zhu, How are you doing?
+Tell me how can I help you. (type help for options)> to ChatID 481378768
+2017-12-06 02:35:09:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:35:14:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:35:19:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:35:24:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:35:29:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:35:34:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:35:39:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:35:44:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:35:49:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:35:54:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:35:59:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:36:04:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:36:09:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:36:14:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:36:19:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:36:24:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:36:29:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:36:34:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:36:39:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:36:44:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:36:49:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:36:54:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:36:59:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:37:04:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:37:10:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:37:15:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:37:20:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:37:21:	logInfo	Message Received from 481378768: show me kpi
+2017-12-06 02:37:22:	logError	Error trying to predict 'show me kpi': System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at QlikConversationService.TelegramConversation.<Reply>d__11.MoveNext() in C:\Users\baz\Documents\GitHub\Qlik_Sense_Bot\Qlik sense bot refactored(In Progress)\Bot Development\QlikLanguageParsing\TelegramConversation.cs:line 464
+2017-12-06 02:37:28:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:37:33:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-06 02:37:38:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs

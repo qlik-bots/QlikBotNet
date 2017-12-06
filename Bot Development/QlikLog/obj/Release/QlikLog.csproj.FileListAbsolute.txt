@@ -1,0 +1,8 @@
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikLog\bin\Release\QlikLog.dll
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikLog\bin\Release\QlikLog.pdb
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikLog\bin\Release\Newtonsoft.Json.dll
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikLog\bin\Release\Telegram.Bot.dll
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikLog\bin\Release\Newtonsoft.Json.xml
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikLog\obj\Release\QlikLog.csprojResolveAssemblyReference.cache
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikLog\obj\Release\QlikLog.dll
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikLog\obj\Release\QlikLog.pdb
