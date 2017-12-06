@@ -1,4 +1,4 @@
-# Telegram chat bot for Qlik sense
+# Telegram chatbot for Qlik Sense
 
 This is example source code for QlikBotNet, a Qlik sense chatbot for use with the Telegram messaging platform.
 QlikBotNet is the middle layer between Telegram and Qlik products which enables users to perform analytics easily on any devices.
