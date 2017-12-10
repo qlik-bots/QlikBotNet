@@ -405,7 +405,7 @@ namespace QlikTelegram
             Console.WriteLine("message received");
             var message1 = messageEventArgs.Message;
             Console.WriteLine(message1.Text);
-            botClient.SendTextMessageAsync(message1.From.Id, message1.Text, replyMarkup: new ReplyKeyboardRemove()).Wait();
+            //botClient.SendTextMessageAsync(message1.From.Id, message1.Text, replyMarkup: new ReplyKeyboardRemove()).Wait();
 
             try
             {
@@ -764,36 +764,44 @@ namespace QlikTelegram
 
             if (Resp.Options.Count() > 0)
             {
-                BotShowTypingState(ChatId);
-
-                InlineKeyboardButton[][] rows = new InlineKeyboardButton[(Resp.Options.Count() + 1) / 2][];
-
-                int r = -1;
-                for (int i = 0; i < Resp.Options.Count(); i++)
+                try
                 {
-                    string ButtonData = Resp.Options[i].Action.ToString() + "#" + Resp.Options[i].ID;
-                    //zhu
-                    //var b = new InlineKeyboardButton(Resp.Options[i].Title, ButtonData);
-                    if (i % 2 == 0)
+                    BotShowTypingState(ChatId);
+
+                    InlineKeyboardButton[][] rows = new InlineKeyboardButton[(Resp.Options.Count() + 1) / 2][];
+
+                    int r = -1;
+                    for (int i = 0; i < Resp.Options.Count(); i++)
                     {
-                        r++;
-                        if (i == Resp.Options.Count() - 1)   // Last button
-                            rows[r] = new InlineKeyboardButton[1];  // new row, only 1 button
-                        else
-                            rows[r] = new InlineKeyboardButton[2];  // new row, two buttons
+                        string ButtonData = Resp.Options[i].Action.ToString() + "#" + Resp.Options[i].ID;
+                        //zhu
+                        //var b = new InlineKeyboardButton(Resp.Options[i].Title, ButtonData);
+                        if (i % 2 == 0)
+                        {
+                            r++;
+                            if (i == Resp.Options.Count() - 1)   // Last button
+                                rows[r] = new InlineKeyboardButton[1];  // new row, only 1 button
+                            else
+                                rows[r] = new InlineKeyboardButton[2];  // new row, two buttons
 
-                        //rows[r][0] = b;
-                        rows[r][0] = Resp.Options[i].Title;
+                            //rows[r][0] = b;
+                            rows[r][0] = Resp.Options[i].Title;
+                        }
+                        //else rows[r][1] = b;
+                        rows[r][1] = Resp.Options[i].Title;
                     }
-                    //else rows[r][1] = b;
-                    rows[r][1] = Resp.Options[i].Title;
+
+                    var keyboard = new InlineKeyboardMarkup(rows);
+
+                    await BotSendTextMessage(ChatId, Resp.TextMessage, replyMarkup: keyboard);
+                    Resp.TextMessage = "";
                 }
-
-                var keyboard = new InlineKeyboardMarkup(rows);
-
-                await BotSendTextMessage(ChatId, Resp.TextMessage, replyMarkup: keyboard);
-                Resp.TextMessage = "";
-            }
+                catch (Exception e)
+                {
+                    botLog.AddBotLine(string.Format("General Error in BotOnMessageReceived: {0}", e), LogFile.LogType.logError);
+                    Resp.TextMessage = StringResources.nlMessageNotManaged;
+                }
+            }     
 
 
             if (Resp.OtherAction == "Help")
@@ -837,20 +845,22 @@ namespace QlikTelegram
 
             if (Resp.OtherAction == "GeoFilter")
             {
-                WaitingGeoFilter = 3;
-                WaitingGeoDimension = Resp.NLPrediction.Dimension;
-                WaitingGeoDistanceKm = Resp.NLPrediction.DistanceKm;
+                    //zhu
+                    //WaitingGeoFilter = 3;
+                    //WaitingGeoDimension = Resp.NLPrediction.Dimension;
+                    //WaitingGeoDistanceKm = Resp.NLPrediction.DistanceKm;
 
-                var keyboard = new ReplyKeyboardMarkup(new[]
-                {
-                    new KeyboardButton(StringResources.gasAccessLocation)
-                    {
-                        RequestLocation = true
-                    }
-                });
+                    //var keyboard = new ReplyKeyboardMarkup(new[]
+                    //{
+                    //    new KeyboardButton(StringResources.gasAccessLocation)
+                    //    {
+                    //        RequestLocation = true
+                    //    }
+                    //});
 
-                await BotSendTextMessage(ChatId, StringResources.gasButtonLocation, replyMarkup: keyboard);
-            }
+                    //await BotSendTextMessage(ChatId, StringResources.gasButtonLocation, replyMarkup: keyboard);
+                    await BotSendTextMessage(ChatId, "I am sorry, GeoFilter is currently unavailable", replyMarkup: new ReplyKeyboardRemove());
+                }
 
             if (Resp.OtherAction == "CreateGroup")
             {

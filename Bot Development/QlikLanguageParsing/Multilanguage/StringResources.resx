@@ -336,11 +336,11 @@ In that case, the {2} is {3}</value>
    Inline mode, write: @QlikSenseBot [search data]
 
 Or try asking for the information directly, I'll try to understand you. Some examples:
-   Show my KPIs
-   I want to know the sales
-   Could you show me the cost by family?
-   Show my reports
-   What are my best customers?
+   Show my KPIs.
+   I want to know avg sales.
+   Could you show me revenue by product?
+   Show my reports.
+   Who are my best customers?
 </value>
   </data>
   <data name="Welcome" xml:space="preserve">
