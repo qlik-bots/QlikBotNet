@@ -841,7 +841,7 @@ namespace QlikTelegram
 
 
             if (Resp.OtherAction == "ShowReports")
-                //zhu await ShowReportList(ChatId);
+                await ShowReportList(ChatId);
 
             if (Resp.OtherAction == "GeoFilter")
             {
@@ -872,6 +872,7 @@ namespace QlikTelegram
 
 
         }
+
 
         private async Task CreateChatGroup(long ChatId, string GroupName)
         {
@@ -912,6 +913,131 @@ namespace QlikTelegram
         async void BotOnCallbackQueryReceived(object sender, CallbackQueryEventArgs callbackQueryEventArgs)
         {
             Console.WriteLine("call back query received");
+            string msg;
+
+            var chatMsg = callbackQueryEventArgs.CallbackQuery.Message;
+
+            try
+            {
+                QSUser Usr = CheckTheUser(callbackQueryEventArgs.CallbackQuery.From.Id.ToString(),
+                    callbackQueryEventArgs.CallbackQuery.From,
+                    callbackQueryEventArgs.CallbackQuery.From.FirstName + " " + callbackQueryEventArgs.CallbackQuery.From.LastName);
+
+                if (callbackQueryEventArgs.CallbackQuery.Data.StartsWith("#Report"))
+                {
+                    string ReportName = callbackQueryEventArgs.CallbackQuery.Data.Substring(7);
+                    msg = string.Format(StringResources.reportHereYourReport, chatMsg.Chat.FirstName, ReportName);
+                    await BotSendDocMessage(chatMsg.Chat.Id, msg, NPrintingImgsPath + "\\" + ReportName + ".pdf", replyMarkup: new ReplyKeyboardRemove());
+                    return;
+                }
+                else if (callbackQueryEventArgs.CallbackQuery.Data.StartsWith("#Measure"))
+                {
+                    string MeasureName = callbackQueryEventArgs.CallbackQuery.Data.Substring(8);
+                    Response Resp = Conversation.ShowAMeasure(MeasureName, Usr);
+                    ProcessConversationResponse(Resp, chatMsg.Chat.Id, Usr);
+
+                    return;
+                }
+                else if (callbackQueryEventArgs.CallbackQuery.Data.StartsWith("#Dimension"))
+                {
+                    if (Usr.QS.LastMeasure != null)
+                    {
+                        string DimensionName = callbackQueryEventArgs.CallbackQuery.Data.Substring(10);
+                        string MeasureName = Usr.QS.LastMeasure.Name;
+                        Response Resp = Conversation.ShowMeasureByDimension(ref MeasureName, ref DimensionName, Usr);
+                        ProcessConversationResponse(Resp, chatMsg.Chat.Id, Usr);
+                    }
+                    return;
+                }
+                else if (callbackQueryEventArgs.CallbackQuery.Data.StartsWith("#Story"))
+                {
+                    string StoryId = callbackQueryEventArgs.CallbackQuery.Data.Substring(6).Split('#').First();
+                    string url = Usr.QS.qsSingleServer + "/sense/app/" + Usr.QS.qsSingleApp
+                        + "/story/" + StoryId + "/state/play";
+                    msg = string.Format(StringResources.kpiShowStory, callbackQueryEventArgs.CallbackQuery.From.FirstName, url);
+
+                    await BotSendTextMessage(chatMsg.Chat.Id, msg, parseMode: ParseMode.Html, replyMarkup: new ReplyKeyboardRemove());
+
+                    return;
+                }
+                else if (callbackQueryEventArgs.CallbackQuery.Data.StartsWith("#BingNewsYes"))
+                {
+                    string NewsQuery = callbackQueryEventArgs.CallbackQuery.Data.Substring(12);
+                    //SendBingNews(chatMsg.Chat.Id, NewsQuery, callbackQueryEventArgs.CallbackQuery.From.FirstName);
+
+                    return;
+                }
+                else if (callbackQueryEventArgs.CallbackQuery.Data.StartsWith("#AppId"))
+                {
+                    string AppId = callbackQueryEventArgs.CallbackQuery.Data.Substring(6);
+                    Usr.QS.QSOpenApp(AppId);
+                    if (Usr.QS.qsAppId == AppId)
+                    {
+                        msg = string.Format(StringResources.appOpenedApp, Usr.QS.qsAppName);
+                    }
+                    else
+                    {
+                        msg = string.Format(StringResources.appOpenAppError, Usr.QS.qsAppId);
+                    }
+                    await BotSendTextMessage(chatMsg.Chat.Id, msg, parseMode: ParseMode.Html, replyMarkup: new ReplyKeyboardRemove());
+                    return;
+                }
+                else if (callbackQueryEventArgs.CallbackQuery.Data.StartsWith("#BingNewsNo"))
+                {
+                    // Do nothing
+                }
+                else if (callbackQueryEventArgs.CallbackQuery.Data.ToLower() == "analysis")
+                {
+                    string url = Usr.QS.qsSingleServer + "/sense/app/" + Usr.QS.qsSingleApp;
+                    if (Usr.QS.qsSingleApp == cntqsSingleApp)
+                        url += "/sheet/" + cntQSSheetForAnalysis + "/state/analysis";
+                    msg = string.Format(StringResources.kpiShowAnalysis, callbackQueryEventArgs.CallbackQuery.From.FirstName, url);
+
+                    await BotSendTextMessage(chatMsg.Chat.Id, msg, parseMode: ParseMode.Html, replyMarkup: new ReplyKeyboardRemove());
+                }
+
+
+                if (callbackQueryEventArgs.CallbackQuery.Data.StartsWith(ResponseAction.OpenApp.ToString()))
+                {
+                    string AppId = callbackQueryEventArgs.CallbackQuery.Data.Substring(ResponseAction.OpenApp.ToString().Length + 1).Trim();
+                    Response Resp = Conversation.ProcessAction(Usr, ResponseAction.OpenApp, AppId);
+                    ProcessConversationResponse(Resp, chatMsg.Chat.Id, Usr);
+                    return;
+                }
+                else if (callbackQueryEventArgs.CallbackQuery.Data.StartsWith(ResponseAction.ShowDimension.ToString()))
+                {
+                    string DimensionName = callbackQueryEventArgs.CallbackQuery.Data.Substring(ResponseAction.ShowDimension.ToString().Length + 1).Trim();
+                    string MeasureName = Usr.QS.LastMeasure.Name;
+                    Response Resp = Conversation.ShowMeasureByDimension(ref MeasureName, ref DimensionName, Usr);
+                    ProcessConversationResponse(Resp, chatMsg.Chat.Id, Usr);
+                    return;
+                }
+                else if (callbackQueryEventArgs.CallbackQuery.Data.StartsWith(ResponseAction.ShowMeasure.ToString()))
+                {
+                    string MeasureName = callbackQueryEventArgs.CallbackQuery.Data.Substring(ResponseAction.ShowMeasure.ToString().Length + 1).Trim();
+                    Response Resp = Conversation.ShowAMeasure(MeasureName, Usr);
+                    ProcessConversationResponse(Resp, chatMsg.Chat.Id, Usr);
+                    return;
+                }
+                else if (callbackQueryEventArgs.CallbackQuery.Data.StartsWith(ResponseAction.ShowSheet.ToString()))
+                {
+                    string SheetID = callbackQueryEventArgs.CallbackQuery.Data.Substring(ResponseAction.ShowSheet.ToString().Length + 1).Trim();
+                    Response Resp = Conversation.ShowSheet(SheetID, Usr);
+                    ProcessConversationResponse(Resp, chatMsg.Chat.Id, Usr);
+                    return;
+                }
+                else if (callbackQueryEventArgs.CallbackQuery.Data.StartsWith(ResponseAction.ShowStory.ToString()))
+                {
+                    string StoryID = callbackQueryEventArgs.CallbackQuery.Data.Substring(ResponseAction.ShowStory.ToString().Length + 1).Trim();
+                    Response Resp = Conversation.ShowStory(StoryID, Usr);
+                    ProcessConversationResponse(Resp, chatMsg.Chat.Id, Usr);
+                    return;
+                }
+            }
+            catch (Exception e)
+            {
+                botLog.AddBotLine(string.Format("Error processing button response in BotOnCallbackQueryReceived for message '{0}': {1}", callbackQueryEventArgs.CallbackQuery.Data, e), LogFile.LogType.logError);
+            }
         }
 
         private async Task<bool> BotSendChartImage(long chatID, string ChartUrl, string ImageFile, string Caption = "")
@@ -1147,7 +1273,35 @@ namespace QlikTelegram
             return ReportFiles;
         }
 
-          void ChangeAppLanguage(string LanguageName)
+          private async Task ShowReportList(long ChatId)
+            {
+                BotShowTypingState(ChatId);
+
+                string[] ReportList = GetReportList();
+
+                InlineKeyboardButton[][] rows = new InlineKeyboardButton[(ReportList.Length + 1) / 2][];
+
+                int r = -1;
+                for (int i = 0; i < ReportList.Length; i++)
+                {
+                    var b = "#Report" + ReportList[i];
+                    if (i % 2 == 0)
+                    {
+                        r++;
+                        rows[r] = new InlineKeyboardButton[2];  // new row
+                        rows[r][0] = b;
+                    }
+                    else rows[r][1] = b;
+                }
+
+                if (ReportList.Length % 2 == 1) rows[r][1] = "-";
+
+                var keyboard = new InlineKeyboardMarkup(rows);
+
+                await BotSendTextMessage(ChatId, StringResources.reportSelectReport, replyMarkup: keyboard);
+            }
+
+            void ChangeAppLanguage(string LanguageName)
         {
             CultureInfo NewCulture = CultureInfo.CreateSpecificCulture(LanguageName);
 
@@ -1175,7 +1329,7 @@ namespace QlikTelegram
 
         }
 
-          double GetDefaultDistanceInKm()
+            double GetDefaultDistanceInKm()
         {
             double Distance;
 
