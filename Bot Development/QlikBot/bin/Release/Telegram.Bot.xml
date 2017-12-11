@@ -4,6 +4,36 @@
         <name>Telegram.Bot</name>
     </assembly>
     <members>
+        <member name="T:Telegram.Bot.Args.ApiRequestEventArgs">
+            <summary>
+            Provides data for MakingApiRequest event
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Args.ApiRequestEventArgs.MethodName">
+            <summary>
+            Bot API method name
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Args.ApiRequestEventArgs.HttpContent">
+            <summary>
+            HTTP content of the request message
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.Args.ApiResponseEventArgs">
+            <summary>
+            Provides data for ApiResponseReceived event
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Args.ApiResponseEventArgs.ResponseMessage">
+            <summary>
+            HTTP response received from API
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Args.ApiResponseEventArgs.ApiRequestEventArgs">
+            <summary>
+            Event arguments of this request
+            </summary>
+        </member>
         <member name="T:Telegram.Bot.Args.CallbackQueryEventArgs">
             <summary>
             <see cref="T:System.EventArgs"/> containing a <see cref="T:Telegram.Bot.Types.CallbackQuery"/>
@@ -251,7 +281,7 @@
         </member>
         <member name="T:Telegram.Bot.Exceptions.ApiRequestException">
             <summary>
-            Represents an api error
+            Represents an API error
             </summary>
         </member>
         <member name="P:Telegram.Bot.Exceptions.ApiRequestException.ErrorCode">
@@ -299,6 +329,178 @@
             <param name="apiResponse">The API response.</param>
             <returns><see cref="T:Telegram.Bot.Exceptions.ApiRequestException"/></returns>
         </member>
+        <member name="T:Telegram.Bot.Exceptions.ChatNotFoundException">
+            <summary>
+            The exception that is thrown when the chat does not exist
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Exceptions.ChatNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new object of the <see cref="T:Telegram.Bot.Exceptions.ChatNotFoundException"/> class
+            </summary>
+            <param name="message">The error message of this exception.</param>
+        </member>
+        <member name="T:Telegram.Bot.Exceptions.ContactRequestException">
+            <summary>
+            The exception that is thrown when the chat does not exist
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Exceptions.ContactRequestException.#ctor(System.String)">
+            <summary>
+            Initializes a new object of the <see cref="T:Telegram.Bot.Exceptions.ChatNotFoundException"/> class
+            </summary>
+            <param name="message">The error message of this exception.</param>
+        </member>
+        <member name="T:Telegram.Bot.Exceptions.InvalidStickerDimensionsException">
+            <summary>
+            The exception that is thrown when the sticker set is invalid
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Exceptions.InvalidStickerDimensionsException.#ctor(System.String)">
+            <summary>
+            Initializes a new object of the <see cref="T:Telegram.Bot.Exceptions.InvalidStickerDimensionsException"/> class
+            </summary>
+            <param name="message">The error message of this exception.</param>
+        </member>
+        <member name="T:Telegram.Bot.Exceptions.InvalidStickerEmojisException">
+            <summary>
+            The exception that is thrown when the sticker set is invalid
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Exceptions.InvalidStickerEmojisException.#ctor(System.String)">
+            <summary>
+            Initializes a new object of the <see cref="T:Telegram.Bot.Exceptions.InvalidStickerEmojisException"/> class
+            </summary>
+            <param name="message">The error message of this exception.</param>
+        </member>
+        <member name="T:Telegram.Bot.Exceptions.InvalidStickerSetNameException">
+            <summary>
+            The exception that is thrown when the sticker set is invalid
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Exceptions.InvalidStickerSetNameException.#ctor(System.String)">
+            <summary>
+            Initializes a new object of the <see cref="T:Telegram.Bot.Exceptions.InvalidStickerSetNameException"/> class
+            </summary>
+            <param name="message">The error message of this exception.</param>
+        </member>
+        <member name="T:Telegram.Bot.Exceptions.InvalidUserIdException">
+            <summary>
+            The exception that is thrown when the user does not exist
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Exceptions.InvalidUserIdException.#ctor(System.String)">
+            <summary>
+            Initializes a new object of the <see cref="T:Telegram.Bot.Exceptions.InvalidUserIdException"/> class
+            </summary>
+            <param name="message">The error message of this exception.</param>
+        </member>
+        <member name="T:Telegram.Bot.Exceptions.StickerSetNameExistsException">
+            <summary>
+            The exception that is thrown when the sticker set is invalid
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Exceptions.StickerSetNameExistsException.#ctor(System.String)">
+            <summary>
+            Initializes a new object of the <see cref="T:Telegram.Bot.Exceptions.StickerSetNameExistsException"/> class
+            </summary>
+            <param name="message">The error message of this exception.</param>
+        </member>
+        <member name="T:Telegram.Bot.Exceptions.StickerSetNotModifiedException">
+            <summary>
+            The exception that is thrown when the sticker set is invalid
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Exceptions.StickerSetNotModifiedException.#ctor(System.String)">
+            <summary>
+            Initializes a new object of the <see cref="T:Telegram.Bot.Exceptions.StickerSetNotModifiedException"/> class
+            </summary>
+            <param name="message">The error message of this exception.</param>
+        </member>
+        <member name="T:Telegram.Bot.Exceptions.UserNotFoundException">
+            <summary>
+            The exception that is thrown when the user does not exist
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Exceptions.UserNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new object of the <see cref="T:Telegram.Bot.Exceptions.UserNotFoundException"/> class
+            </summary>
+            <param name="message">The error message of this exception.</param>
+        </member>
+        <member name="T:Telegram.Bot.Exceptions.BotBlockedException">
+            <summary>
+            This represents an exception when the bot is blocked by the user
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Exceptions.BotBlockedException.#ctor(System.String)">
+            <summary>
+            Initializes a new object of the <see cref="T:Telegram.Bot.Exceptions.BotBlockedException"/> class
+            </summary>
+            <param name="message">The message of this exception</param>
+        </member>
+        <member name="T:Telegram.Bot.Exceptions.BotRestrictedException">
+            <summary>
+            THis represents an api error when the bot is restricted in a group.
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Exceptions.BotRestrictedException.#ctor(System.String)">
+            <summary>
+            Initializes a new object of the <see cref="T:Telegram.Bot.Exceptions.BotRestrictedException"/> class.
+            </summary>
+            <param name="message">The error message.</param>
+        </member>
+        <member name="T:Telegram.Bot.Exceptions.ChatNotInitiatedException">
+            <summary>
+            The exception that is thrown when the bot sends message to
+            a user who has not initiated a chat with bot yet
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Exceptions.ChatNotInitiatedException.#ctor(System.String)">
+            <summary>
+            Initializes a new object of the <see cref="T:Telegram.Bot.Exceptions.ChatNotInitiatedException"/> class
+            </summary>
+            <param name="message">The message of this exception</param>
+        </member>
+        <member name="T:Telegram.Bot.Exceptions.MissingParameterException">
+            <summary>
+            Represents an api exception for a missing parameter.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Exceptions.MissingParameterException.MissingParameter">
+            <summary>
+            The missing parameter.
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Exceptions.MissingParameterException.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new object of the <see cref="T:Telegram.Bot.Exceptions.MissingParameterException"/> class
+            </summary>
+            <param name="message">The error message of this exception.</param>
+            <param name="paramName">The name of the missing parameter.</param>
+        </member>
+        <member name="T:Telegram.Bot.Exceptions.NotEnoughRightsException">
+            <summary>
+            Reperesents an api exception when the bot has not enough rights to do something
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Exceptions.NotEnoughRightsException.#ctor(System.String)">
+            <summary>
+            Initializes a new object of the <see cref="T:Telegram.Bot.Exceptions.NotEnoughRightsException"/> class
+            </summary>
+            <param name="message">The error message of this exception.</param>
+        </member>
+        <member name="T:Telegram.Bot.Exceptions.WrongChatTypeException">
+            <summary>
+            Reperesents an api exception when the bot sent a request for the wrong chat type
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Exceptions.WrongChatTypeException.#ctor(System.String)">
+            <summary>
+            Initializes a new object of the <see cref="T:Telegram.Bot.Exceptions.WrongChatTypeException"/> class
+            </summary>
+            <param name="message">The error message of this exception.</param>
+        </member>
         <member name="T:Telegram.Bot.Helpers.Extensions">
             <summary>
             Extension Methods
@@ -334,6 +536,16 @@
         <member name="P:Telegram.Bot.ITelegramBotClient.MessageOffset">
             <summary>
             The current message offset
+            </summary>
+        </member>
+        <member name="E:Telegram.Bot.ITelegramBotClient.MakingApiRequest">
+            <summary>
+            Occurs before sending a request to API
+            </summary>
+        </member>
+        <member name="E:Telegram.Bot.ITelegramBotClient.ApiResponseReceived">
+            <summary>
+            Occurs after receiving the response to an API request
             </summary>
         </member>
         <member name="E:Telegram.Bot.ITelegramBotClient.OnUpdate">
@@ -376,10 +588,20 @@
             Occurs when an error occurs during the background update pooling.
             </summary>
         </member>
+        <member name="M:Telegram.Bot.ITelegramBotClient.MakeRequestAsync``1(Telegram.Bot.Requests.IRequest{``0},System.Threading.CancellationToken)">
+            <summary>
+            Send a request to Bot API
+            </summary>
+            <typeparam name="TResponse">Type of expected result in the response object</typeparam>
+            <param name="request">API request object</param>
+            <param name="cancellationToken"></param>
+            <returns>Result of the API request</returns>
+        </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.TestApiAsync(System.Threading.CancellationToken)">
             <summary>
             Test the API token
             </summary>
+            <param name="cancellationToken"></param>
             <returns><c>true</c> if token is valid</returns>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.StartReceiving(Telegram.Bot.Types.Enums.UpdateType[],System.Threading.CancellationToken)">
@@ -407,7 +629,7 @@
              The negative offset can be specified to retrieve updates starting from -offset update from the end of the updates queue. All previous updates will forgotten.
              </param>
              <param name="limit">
-             Limits the number of updates to be retrieved. Values between 1—100 are accepted.
+             Limits the number of updates to be retrieved. Values between 1-100 are accepted.
              </param>
              <param name="timeout">
              Timeout in seconds for long polling. Defaults to 0, i.e. usual short polling. Should be positive, short polling should be used for testing purposes only.
@@ -415,7 +637,7 @@
              <param name="allowedUpdates">
              List the <see cref="T:Telegram.Bot.Types.Enums.UpdateType"/> of updates you want your bot to receive. See <see cref="T:Telegram.Bot.Types.Enums.UpdateType"/> for a complete list of available update types. Specify an empty list to receive all updates regardless of type (default).
              If not specified, the previous setting will be used.
-             
+            
              Please note that this parameter doesn't affect updates created before the call to the <see cref="M:Telegram.Bot.ITelegramBotClient.GetUpdatesAsync(System.Int32,System.Int32,System.Int32,Telegram.Bot.Types.Enums.UpdateType[],System.Threading.CancellationToken)"/>, so unwanted updates may be received for a short period of time.
              </param>
              <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
@@ -444,11 +666,11 @@
              Upload your public key certificate so that the root certificate in use can be checked.
              See the <see href="https://core.telegram.org/bots/self-signed">self-signed guide</see> for details.
              </param>
-             <param name="maxConnections">Maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery, 1-100. Defaults to 40. Use lower values to limit the load on your bot‘s server, and higher values to increase your bot’s throughput.</param>
+             <param name="maxConnections">Maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery, 1-100. Defaults to 40. Use lower values to limit the load on your bot's server, and higher values to increase your bot's throughput.</param>
              <param name="allowedUpdates">
              List the <see cref="T:Telegram.Bot.Types.Enums.UpdateType"/> of updates you want your bot to receive. See <see cref="T:Telegram.Bot.Types.Enums.UpdateType"/> for a complete list of available update types. Specify an empty list to receive all updates regardless of type (default).
              If not specified, the previous setting will be used.
-             
+            
              Please note that this parameter doesn't affect updates created before the call to the <see cref="M:Telegram.Bot.ITelegramBotClient.GetUpdatesAsync(System.Int32,System.Int32,System.Int32,Telegram.Bot.Types.Enums.UpdateType[],System.Threading.CancellationToken)"/>, so unwanted updates may be received for a short period of time.
              </param>
              <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
@@ -457,7 +679,7 @@
              1. You will not be able to receive updates using getUpdates for as long as an outgoing webhook is set up.
              2. We currently do not support self-signed certificates.
              3. For the moment, the only supported port for Webhooks is 443. We may support additional ports later.
-             
+            
              If you're having any trouble setting up webhooks, please check out this <see href="https://core.telegram.org/bots/webhooks">amazing guide to Webhooks</see>.
              </remarks>
              <see href="https://core.telegram.org/bots/api#setwebhook"/>
@@ -488,7 +710,7 @@
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.SendTextMessageAsync(Telegram.Bot.Types.ChatId,System.String,Telegram.Bot.Types.Enums.ParseMode,System.Boolean,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
             <summary>
-            Use this method to send text messages. On success, the sent Message is returned.
+            Use this method to send text messages. On success, the sent Description is returned.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="text">Text of the message to be sent</param>
@@ -498,24 +720,24 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendmessage"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.ForwardMessageAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.ChatId,System.Int32,System.Boolean,System.Threading.CancellationToken)">
             <summary>
-            Use this method to forward messages of any kind. On success, the sent Message is returned.
+            Use this method to forward messages of any kind. On success, the sent Description is returned.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="fromChatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the chat where the original message was sent</param>
             <param name="messageId">Unique message identifier</param>
             <param name="disableNotification">Sends the message silently. iOS users will not receive a notification, Android users will receive a notification with no sound.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#forwardmessage"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.SendPhotoAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.FileToSend,System.String,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
             <summary>
-            Use this method to send photos. On success, the sent Message is returned.
+            Use this method to send photos. On success, the sent Description is returned.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="photo">Photo to send.</param>
@@ -524,12 +746,12 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendphoto"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.SendAudioAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.FileToSend,System.String,System.Int32,System.String,System.String,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
             <summary>
-            Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent Message is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.
+            Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent Description is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="audio">Audio file to send.</param>
@@ -541,12 +763,12 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendaudio"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.SendDocumentAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.FileToSend,System.String,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
             <summary>
-            Use this method to send general files. On success, the sent Message is returned. Bots can send files of any type of up to 50 MB in size.
+            Use this method to send general files. On success, the sent Description is returned. Bots can send files of any type of up to 50 MB in size.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="document">File to send.</param>
@@ -555,12 +777,12 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#senddocument"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.SendStickerAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.FileToSend,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
             <summary>
-            Use this method to send .webp stickers. On success, the sent Message is returned.
+            Use this method to send .webp stickers. On success, the sent Description is returned.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="sticker">Sticker to send.</param>
@@ -568,12 +790,12 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendsticker"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.SendVideoAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.FileToSend,System.Int32,System.Int32,System.Int32,System.String,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
             <summary>
-            Use this method to send video files, Telegram clients support mp4 videos (other formats may be sent as Document). On success, the sent Message is returned. Bots can send video files of up to 50 MB in size.
+            Use this method to send video files, Telegram clients support mp4 videos (other formats may be sent as Document). On success, the sent Description is returned. Bots can send video files of up to 50 MB in size.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="video">Video to send.</param>
@@ -585,12 +807,12 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendvideo"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.SendVoiceAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.FileToSend,System.String,System.Int32,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
             <summary>
-            Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .ogg file encoded with OPUS (other formats may be sent as Audio or Document). On success, the sent Message is returned. Bots can currently send voice messages of up to 50 MB in size, this limit may be changed in the future.
+            Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .ogg file encoded with OPUS (other formats may be sent as Audio or Document). On success, the sent Description is returned. Bots can currently send voice messages of up to 50 MB in size, this limit may be changed in the future.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="voice">Audio file to send.</param>
@@ -600,7 +822,7 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendvoice"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.SendVideoNoteAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.FileToSend,System.Int32,System.Int32,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
@@ -618,18 +840,31 @@
             <returns>On success, the sent <see cref="T:Telegram.Bot.Types.Message"/> is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendvideonote"/>
         </member>
-        <member name="M:Telegram.Bot.ITelegramBotClient.SendLocationAsync(Telegram.Bot.Types.ChatId,System.Single,System.Single,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
+        <member name="M:Telegram.Bot.ITelegramBotClient.SendMediaGroupAsync(Telegram.Bot.Types.ChatId,System.Collections.Generic.IEnumerable{Telegram.Bot.Types.InputMediaBase},System.Boolean,System.Int32,System.Threading.CancellationToken)">
             <summary>
-            Use this method to send point on the map. On success, the sent Message is returned.
+            Use this method to send a group of photos or videos as an album. On success, an array of the sent Messages is returned.
+            </summary>
+            <param name="chatId">Unique identifier for the target chat or username of the target channel (in the format @channelusername)</param>
+            <param name="media">A JSON-serialized array describing photos and videos to be sent, must include 2–10 items</param>
+            <param name="disableNotification">Sends the messages silently. Users will receive a notification with no sound.</param>
+            <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>On success, an array of the sent <see cref="T:Telegram.Bot.Types.Message"/>s is returned.</returns>
+            <see href="https://core.telegram.org/bots/api#sendmediagroup"/>
+        </member>
+        <member name="M:Telegram.Bot.ITelegramBotClient.SendLocationAsync(Telegram.Bot.Types.ChatId,System.Single,System.Single,System.Int32,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
+            <summary>
+            Use this method to send point on the map. On success, the sent Description is returned.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="latitude">Latitude of location</param>
             <param name="longitude">Longitude of location</param>
+            <param name="livePeriod">Period in seconds for which the location will be updated. Should be between 60 and 86400.</param>
             <param name="disableNotification">Sends the message silently. iOS users will not receive a notification, Android users will receive a notification with no sound.</param>
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendlocation"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.SendVenueAsync(Telegram.Bot.Types.ChatId,System.Single,System.Single,System.String,System.String,System.String,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
@@ -661,7 +896,7 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendcontact"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.SendChatActionAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.Enums.ChatAction,System.Threading.CancellationToken)">
@@ -680,7 +915,7 @@
             </summary>
             <param name="userId">Unique identifier of the target user</param>
             <param name="offset">Sequential number of the first photo to be returned. By default, all photos are returned.</param>
-            <param name="limit">Limits the number of photos to be retrieved. Values between 1—100 are accepted. Defaults to 100.</param>
+            <param name="limit">Limits the number of photos to be retrieved. Values between 1-100 are accepted. Defaults to 100.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
             <returns>Returns a <see cref="T:Telegram.Bot.Types.UserProfilePhotos"/> object</returns>
             <see href="https://core.telegram.org/bots/api#getuserprofilephotos"/>
@@ -717,7 +952,7 @@
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.UnbanChatMemberAsync(Telegram.Bot.Types.ChatId,System.Int32,System.Threading.CancellationToken)">
             <summary>
-            Use this method to unban a previously kicked user in a supergroup. The user will not return to the group automatically, but will be able to join via link, etc. The bot must be an administrator in the group for this to work. 
+            Use this method to unban a previously kicked user in a supergroup. The user will not return to the group automatically, but will be able to join via link, etc. The bot must be an administrator in the group for this to work.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target group</param>
             <param name="userId">Unique identifier of the target user</param>
@@ -770,7 +1005,7 @@
             <param name="text">Text of the notification. If not specified, nothing will be shown to the user</param>
             <param name="showAlert">If true, an alert will be shown by the client instead of a notification at the top of the chat screen. Defaults to false.</param>
             <param name="url">
-            URL that will be opened by the user's client. If you have created a Game and accepted the conditions via @Botfather, specify the URL that opens your game – note that this will only work if the query comes from a callback_game button.
+            URL that will be opened by the user's client. If you have created a Game and accepted the conditions via @Botfather, specify the URL that opens your game — note that this will only work if the query comes from a callback_game button.
             Otherwise, you may use links like telegram.me/your_bot? start = XXXX that open your bot with a parameter.
             </param>
             <param name="cacheTime">The maximum amount of time in seconds that the result of the callback query may be cached client-side. Telegram apps will support caching starting in version 3.14.</param>
@@ -828,8 +1063,29 @@
             <param name="disableWebPagePreview">Disables link previews for links in this message</param>
             <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the edited Message is returned.</returns>
+            <returns>On success, the edited Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#editmessagetext"/>
+        </member>
+        <member name="M:Telegram.Bot.ITelegramBotClient.StopMessageLiveLocationAsync(Telegram.Bot.Types.ChatId,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
+            <summary>
+            Use this method to stop updating a live location message sent by the bot before live_period expires.
+            </summary>
+            <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
+            <param name="messageId">Unique identifier of the sent message</param>
+            <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>On success the sent <see cref="T:Telegram.Bot.Types.Message"/> is returned.</returns>
+            <see href="https://core.telegram.org/bots/api#stopmessagelivelocation"/>
+        </member>
+        <member name="M:Telegram.Bot.ITelegramBotClient.StopMessageLiveLocationAsync(System.String,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
+            <summary>
+            Use this method to stop updating a live location message sent via the bot (for inline bots) before live_period expires.
+            </summary>
+            <param name="inlineMessageId">Identifier of the inline message</param>
+            <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns><c>true</c> on success.</returns>
+            <see href="https://core.telegram.org/bots/api#stopmessagelivelocation"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.EditInlineMessageTextAsync(System.String,System.String,Telegram.Bot.Types.Enums.ParseMode,System.Boolean,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
             <summary>
@@ -841,7 +1097,7 @@
             <param name="disableWebPagePreview">Disables link previews for links in this message</param>
             <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>><c>true</c> on success.</returns>
+            <returns><c>true</c> on success.</returns>
             <see href="https://core.telegram.org/bots/api#editmessagetext"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.EditMessageCaptionAsync(Telegram.Bot.Types.ChatId,System.Int32,System.String,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
@@ -853,7 +1109,7 @@
             <param name="caption">New caption of the message</param>
             <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the edited Message is returned.</returns>
+            <returns>On success, the edited Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#editmessagecaption"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.EditInlineMessageCaptionAsync(System.String,System.String,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
@@ -864,7 +1120,7 @@
             <param name="caption">New caption of the message</param>
             <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>><c>true</c> on success.</returns>
+            <returns><c>true</c> on success.</returns>
             <see href="https://core.telegram.org/bots/api#editmessagecaption"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.EditMessageReplyMarkupAsync(Telegram.Bot.Types.ChatId,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
@@ -875,8 +1131,33 @@
             <param name="messageId">Unique identifier of the sent message</param>
             <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the edited Message is returned.</returns>
+            <returns>On success, the edited Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#editmessagereplymarkup"/>
+        </member>
+        <member name="M:Telegram.Bot.ITelegramBotClient.EditMessageLiveLocationAsync(Telegram.Bot.Types.ChatId,System.Int32,System.Single,System.Single,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
+            <summary>
+            Use this method to edit live location messages sent by the bot.
+            </summary>
+            <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
+            <param name="messageId">Unique identifier of the sent message</param>
+            <param name="latitude">Latitude of location</param>
+            <param name="longitude">Longitude of location</param>
+            <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>On success the edited <see cref="T:Telegram.Bot.Types.Message"/> is returned.</returns>
+            <see href="https://core.telegram.org/bots/api#editmessagelivelocation"/>
+        </member>
+        <member name="M:Telegram.Bot.ITelegramBotClient.EditMessageLiveLocationAsync(System.String,System.Single,System.Single,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
+            <summary>
+            Use this method to edit live location messages sent via the bot (for inline bots).
+            </summary>
+            <param name="inlineMessageId">Unique identifier of the sent message</param>
+            <param name="latitude">Latitude of location</param>
+            <param name="longitude">Longitude of location</param>
+            <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns><c>true</c> on success.</returns>
+            <see href="https://core.telegram.org/bots/api#editmessagelivelocation"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.EditInlineMessageReplyMarkupAsync(System.String,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
             <summary>
@@ -885,7 +1166,7 @@
             <param name="inlineMessageId">Unique identifier of the sent message</param>
             <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>><c>true</c> on success.</returns>
+            <returns><c>true</c> on success.</returns>
             <see href="https://core.telegram.org/bots/api#editmessagereplymarkup"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.DeleteMessageAsync(Telegram.Bot.Types.ChatId,System.Int32,System.Threading.CancellationToken)">
@@ -913,7 +1194,7 @@
             <returns>On success, <c>true</c> is returned.</returns>
             <see href="https://core.telegram.org/bots/api#answerinlinequery"/>
         </member>
-        <member name="M:Telegram.Bot.ITelegramBotClient.SendInvoiceAsync(Telegram.Bot.Types.ChatId,System.String,System.String,System.String,System.String,System.String,System.String,Telegram.Bot.Types.Payments.LabeledPrice[],System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.InlineKeyboardMarkup,System.Threading.CancellationToken)">
+        <member name="M:Telegram.Bot.ITelegramBotClient.SendInvoiceAsync(Telegram.Bot.Types.ChatId,System.String,System.String,System.String,System.String,System.String,System.String,Telegram.Bot.Types.Payments.LabeledPrice[],System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.InlineKeyboardMarkup,System.Threading.CancellationToken,System.String)">
             <summary>
             Use this method to send invoices.
             </summary>
@@ -924,6 +1205,7 @@
             <param name="providerToken">Payments provider token, obtained via Botfather</param>
             <param name="startParameter">Unique deep-linking parameter that can be used to generate this invoice when used as a start parameter</param>
             <param name="currency">Three-letter ISO 4217 currency code, see more on currencies</param>
+            <param name="providerData">JSON-encoded data about the invoice, which will be shared with the payment provider. A detailed description of required fields should be provided by the payment provider.</param>
             <param name="prices">Price breakdown, a list of components (e.g. product price, tax, discount, delivery cost, delivery tax, bonus, etc.)</param>
             <param name="photoUrl">URL of the product photo for the invoice. Can be a photo of the goods or a marketing image for a service.</param>
             <param name="photoSize">Photo size</param>
@@ -947,8 +1229,8 @@
             </summary>
             <param name="shippingQueryId">Unique identifier for the query to be answered</param>
             <param name="ok">Specify True if delivery to the specified address is possible and False if there are any problems</param>
-            <param name="shippingOptions">Required if ok is True.</param>
-            <param name="errorMessage">Required if ok is False. Error message in human readable form that explains why it is impossible to complete the order </param>
+            <param name="shippingOptions">Required if OK is True.</param>
+            <param name="errorMessage">Required if OK is False. Error message in human readable form that explains why it is impossible to complete the order </param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
             <returns>On success, True is returned.</returns>
             <see href="https://core.telegram.org/bots/api#answershippingquery"/>
@@ -959,7 +1241,7 @@
             </summary>
             <param name="preCheckoutQueryId">Unique identifier for the query to be answered</param>
             <param name="ok">Specify True if everything is alright</param>
-            <param name="errorMessage">Required if ok is False. Error message in human readable form that explains the reason for failure to proceed with the checkout</param>
+            <param name="errorMessage">Required if OK is False. Error message in human readable form that explains the reason for failure to proceed with the checkout</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
             <returns>On success, True is returned.</returns>
             <remarks>Note: The Bot API must receive an answer within 10 seconds after the pre-checkout query was sent.</remarks>
@@ -975,7 +1257,7 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendgame"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.SetGameScoreAsync(System.Int32,System.Int32,Telegram.Bot.Types.ChatId,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Threading.CancellationToken)">
@@ -1004,7 +1286,7 @@
             <param name="disableEditMessage">Pass True, if the game message should not be automatically edited to include the current scoreboard</param>
             <param name="editMessage">Pass True, if the game message should be automatically edited to include the current scoreboard.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, if the message was sent by the bot, returns the edited Message</returns>
+            <returns>On success, if the message was sent by the bot, returns the edited Description</returns>
             <see href="https://core.telegram.org/bots/api#setgamescore"/>
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.GetGameHighScoresAsync(System.Int32,Telegram.Bot.Types.ChatId,System.Int32,System.Threading.CancellationToken)">
@@ -1057,10 +1339,10 @@
         </member>
         <member name="M:Telegram.Bot.ITelegramBotClient.CreateNewStickerSetAsnyc(System.Int32,System.String,System.String,Telegram.Bot.Types.FileToSend,System.String,System.Boolean,Telegram.Bot.Types.MaskPosition,System.Threading.CancellationToken)">
             <summary>
-            Use this method to create new sticker set owned by a user. The bot will be able to edit the created sticker set. 
+            Use this method to create new sticker set owned by a user. The bot will be able to edit the created sticker set.
             </summary>
             <param name="userId">User identifier of created sticker set owner</param>
-            <param name="name">Short name of sticker set, to be used in t.me/addstickers/ URLs (e.g., animals). Can contain only english letters, digits and underscores. Must begin with a letter, can't contain consecutive underscores and must end in “_by_&lt;bot_username&gt;”. &lt;bot_username&gt; is case insensitive. 1-64 characters.</param>
+            <param name="name">Short name of sticker set, to be used in t.me/addstickers/ URLs (e.g., animals). Can contain only English letters, digits and underscores. Must begin with a letter, can't contain consecutive underscores and must end in “_by_&lt;bot_username&gt;”. &lt;bot_username&gt; is case insensitive. 1-64 characters.</param>
             <param name="title">Sticker set title, 1-64 characters</param>
             <param name="pngSticker">Png image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px.</param>
             <param name="emojis">One or more emoji corresponding to the sticker</param>
@@ -1170,6 +1452,183 @@
             <returns>Returns true on success</returns>
             <see href="https://core.telegram.org/bots/api#unpinchatmessage"/>
         </member>
+        <member name="M:Telegram.Bot.ITelegramBotClient.SetChatStickerSetAsync(Telegram.Bot.Types.ChatId,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Use this method to set a new group sticker set for a supergroup.
+            </summary>
+            <param name="chatId">Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)</param>
+            <param name="stickerSetName">Name of the sticker set to be set as the group sticker set</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>Returns true on success</returns>
+            <see href="https://core.telegram.org/bots/api#setchatstickerset"/>
+        </member>
+        <member name="M:Telegram.Bot.ITelegramBotClient.DeleteChatStickerSetAsync(Telegram.Bot.Types.ChatId,System.Threading.CancellationToken)">
+            <summary>
+            Use this method to delete a group sticker set from a supergroup.
+            </summary>
+            <param name="chatId">Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>Returns true on success</returns>
+            <see href="https://core.telegram.org/bots/api#deletechatstickerset"/>
+        </member>
+        <member name="T:Telegram.Bot.Requests.IRequest`1">
+            <summary>
+            Represents a request to Bot API
+            </summary>
+            <typeparam name="TResponse">Type of result expected in result</typeparam>
+        </member>
+        <member name="P:Telegram.Bot.Requests.IRequest`1.Method">
+            <summary>
+            HTTP method of request
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Requests.IRequest`1.MethodName">
+            <summary>
+            API method name
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Requests.IRequest`1.ToHttpContent(Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Generate content of HTTP message
+            </summary>
+            <param name="serializerSettings">JSON serialization setting</param>
+            <returns>Content of HTTP request</returns>
+        </member>
+        <member name="T:Telegram.Bot.Requests.RequestBase`1">
+            <summary>
+            Represents a API request
+            </summary>
+            <typeparam name="TResponse">Type of result expected in result</typeparam>
+        </member>
+        <member name="P:Telegram.Bot.Requests.RequestBase`1.Method">
+            <inheritdoc />
+        </member>
+        <member name="P:Telegram.Bot.Requests.RequestBase`1.MethodName">
+            <inheritdoc />
+        </member>
+        <member name="M:Telegram.Bot.Requests.RequestBase`1.#ctor(System.String)">
+            <summary>
+            Initializes an instance of request
+            </summary>
+            <param name="methodName">Bot API method</param>
+        </member>
+        <member name="M:Telegram.Bot.Requests.RequestBase`1.#ctor(System.String,System.Net.Http.HttpMethod)">
+            <summary>
+            Initializes an instance of request
+            </summary>
+            <param name="methodName">Bot API method</param>
+            <param name="method">HTTP method to use</param>
+        </member>
+        <member name="M:Telegram.Bot.Requests.RequestBase`1.ToHttpContent(Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Generate content of HTTP message
+            </summary>
+            <param name="serializerSettings">JSON serialization setting</param>
+            <returns>Content of HTTP request</returns>
+        </member>
+        <member name="T:Telegram.Bot.Requests.SendMediaGroupRequest">
+            <summary>
+            Send a group of photos or videos as an album. On success, an array of the sent Messages is returned.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Requests.SendMediaGroupRequest.ChatId">
+            <summary>
+            Unique identifier for the target chat or username of the target channel (in the format @channelusername)
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Requests.SendMediaGroupRequest.Media">
+            <summary>
+            A JSON-serialized array describing photos and videos to be sent, must include 2–10 items
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Requests.SendMediaGroupRequest.DisableNotification">
+            <summary>
+            Sends the messages silently. Users will receive a notification with no sound.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Requests.SendMediaGroupRequest.ReplyToMessageId">
+            <summary>
+            If the messages are a reply, ID of the original message
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Requests.SendMediaGroupRequest.#ctor(Telegram.Bot.Types.ChatId,System.Collections.Generic.IEnumerable{Telegram.Bot.Types.InputMediaBase})">
+            <summary>
+            Initializes a request with chat_id and media
+            </summary>
+            <param name="chatId">ID of target chat</param>
+            <param name="media">Media items to send</param>
+        </member>
+        <member name="M:Telegram.Bot.Requests.SendMediaGroupRequest.#ctor">
+            <summary>
+            Initializes a new request
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Requests.SendMediaGroupRequest.ToHttpContent(Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Generate content of HTTP message
+            </summary>
+            <param name="serializerSettings">JSON serialization setting</param>
+            <returns>Content of HTTP request</returns>
+        </member>
+        <member name="T:Telegram.Bot.Responses.IResponse">
+            <summary>
+            Marker for API responses
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.Responses.JsonArrayResponse`1">
+            <summary>
+            Represents an API response with JSON serialized array results
+            </summary>
+            <typeparam name="T">Type of array items</typeparam>
+        </member>
+        <member name="M:Telegram.Bot.Responses.JsonArrayResponse`1.GetEnumerator">
+            <summary>Returns an enumerator that iterates through the collection.</summary>
+            <returns>An enumerator that can be used to iterate through the collection.</returns>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:Telegram.Bot.Responses.JsonArrayResponse`1.Add(`0)">
+            <summary>Adds an item to the <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+            <param name="item">The object to add to the <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+            <exception cref="T:System.NotSupportedException">The <see cref="T:System.Collections.Generic.ICollection`1" /> is read-only.</exception>
+        </member>
+        <member name="M:Telegram.Bot.Responses.JsonArrayResponse`1.Clear">
+            <summary>Removes all items from the <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+            <exception cref="T:System.NotSupportedException">The <see cref="T:System.Collections.Generic.ICollection`1" /> is read-only. </exception>
+        </member>
+        <member name="M:Telegram.Bot.Responses.JsonArrayResponse`1.Contains(`0)">
+            <summary>Determines whether the <see cref="T:System.Collections.Generic.ICollection`1" /> contains a specific value.</summary>
+            <returns>true if <paramref name="item" /> is found in the <see cref="T:System.Collections.Generic.ICollection`1" />; otherwise, false.</returns>
+            <param name="item">The object to locate in the <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+        </member>
+        <member name="M:Telegram.Bot.Responses.JsonArrayResponse`1.CopyTo(`0[],System.Int32)">
+            <summary>Copies the elements of the <see cref="T:System.Collections.Generic.ICollection`1" /> to an <see cref="T:System.Array" />, starting at a particular <see cref="T:System.Array" /> index.</summary>
+            <param name="array">The one-dimensional <see cref="T:System.Array" /> that is the destination of the elements copied from <see cref="T:System.Collections.Generic.ICollection`1" />. The <see cref="T:System.Array" /> must have zero-based indexing.</param>
+            <param name="arrayIndex">The zero-based index in <paramref name="array" /> at which copying begins.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="array" /> is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="arrayIndex" /> is less than 0.</exception>
+            <exception cref="T:System.ArgumentException">The number of elements in the source <see cref="T:System.Collections.Generic.ICollection`1" /> is greater than the available space from <paramref name="arrayIndex" /> to the end of the destination <paramref name="array" />.</exception>
+        </member>
+        <member name="M:Telegram.Bot.Responses.JsonArrayResponse`1.Remove(`0)">
+            <summary>Removes the first occurrence of a specific object from the <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+            <returns>true if <paramref name="item" /> was successfully removed from the <see cref="T:System.Collections.Generic.ICollection`1" />; otherwise, false. This method also returns false if <paramref name="item" /> is not found in the original <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
+            <param name="item">The object to remove from the <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+            <exception cref="T:System.NotSupportedException">The <see cref="T:System.Collections.Generic.ICollection`1" /> is read-only.</exception>
+        </member>
+        <member name="P:Telegram.Bot.Responses.JsonArrayResponse`1.Count">
+            <summary>Gets the number of elements contained in the <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+            <returns>The number of elements contained in the <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
+        </member>
+        <member name="P:Telegram.Bot.Responses.JsonArrayResponse`1.IsReadOnly">
+            <summary>Gets a value indicating whether the <see cref="T:System.Collections.Generic.ICollection`1" /> is read-only.</summary>
+            <returns>true if the <see cref="T:System.Collections.Generic.ICollection`1" /> is read-only; otherwise, false.</returns>
+        </member>
+        <member name="T:Telegram.Bot.Responses.SendMediaGroupResponse">
+            <summary>
+            Response of <see cref="T:Telegram.Bot.Requests.SendMediaGroupRequest"/> request
+            </summary>
+        </member>
         <member name="T:Telegram.Bot.TelegramBotClient">
             <summary>
             A client to use the Telegram Bot API
@@ -1188,6 +1647,16 @@
         <member name="P:Telegram.Bot.TelegramBotClient.MessageOffset">
             <summary>
             The current message offset
+            </summary>
+        </member>
+        <member name="E:Telegram.Bot.TelegramBotClient.MakingApiRequest">
+            <summary>
+            Occurs before sending a request to API
+            </summary>
+        </member>
+        <member name="E:Telegram.Bot.TelegramBotClient.ApiResponseReceived">
+            <summary>
+            Occurs after receiving the response to an API request
             </summary>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.OnUpdateReceived(Telegram.Bot.Args.UpdateEventArgs)">
@@ -1252,6 +1721,15 @@
             <param name="webProxy">Use this <see cref="T:System.Net.IWebProxy"/> to connect to the API</param>
             <exception cref="T:System.ArgumentException">Thrown if <paramref name="token"/> format is invalid</exception>
         </member>
+        <member name="M:Telegram.Bot.TelegramBotClient.MakeRequestAsync``1(Telegram.Bot.Requests.IRequest{``0},System.Threading.CancellationToken)">
+            <summary>
+            Send a request to Bot API
+            </summary>
+            <typeparam name="TResponse">Type of expected result in the response object</typeparam>
+            <param name="request">API request object</param>
+            <param name="cancellationToken"></param>
+            <returns>Result of the API request</returns>
+        </member>
         <member name="M:Telegram.Bot.TelegramBotClient.TestApiAsync(System.Threading.CancellationToken)">
             <summary>
             Test the API token
@@ -1291,7 +1769,7 @@
              <param name="allowedUpdates">
              List the <see cref="T:Telegram.Bot.Types.Enums.UpdateType"/> of updates you want your bot to receive. See <see cref="T:Telegram.Bot.Types.Enums.UpdateType"/> for a complete list of available update types. Specify an empty list to receive all updates regardless of type (default).
              If not specified, the previous setting will be used.
-             
+            
              Please note that this parameter doesn't affect updates created before the call to the <see cref="M:Telegram.Bot.TelegramBotClient.GetUpdatesAsync(System.Int32,System.Int32,System.Int32,Telegram.Bot.Types.Enums.UpdateType[],System.Threading.CancellationToken)"/>, so unwanted updates may be received for a short period of time.
              </param>
              <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
@@ -1320,11 +1798,11 @@
              Upload your public key certificate so that the root certificate in use can be checked.
              See the <see href="https://core.telegram.org/bots/self-signed">self-signed guide</see> for details.
              </param>
-             <param name="maxConnections">Maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery, 1-100. Defaults to 40. Use lower values to limit the load on your bot‘s server, and higher values to increase your bot’s throughput.</param>
+             <param name="maxConnections">Maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery, 1-100. Defaults to 40. Use lower values to limit the load on your bot‘s server, and higher values to increase your bot's throughput.</param>
              <param name="allowedUpdates">
              List the <see cref="T:Telegram.Bot.Types.Enums.UpdateType"/> of updates you want your bot to receive. See <see cref="T:Telegram.Bot.Types.Enums.UpdateType"/> for a complete list of available update types. Specify an empty list to receive all updates regardless of type (default).
              If not specified, the previous setting will be used.
-             
+            
              Please note that this parameter doesn't affect updates created before the call to the <see cref="M:Telegram.Bot.TelegramBotClient.GetUpdatesAsync(System.Int32,System.Int32,System.Int32,Telegram.Bot.Types.Enums.UpdateType[],System.Threading.CancellationToken)"/>, so unwanted updates may be received for a short period of time.
              </param>
              <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
@@ -1333,7 +1811,7 @@
              1. You will not be able to receive updates using getUpdates for as long as an outgoing webhook is set up.
              2. We currently do not support self-signed certificates.
              3. For the moment, the only supported port for Webhooks is 443. We may support additional ports later.
-             
+            
              If you're having any trouble setting up webhooks, please check out this <see href="https://core.telegram.org/bots/webhooks">amazing guide to Webhooks</see>.
              </remarks>
              <see href="https://core.telegram.org/bots/api#setwebhook"/>
@@ -1364,7 +1842,7 @@
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.SendTextMessageAsync(Telegram.Bot.Types.ChatId,System.String,Telegram.Bot.Types.Enums.ParseMode,System.Boolean,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
             <summary>
-            Use this method to send text messages. On success, the sent Message is returned.
+            Use this method to send text messages. On success, the sent Description is returned.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="text">Text of the message to be sent</param>
@@ -1374,24 +1852,24 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendmessage"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.ForwardMessageAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.ChatId,System.Int32,System.Boolean,System.Threading.CancellationToken)">
             <summary>
-            Use this method to forward messages of any kind. On success, the sent Message is returned.
+            Use this method to forward messages of any kind. On success, the sent Description is returned.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="fromChatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the chat where the original message was sent</param>
             <param name="messageId">Unique message identifier</param>
             <param name="disableNotification">Sends the message silently. iOS users will not receive a notification, Android users will receive a notification with no sound.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#forwardmessage"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.SendPhotoAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.FileToSend,System.String,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
             <summary>
-            Use this method to send photos. On success, the sent Message is returned.
+            Use this method to send photos. On success, the sent Description is returned.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="photo">Photo to send.</param>
@@ -1400,12 +1878,12 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendphoto"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.SendAudioAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.FileToSend,System.String,System.Int32,System.String,System.String,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
             <summary>
-            Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent Message is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.
+            Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent Description is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="audio">Audio file to send.</param>
@@ -1417,12 +1895,12 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendaudio"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.SendDocumentAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.FileToSend,System.String,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
             <summary>
-            Use this method to send general files. On success, the sent Message is returned. Bots can send files of any type of up to 50 MB in size.
+            Use this method to send general files. On success, the sent Description is returned. Bots can send files of any type of up to 50 MB in size.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="document">File to send.</param>
@@ -1431,12 +1909,12 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#senddocument"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.SendStickerAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.FileToSend,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
             <summary>
-            Use this method to send .webp stickers. On success, the sent Message is returned.
+            Use this method to send .webp stickers. On success, the sent Description is returned.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="sticker">Sticker to send.</param>
@@ -1444,12 +1922,12 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendsticker"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.SendVideoAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.FileToSend,System.Int32,System.Int32,System.Int32,System.String,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
             <summary>
-            Use this method to send video files, Telegram clients support mp4 videos (other formats may be sent as Document). On success, the sent Message is returned. Bots can send video files of up to 50 MB in size.
+            Use this method to send video files, Telegram clients support mp4 videos (other formats may be sent as Document). On success, the sent Description is returned. Bots can send video files of up to 50 MB in size.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="video">Video to send.</param>
@@ -1461,12 +1939,12 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendvideo"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.SendVoiceAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.FileToSend,System.String,System.Int32,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
             <summary>
-            Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .ogg file encoded with OPUS (other formats may be sent as Audio or Document). On success, the sent Message is returned. Bots can currently send voice messages of up to 50 MB in size, this limit may be changed in the future.
+            Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .ogg file encoded with OPUS (other formats may be sent as Audio or Document). On success, the sent Description is returned. Bots can currently send voice messages of up to 50 MB in size, this limit may be changed in the future.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="voice">Audio file to send.</param>
@@ -1476,7 +1954,7 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendvoice"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.SendVideoNoteAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.FileToSend,System.Int32,System.Int32,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
@@ -1494,18 +1972,31 @@
             <returns>On success, the sent <see cref="T:Telegram.Bot.Types.Message"/> is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendvideonote"/>
         </member>
-        <member name="M:Telegram.Bot.TelegramBotClient.SendLocationAsync(Telegram.Bot.Types.ChatId,System.Single,System.Single,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
+        <member name="M:Telegram.Bot.TelegramBotClient.SendMediaGroupAsync(Telegram.Bot.Types.ChatId,System.Collections.Generic.IEnumerable{Telegram.Bot.Types.InputMediaBase},System.Boolean,System.Int32,System.Threading.CancellationToken)">
             <summary>
-            Use this method to send point on the map. On success, the sent Message is returned.
+            Use this method to send a group of photos or videos as an album. On success, an array of the sent Messages is returned.
+            </summary>
+            <param name="chatId">Unique identifier for the target chat or username of the target channel (in the format @channelusername)</param>
+            <param name="media">A JSON-serialized array describing photos and videos to be sent, must include 2–10 items</param>
+            <param name="disableNotification">Sends the messages silently. Users will receive a notification with no sound.</param>
+            <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>On success, an array of the sent <see cref="T:Telegram.Bot.Types.Message"/>s is returned.</returns>
+            <see href="https://core.telegram.org/bots/api#sendmediagroup"/>
+        </member>
+        <member name="M:Telegram.Bot.TelegramBotClient.SendLocationAsync(Telegram.Bot.Types.ChatId,System.Single,System.Single,System.Int32,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
+            <summary>
+            Use this method to send point on the map. On success, the sent Description is returned.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
             <param name="latitude">Latitude of location</param>
             <param name="longitude">Longitude of location</param>
+            <param name="livePeriod">Period in seconds for which the location will be updated. Should be between 60 and 86400.</param>
             <param name="disableNotification">Sends the message silently. iOS users will not receive a notification, Android users will receive a notification with no sound.</param>
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendlocation"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.SendVenueAsync(Telegram.Bot.Types.ChatId,System.Single,System.Single,System.String,System.String,System.String,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
@@ -1537,7 +2028,7 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendcontact"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.SendChatActionAsync(Telegram.Bot.Types.ChatId,Telegram.Bot.Types.Enums.ChatAction,System.Threading.CancellationToken)">
@@ -1593,7 +2084,7 @@
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.UnbanChatMemberAsync(Telegram.Bot.Types.ChatId,System.Int32,System.Threading.CancellationToken)">
             <summary>
-            Use this method to unban a previously kicked user in a supergroup. The user will not return to the group automatically, but will be able to join via link, etc. The bot must be an administrator in the group for this to work. 
+            Use this method to unban a previously kicked user in a supergroup. The user will not return to the group automatically, but will be able to join via link, etc. The bot must be an administrator in the group for this to work.
             </summary>
             <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target group</param>
             <param name="userId">Unique identifier of the target user</param>
@@ -1693,6 +2184,27 @@
             <remarks>Pass False for all boolean parameters to demote a user.</remarks>
             <see href="https://core.telegram.org/bots/api#promotechatmember"/>
         </member>
+        <member name="M:Telegram.Bot.TelegramBotClient.StopMessageLiveLocationAsync(Telegram.Bot.Types.ChatId,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
+            <summary>
+            Use this method to stop updating a live location message sent by the bot before live_period expires.
+            </summary>
+            <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
+            <param name="messageId">Unique identifier of the sent message</param>
+            <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>On success the sent <see cref="T:Telegram.Bot.Types.Message"/> is returned.</returns>
+            <see href="https://core.telegram.org/bots/api#stopmessagelivelocation"/>
+        </member>
+        <member name="M:Telegram.Bot.TelegramBotClient.StopMessageLiveLocationAsync(System.String,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
+            <summary>
+            Use this method to stop updating a live location message sent via the bot (for inline bots) before live_period expires.
+            </summary>
+            <param name="inlineMessageId">Identifier of the inline message</param>
+            <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns><c>true</c> on success.</returns>
+            <see href="https://core.telegram.org/bots/api#stopmessagelivelocation"/>
+        </member>
         <member name="M:Telegram.Bot.TelegramBotClient.EditMessageTextAsync(Telegram.Bot.Types.ChatId,System.Int32,System.String,Telegram.Bot.Types.Enums.ParseMode,System.Boolean,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
             <summary>
             Use this method to edit text messages sent by the bot or via the bot (for inline bots).
@@ -1704,7 +2216,7 @@
             <param name="disableWebPagePreview">Disables link previews for links in this message</param>
             <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the edited Message is returned.</returns>
+            <returns>On success, the edited Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#editmessagetext"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.EditInlineMessageTextAsync(System.String,System.String,Telegram.Bot.Types.Enums.ParseMode,System.Boolean,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
@@ -1717,7 +2229,7 @@
             <param name="disableWebPagePreview">Disables link previews for links in this message</param>
             <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>><c>true</c> on success.</returns>
+            <returns><c>true</c> on success.</returns>
             <see href="https://core.telegram.org/bots/api#editmessagetext"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.EditMessageCaptionAsync(Telegram.Bot.Types.ChatId,System.Int32,System.String,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
@@ -1729,7 +2241,7 @@
             <param name="caption">New caption of the message</param>
             <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the edited Message is returned.</returns>
+            <returns>On success, the edited Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#editmessagecaption"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.EditInlineMessageCaptionAsync(System.String,System.String,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
@@ -1740,7 +2252,7 @@
             <param name="caption">New caption of the message</param>
             <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>><c>true</c> on success.</returns>
+            <returns><c>true</c> on success.</returns>
             <see href="https://core.telegram.org/bots/api#editmessagecaption"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.EditMessageReplyMarkupAsync(Telegram.Bot.Types.ChatId,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
@@ -1751,7 +2263,7 @@
             <param name="messageId">Unique identifier of the sent message</param>
             <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the edited Message is returned.</returns>
+            <returns>On success, the edited Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#editmessagereplymarkup"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.EditInlineMessageReplyMarkupAsync(System.String,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
@@ -1761,8 +2273,33 @@
             <param name="inlineMessageId">Unique identifier of the sent message</param>
             <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>><c>true</c> on success.</returns>
+            <returns><c>true</c> on success.</returns>
             <see href="https://core.telegram.org/bots/api#editmessagereplymarkup"/>
+        </member>
+        <member name="M:Telegram.Bot.TelegramBotClient.EditMessageLiveLocationAsync(Telegram.Bot.Types.ChatId,System.Int32,System.Single,System.Single,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
+            <summary>
+            Use this method to edit live location messages sent by the bot.
+            </summary>
+            <param name="chatId"><see cref="T:Telegram.Bot.Types.ChatId"/> for the target chat</param>
+            <param name="messageId">Unique identifier of the sent message</param>
+            <param name="latitude">Latitude of location</param>
+            <param name="longitude">Longitude of location</param>
+            <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>On success the edited <see cref="T:Telegram.Bot.Types.Message"/> is returned.</returns>
+            <see href="https://core.telegram.org/bots/api#editmessagelivelocation"/>
+        </member>
+        <member name="M:Telegram.Bot.TelegramBotClient.EditMessageLiveLocationAsync(System.String,System.Single,System.Single,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Threading.CancellationToken)">
+            <summary>
+            Use this method to edit live location messages sent via the bot (for inline bots).
+            </summary>
+            <param name="inlineMessageId">Unique identifier of the sent message</param>
+            <param name="latitude">Latitude of location</param>
+            <param name="longitude">Longitude of location</param>
+            <param name="replyMarkup">A JSON-serialized object for an inline keyboard.</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns><c>true</c> on success.</returns>
+            <see href="https://core.telegram.org/bots/api#editmessagelivelocation"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.DeleteMessageAsync(Telegram.Bot.Types.ChatId,System.Int32,System.Threading.CancellationToken)">
             <summary>
@@ -1789,7 +2326,7 @@
             <returns>On success, <c>true</c> is returned.</returns>
             <see href="https://core.telegram.org/bots/api#answerinlinequery"/>
         </member>
-        <member name="M:Telegram.Bot.TelegramBotClient.SendInvoiceAsync(Telegram.Bot.Types.ChatId,System.String,System.String,System.String,System.String,System.String,System.String,Telegram.Bot.Types.Payments.LabeledPrice[],System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.InlineKeyboardMarkup,System.Threading.CancellationToken)">
+        <member name="M:Telegram.Bot.TelegramBotClient.SendInvoiceAsync(Telegram.Bot.Types.ChatId,System.String,System.String,System.String,System.String,System.String,System.String,Telegram.Bot.Types.Payments.LabeledPrice[],System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.InlineKeyboardMarkup,System.Threading.CancellationToken,System.String)">
             <summary>
             Use this method to send invoices.
             </summary>
@@ -1801,6 +2338,7 @@
             <param name="startParameter">Unique deep-linking parameter that can be used to generate this invoice when used as a start parameter</param>
             <param name="currency">Three-letter ISO 4217 currency code, see more on currencies</param>
             <param name="prices">Price breakdown, a list of components (e.g. product price, tax, discount, delivery cost, delivery tax, bonus, etc.)</param>
+            <param name="providerData">JSON-encoded data about the invoice, which will be shared with the payment provider. A detailed description of required fields should be provided by the payment provider.</param>
             <param name="photoUrl">URL of the product photo for the invoice. Can be a photo of the goods or a marketing image for a service.</param>
             <param name="photoSize">Photo size</param>
             <param name="photoWidth">Photo width</param>
@@ -1823,8 +2361,8 @@
             </summary>
             <param name="shippingQueryId">Unique identifier for the query to be answered</param>
             <param name="ok">Specify True if delivery to the specified address is possible and False if there are any problems</param>
-            <param name="shippingOptions">Required if ok is True.</param>
-            <param name="errorMessage">Required if ok is False. Error message in human readable form that explains why it is impossible to complete the order </param>
+            <param name="shippingOptions">Required ifOKis True.</param>
+            <param name="errorMessage">Required ifOKis False. Error message in human readable form that explains why it is impossible to complete the order </param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
             <returns>On success, True is returned.</returns>
             <see href="https://core.telegram.org/bots/api#answershippingquery"/>
@@ -1835,7 +2373,7 @@
             </summary>
             <param name="preCheckoutQueryId">Unique identifier for the query to be answered</param>
             <param name="ok">Specify True if everything is alright</param>
-            <param name="errorMessage">Required if ok is False. Error message in human readable form that explains the reason for failure to proceed with the checkout</param>
+            <param name="errorMessage">Required ifOKis False. Error message in human readable form that explains the reason for failure to proceed with the checkout</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
             <returns>On success, True is returned.</returns>
             <remarks>Note: The Bot API must receive an answer within 10 seconds after the pre-checkout query was sent.</remarks>
@@ -1851,7 +2389,7 @@
             <param name="replyToMessageId">If the message is a reply, ID of the original message</param>
             <param name="replyMarkup">Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
             <see href="https://core.telegram.org/bots/api#sendgame"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.SetGameScoreAsync(System.Int32,System.Int32,Telegram.Bot.Types.ChatId,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Threading.CancellationToken)">
@@ -1880,7 +2418,7 @@
             <param name="disableEditMessage">Pass True, if the game message should not be automatically edited to include the current scoreboard</param>
             <param name="editMessage">Pass True, if the game message should be automatically edited to include the current scoreboard.</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, if the message was sent by the bot, returns the edited Message</returns>
+            <returns>On success, if the message was sent by the bot, returns the edited Description</returns>
             <see href="https://core.telegram.org/bots/api#setgamescore"/>
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.GetGameHighScoresAsync(System.Int32,Telegram.Bot.Types.ChatId,System.Int32,System.Threading.CancellationToken)">
@@ -1980,6 +2518,25 @@
             <returns>Returns true on success</returns>
             <see href="https://core.telegram.org/bots/api#unpinchatmessage"/>
         </member>
+        <member name="M:Telegram.Bot.TelegramBotClient.SetChatStickerSetAsync(Telegram.Bot.Types.ChatId,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Use this method to set a new group sticker set for a supergroup.
+            </summary>
+            <param name="chatId">Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)</param>
+            <param name="stickerSetName">Name of the sticker set to be set as the group sticker set</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>Returns true on success</returns>
+            <see href="https://core.telegram.org/bots/api#setchatstickerset"/>
+        </member>
+        <member name="M:Telegram.Bot.TelegramBotClient.DeleteChatStickerSetAsync(Telegram.Bot.Types.ChatId,System.Threading.CancellationToken)">
+            <summary>
+            Use this method to delete a group sticker set from a supergroup.
+            </summary>
+            <param name="chatId">Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)</param>
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>Returns true on success</returns>
+            <see href="https://core.telegram.org/bots/api#deletechatstickerset"/>
+        </member>
         <member name="M:Telegram.Bot.TelegramBotClient.GetStickerSetAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Use this method to get a sticker set.
@@ -2001,7 +2558,7 @@
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.CreateNewStickerSetAsnyc(System.Int32,System.String,System.String,Telegram.Bot.Types.FileToSend,System.String,System.Boolean,Telegram.Bot.Types.MaskPosition,System.Threading.CancellationToken)">
             <summary>
-            Use this method to create new sticker set owned by a user. The bot will be able to edit the created sticker set. 
+            Use this method to create new sticker set owned by a user. The bot will be able to edit the created sticker set.
             </summary>
             <param name="userId">User identifier of created sticker set owner</param>
             <param name="name">Short name of sticker set, to be used in t.me/addstickers/ URLs (e.g., animals). Can contain only english letters, digits and underscores. Must begin with a letter, can't contain consecutive underscores and must end in “_by_&lt;bot_username&gt;”. &lt;bot_username&gt; is case insensitive. 1-64 characters.</param>
@@ -2048,7 +2605,7 @@
         </member>
         <member name="M:Telegram.Bot.TelegramBotClient.SendMessageAsync(Telegram.Bot.Types.Enums.MessageType,Telegram.Bot.Types.ChatId,System.Object,System.Boolean,System.Int32,Telegram.Bot.Types.ReplyMarkups.IReplyMarkup,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)">
             <summary>
-            Use this method to send any messages. On success, the sent Message is returned.
+            Use this method to send any messages. On success, the sent Description is returned.
             </summary>
             <param name="type">The <see cref="T:Telegram.Bot.Types.Enums.MessageType"/></param>
             <param name="chatId">Unique identifier for the target chat or username of the target channel (in the format @channelusername)</param>
@@ -2058,7 +2615,7 @@
             <param name="replyMarkup">Optional. Additional interface options. A JSON-serialized object for a custom reply keyboard, instructions to hide keyboard or to force a reply from the user.</param>
             <param name="additionalParameters">Optional. if additional Parameters could be send i.e. "disable_web_page_preview" in for a TextMessage</param>
             <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-            <returns>On success, the sent Message is returned.</returns>
+            <returns>On success, the sent Description is returned.</returns>
         </member>
         <member name="T:Telegram.Bot.Types.Animation">
             <summary>
@@ -2092,26 +2649,26 @@
         </member>
         <member name="T:Telegram.Bot.Types.ApiResponse`1">
             <summary>
-            The Api Response
+            Represents bot API response
             </summary>
-            <typeparam name="T">The resultant object</typeparam>
+            <typeparam name="TResult">Expected type of operation result</typeparam>
         </member>
         <member name="P:Telegram.Bot.Types.ApiResponse`1.Ok">
             <summary>
             Gets a value indicating whether the request was successful.
             </summary>
         </member>
-        <member name="P:Telegram.Bot.Types.ApiResponse`1.ResultObject">
+        <member name="P:Telegram.Bot.Types.ApiResponse`1.Result">
             <summary>
             Gets the result object.
             </summary>
         </member>
-        <member name="P:Telegram.Bot.Types.ApiResponse`1.Message">
+        <member name="P:Telegram.Bot.Types.ApiResponse`1.Description">
             <summary>
             Gets the error message.
             </summary>
         </member>
-        <member name="P:Telegram.Bot.Types.ApiResponse`1.Code">
+        <member name="P:Telegram.Bot.Types.ApiResponse`1.ErrorCode">
             <summary>
             Gets the error code.
             </summary>
@@ -2168,7 +2725,7 @@
         </member>
         <member name="P:Telegram.Bot.Types.CallbackQuery.Message">
             <summary>
-            Optional. Message with the callback button that originated the query. Note that message content and message date will not be available if the message is too old
+            Optional. Description with the callback button that originated the query. Note that message content and message date will not be available if the message is too old
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.CallbackQuery.InlineMessageId">
@@ -2252,6 +2809,21 @@
         <member name="P:Telegram.Bot.Types.Chat.InviteLink">
             <summary>
             Optional. Chat invite link, for supergroups and channel chats. Returned only in getChat.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Chat.PinnedMessage">
+            <summary>
+            Optional. Pinned message, for supergroups. Returned only in getChat.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Chat.StickerSetName">
+            <summary>
+            Optional. For supergroups, name of group sticker set. Returned only in getChat.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Chat.CanSetStickerSet">
+            <summary>
+            Optional. True, if the bot can change the group sticker set. Returned only in getChat.
             </summary>
         </member>
         <member name="T:Telegram.Bot.Types.ChatId">
@@ -2927,7 +3499,7 @@
         </member>
         <member name="P:Telegram.Bot.Types.File.FileStream">
             <summary>
-            Gets the file stream.
+            Gets the file stream
             </summary>
         </member>
         <member name="T:Telegram.Bot.Types.FileToSend">
@@ -3111,7 +3683,7 @@
             Initializes a new instance of the <see cref="T:Telegram.Bot.Types.InlineKeyboardButtons.InlineKeyboardButton"/> class.
             </summary>
             <param name="text">Text of the button</param>
-            <param name="switchInlineQuery">Pressing the button will prompt the user to select one of their chats, open that chat and insert the bot‘s username and the specified inline query in the input field. Can be empty, in which case just the bot’s username will be inserted.</param>
+            <param name="switchInlineQuery">Pressing the button will prompt the user to select one of their chats, open that chat and insert the bot‘s username and the specified inline query in the input field. Can be empty, in which case just the bot's username will be inserted.</param>
             <returns></returns>
         </member>
         <member name="M:Telegram.Bot.Types.InlineKeyboardButtons.InlineKeyboardButton.WithSwitchInlineQueryCurrentChat(System.String,System.String)">
@@ -3119,7 +3691,7 @@
             Initializes a new instance of the <see cref="T:Telegram.Bot.Types.InlineKeyboardButtons.InlineKeyboardButton"/> class.
             </summary>
             <param name="text">Text of the button</param>
-            <param name="switchInlineQueryCurrentChat">Pressing the button will insert the bot‘s username and the specified inline query in the current chat's input field. Can be empty, in which case only the bot’s username will be inserted.</param>
+            <param name="switchInlineQueryCurrentChat">Pressing the button will insert the bot‘s username and the specified inline query in the current chat's input field. Can be empty, in which case only the bot's username will be inserted.</param>
         </member>
         <member name="M:Telegram.Bot.Types.InlineKeyboardButtons.InlineKeyboardButton.WithCallBackGame(System.String,Telegram.Bot.Types.CallbackGame)">
             <summary>
@@ -3214,7 +3786,7 @@
         </member>
         <member name="T:Telegram.Bot.Types.InlineKeyboardButtons.InlineKeyboardSwitchInlineQueryButton">
             <summary>
-            This object represents one button of an inline keyboard that asks the user to switch to a chat 
+            This object represents one button of an inline keyboard that asks the user to switch to a chat
             and starts an inline query there
             </summary>
         </member>
@@ -3639,6 +4211,11 @@
             Longitude of the location in degrees
             </summary>
         </member>
+        <member name="P:Telegram.Bot.Types.InlineQueryResults.InlineQueryResultLocation.LivePeriod">
+            <summary>
+            Longitude of the location in degrees
+            </summary>
+        </member>
         <member name="T:Telegram.Bot.Types.InlineQueryResults.InlineQueryResultMpeg4Gif">
             <summary>
             Represents a link to a video animation (H.264/MPEG-4 AVC video without sound).
@@ -3955,6 +4532,109 @@
             Optional. Thumbnail height
             </summary>
         </member>
+        <member name="T:Telegram.Bot.Types.InputFileBase">
+            <summary>
+            This object represents the contents of a file to be uploaded. Must be posted using multipart/form-data in the usual way that files are uploaded via the browser
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.InputFileBase.FileId">
+            <summary>
+            Id of a file that exists on the Telegram servers
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.InputFileBase.Url">
+            <summary>
+            HTTP URL for Telegram to get a file from the Internet
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.InputFileBase.FileName">
+            <summary>
+            Name of a file to upload using multipart/form-data
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.InputFileBase.Content">
+            <summary> 
+            File content to upload
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.InputFileBase.FileType">
+            <summary>
+            Type of file to send
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.Types.InputMediaBase">
+            <summary>
+            This object represents the content of a media message to be sent
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.InputMediaBase.Type">
+            <summary>
+            Type of the media
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.InputMediaBase.Media">
+            <summary>
+            Media to send
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.InputMediaBase.Caption">
+            <summary>
+            Optional. Caption of the photo to be sent, 0-200 characters
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.Types.InputMediaPhoto">
+            <summary>
+            Represents a photo to be sent
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Types.InputMediaPhoto.#ctor">
+            <summary>
+            Initializes a new photo media to send
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.Types.InputMediaType">
+            <summary>
+            Media to send in request that could be a file_id, HTTP url, or a file
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Types.InputMediaType.#ctor(System.String)">
+            <summary>
+            Initializes media with either a file_id or a HTTP url
+            </summary>
+            <param name="value">file_id to send a file that exists on the Telegram servers or an HTTP URL for Telegram to get a file from the Internet</param>
+        </member>
+        <member name="M:Telegram.Bot.Types.InputMediaType.#ctor(System.String,System.IO.Stream)">
+            <summary>
+            Initializes media with a file to send
+            </summary>
+            <param name="fileName">Name of the file to send</param>
+            <param name="content">File content to upload</param>
+        </member>
+        <member name="T:Telegram.Bot.Types.InputMediaVideo">
+            <summary>
+            Represents a video to be sent
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.InputMediaVideo.Width">
+            <summary>
+            Optional. Video width
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.InputMediaVideo.Height">
+            <summary>
+            Optional. Video height
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.InputMediaVideo.Duration">
+            <summary>
+            Optional. Video duration
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Types.InputMediaVideo.#ctor">
+            <summary>
+            Initializes a new video media to send
+            </summary>
+        </member>
         <member name="T:Telegram.Bot.Types.InputMessageContents.InputContactMessageContent">
             <summary>
             Represents the content of a contact message to be sent as the result of an <see cref="T:Telegram.Bot.Types.InlineQuery"/>.
@@ -3989,6 +4669,11 @@
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.InputMessageContents.InputLocationMessageContent.Longitude">
+            <summary>
+            Longitude of the location in degrees
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.InputMessageContents.InputLocationMessageContent.LivePeriod">
             <summary>
             Longitude of the location in degrees
             </summary>
@@ -4129,6 +4814,11 @@
             Mask scaling coefficient. For example, 2.0 means double size.
             </summary>
         </member>
+        <member name="P:Telegram.Bot.Types.MaskPosition.Scale">
+            <summary>
+            Mask scaling coefficient. For example, 2.0 means double size.
+            </summary>
+        </member>
         <member name="T:Telegram.Bot.Types.Message">
             <summary>
             This object represents a message.
@@ -4154,6 +4844,11 @@
             Conversation the message belongs to
             </summary>
         </member>
+        <member name="P:Telegram.Bot.Types.Message.IsForwarded">
+            <summary>
+            Indicates whether this message is a forwarded message
+            </summary>
+        </member>
         <member name="P:Telegram.Bot.Types.Message.ForwardFrom">
             <summary>
             Optional. For forwarded messages, sender of the original message
@@ -4169,6 +4864,11 @@
             Optional. For forwarded channel posts, identifier of the original message in the channel
             </summary>
         </member>
+        <member name="P:Telegram.Bot.Types.Message.ForwardSignature">
+            <summary>
+            Optional. For messages forwarded from channels, signature of the post author if present
+            </summary>
+        </member>
         <member name="P:Telegram.Bot.Types.Message.ForwardDate">
             <summary>
             Optional. For forwarded messages, date the original message was sent in Unix time
@@ -4176,12 +4876,17 @@
         </member>
         <member name="P:Telegram.Bot.Types.Message.ReplyToMessage">
             <summary>
-            Optional. For replies, the original message. Note that the Message object in this field will not contain further reply_to_message fields even if it itself is a reply.
+            Optional. For replies, the original message. Note that the Description object in this field will not contain further reply_to_message fields even if it itself is a reply.
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.Message.EditDate">
             <summary>
             Optional. Date the message was last edited in Unix time
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Message.AuthorSignature">
+            <summary>
+            Optional. Signature of the post author for messages in channels
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.Message.Text">
@@ -4202,44 +4907,57 @@
             The entity contents.
             </value>
         </member>
+        <member name="P:Telegram.Bot.Types.Message.CaptionEntities">
+            <summary>
+            Optional. For messages with a caption, special entities like usernames, URLs, bot commands, etc. that appear in the caption
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Message.CaptionEntityValues">
+            <summary>
+            Gets the caption entity values.
+            </summary>
+            <value>
+            The caption entity contents.
+            </value>
+        </member>
         <member name="P:Telegram.Bot.Types.Message.Audio">
             <summary>
-            Optional. Message is an audio file, information about the file
+            Optional. Description is an audio file, information about the file
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.Message.Document">
             <summary>
-            Optional. Message is a general file, information about the file
+            Optional. Description is a general file, information about the file
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.Message.Game">
             <summary>
-            Message is a game, information about the game.
+            Description is a game, information about the game.
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.Message.Photo">
             <summary>
-            Optional. Message is a photo, available sizes of the photo
+            Optional. Description is a photo, available sizes of the photo
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.Message.Sticker">
             <summary>
-            Optional. Message is a sticker, information about the sticker
+            Optional. Description is a sticker, information about the sticker
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.Message.Video">
             <summary>
-            Optional. Message is a video, information about the video
+            Optional. Description is a video, information about the video
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.Message.Voice">
             <summary>
-            Message is a voice message, information about the file
+            Description is a voice message, information about the file
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.Message.VideoNote">
             <summary>
-            Optional. Message is a <see cref="P:Telegram.Bot.Types.Message.VideoNote"/>, information about the video message
+            Optional. Description is a <see cref="P:Telegram.Bot.Types.Message.VideoNote"/>, information about the video message
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.Message.Caption">
@@ -4249,17 +4967,17 @@
         </member>
         <member name="P:Telegram.Bot.Types.Message.Contact">
             <summary>
-            Optional. Message is a shared contact, information about the contact
+            Optional. Description is a shared contact, information about the contact
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.Message.Location">
             <summary>
-            Optional. Message is a shared location, information about the location
+            Optional. Description is a shared location, information about the location
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.Message.Venue">
             <summary>
-            Optional. Message is a venue, information about the venue
+            Optional. Description is a venue, information about the venue
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.Message.NewChatMember">
@@ -4319,17 +5037,17 @@
         </member>
         <member name="P:Telegram.Bot.Types.Message.PinnedMessage">
             <summary>
-            Optional. Specified message was pinned. Note that the Message object in this field will not contain further reply_to_message fields even if it is itself a reply
+            Optional. Specified message was pinned. Note that the Description object in this field will not contain further reply_to_message fields even if it is itself a reply
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.Message.Invoice">
             <summary>
-            Optional. Message is an invoice for a payment
+            Optional. Description is an invoice for a payment
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.Message.SuccessfulPayment">
             <summary>
-            Optional. Message is a service message about a successful payment
+            Optional. Description is a service message about a successful payment
             </summary>
         </member>
         <member name="P:Telegram.Bot.Types.Message.Type">
@@ -4724,7 +5442,7 @@
         </member>
         <member name="P:Telegram.Bot.Types.ReplyMarkups.ReplyMarkup.Selective">
             <summary>
-            Optional. Use this parameter if you want to show the keyboard to specific users only. Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot's message is a reply (has <see cref="P:Telegram.Bot.Types.Message.ReplyToMessage"/>), sender of the original message.
+            Optional. Use this parameter if you want to show the keyboard to specific users only. Targets: 1) users that are @mentioned in the text of the Description object; 2) if the bot's message is a reply (has <see cref="P:Telegram.Bot.Types.Message.ReplyToMessage"/>), sender of the original message.
             Example: A user requests to change the bot's language, bot replies to the request with a keyboard to select the new language. Other users in the group don't see the keyboard.
             </summary>
         </member>
@@ -4890,6 +5608,11 @@
             Unique identifier for this user or bot
             </summary>
             <returns></returns>
+        </member>
+        <member name="P:Telegram.Bot.Types.User.IsBot">
+            <summary>
+            True, if this user is a bot
+            </summary>
         </member>
         <member name="P:Telegram.Bot.Types.User.FirstName">
             <summary>

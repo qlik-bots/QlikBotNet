@@ -770,19 +770,19 @@ namespace QlikTelegram
                 {
                     BotShowTypingState(ChatId);
 
-                    InlineKeyboardButton[][] rows = new InlineKeyboardButton[(Resp.Options.Count() + 1) / 2][];
+                    InlineKeyboardCallbackButton[][] rows = new InlineKeyboardCallbackButton[(Resp.Options.Count() + 1) / 2][];
                     
                     for (int i = 0; i < Resp.Options.Count(); i++)
                     {
                         string ButtonData = Resp.Options[i].Action.ToString() + "#" + Resp.Options[i].ID;
-                        var b = ButtonData;
+                        var b = new InlineKeyboardCallbackButton(Resp.Options[i].Title, ButtonData);
                         if (i % 2 == 0)
                         {
                             r++;
                             if (i == Resp.Options.Count() - 1)   // Last button
-                                rows[r] = new InlineKeyboardButton[1];  // new row, only 1 button
+                                rows[r] = new InlineKeyboardCallbackButton[1];  // new row, only 1 button
                             else
-                                rows[r] = new InlineKeyboardButton[2];  // new row, two buttons
+                                rows[r] = new InlineKeyboardCallbackButton[2];  // new row, two buttons
 
                             rows[r][0] = b;
                         }
