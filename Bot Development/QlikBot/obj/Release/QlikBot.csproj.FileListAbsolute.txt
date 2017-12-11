@@ -46,3 +46,5 @@ C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikBot\bin\Release\Qli
 C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikBot\obj\Release\QlikBot.csprojResolveAssemblyReference.cache
 C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikBot\obj\Release\QlikBot.exe
 C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikBot\obj\Release\QlikBot.pdb
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikBot\bin\Release\Autofac.dll
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikBot\bin\Release\Autofac.xml

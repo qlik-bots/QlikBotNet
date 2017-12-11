@@ -764,13 +764,14 @@ namespace QlikTelegram
 
             if (Resp.Options.Count() > 0)
             {
+
+                int r = -1;
                 try
                 {
                     BotShowTypingState(ChatId);
 
                     InlineKeyboardButton[][] rows = new InlineKeyboardButton[(Resp.Options.Count() + 1) / 2][];
-
-                    int r = -1;
+                    
                     for (int i = 0; i < Resp.Options.Count(); i++)
                     {
                         string ButtonData = Resp.Options[i].Action.ToString() + "#" + Resp.Options[i].ID;
@@ -796,6 +797,7 @@ namespace QlikTelegram
                 catch (Exception e)
                 {
                     botLog.AddBotLine(string.Format("General Error in BotOnMessageReceived: {0}", e), LogFile.LogType.logError);
+                    botLog.AddBotLine(""+r);
                     Resp.TextMessage = StringResources.nlMessageNotManaged;
                 }
             }     
