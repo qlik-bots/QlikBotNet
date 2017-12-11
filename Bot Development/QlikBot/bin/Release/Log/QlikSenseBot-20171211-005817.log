@@ -1,0 +1,74 @@
+2017-12-11 00:58:17:	Starting Log...
+2017-12-11 00:58:17:	logInfo	ID:500374305	First:QlikBotNet	Last:	UserName:QlikNetBot	<Timer for alerts started with 60 seconds>
+2017-12-11 00:58:17:	Starting Log...
+2017-12-11 00:58:17:	Started and Callback set for Bot 
+2017-12-11 00:58:17:	logInfo	Message Received from 382410116: KPI total sales
+2017-12-11 00:58:27:	logInfo	ID:382410116	First:Todd	Last:Margolis	UserName:ToddMargolis	<Could not open the Qlik Sense app: Consumer Goods Sales Bot for user 382410116 (Todd Margolis)>
+2017-12-11 00:58:27:	logInfo	ID:500374305	First:QlikBotNet	Last:	UserName:QlikNetBot	<Opened the Qlik Sense app: Consumer Goods Sales Bot>
+2017-12-11 00:58:27:	logInfo	ID:500374305	First:QlikBotNet	Last:	UserName:QlikNetBot	<Created a conversation with Google Api.Ai.>
+2017-12-11 00:58:28:	logInfo	Sent text message <Current Order Count Total value is 29,303.00> to ChatID 382410116
+2017-12-11 00:58:33:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 00:58:38:	logInfo	Message Received from 382410116: KPI blah
+2017-12-11 00:58:39:	logInfo	ID:382410116	First:Todd	Last:Margolis	UserName:ToddMargolis	<Could not open the Qlik Sense app: Consumer Goods Sales Bot for user 382410116 (Todd Margolis)>
+2017-12-11 00:58:39:	logInfo	Sent text message <Current GP% value is 44.0 %> to ChatID 382410116
+2017-12-11 00:58:44:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 00:58:49:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 00:58:50:	logInfo	Message Received from 382410116: show me the KPIs
+2017-12-11 00:58:50:	logError	General Error in BotOnMessageReceived: System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at QlikTelegram.Bot.<ProcessConversationResponse>d__45.MoveNext() in C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikTelegram\Bot.cs:line 791
+2017-12-11 00:58:50:	logInfo	Sent text message <I do not understand you, could you try again with other question?> to ChatID 382410116
+2017-12-11 00:58:55:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 00:58:55:	logInfo	Message Received from 382410116: what are my KPIs
+2017-12-11 00:58:55:	logError	General Error in BotOnMessageReceived: System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at QlikTelegram.Bot.<ProcessConversationResponse>d__45.MoveNext() in C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikTelegram\Bot.cs:line 791
+2017-12-11 00:58:56:	logInfo	Sent text message <I do not understand you, could you try again with other question?> to ChatID 382410116
+2017-12-11 00:59:00:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 00:59:05:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 00:59:10:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 00:59:15:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 00:59:20:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 00:59:25:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 00:59:30:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 00:59:35:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 00:59:40:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 00:59:45:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 00:59:50:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 00:59:55:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 00:59:56:	logInfo	Message Received from 382410116: Geo
+2017-12-11 00:59:57:	logInfo	Sent text message <This is the list of Month, up to 10 elements:
+Apr
+Jun
+Jan
+Sep
+Nov
+Aug
+Oct
+Dec
+Jul
+Feb> to ChatID 382410116
+2017-12-11 01:00:02:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 01:00:07:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 01:00:12:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 01:00:17:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 01:00:22:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 01:00:27:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 01:00:31:	logInfo	Message Received from 382410116: Repors
+2017-12-11 01:00:31:	logInfo	Sent text message <Current GP% value is 44.0 %> to ChatID 382410116
+2017-12-11 01:00:36:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 01:00:38:	logInfo	Message Received from 382410116: Reports
+2017-12-11 01:00:39:	logInfo	Sent text message <Choose a report> to ChatID 382410116
+2017-12-11 01:00:43:	logInfo	Sent doc message <C:\JG Bots\Telegram Bot JGBot\Reports\Year Sales.pdf> with text <Todd, here you have your report Year Sales> to ChatID 382410116
+2017-12-11 01:00:47:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 01:00:52:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 01:00:57:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 01:01:02:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 01:01:07:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 01:01:08:	logInfo	Message Received from 382410116: Dimensions
+2017-12-11 01:01:09:	logInfo	Sent text message <Choose a dimension> to ChatID 382410116
+2017-12-11 01:01:17:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 01:01:22:	logInfo	Message Received from 382410116: Measures
+2017-12-11 01:01:22:	logError	General Error in BotOnMessageReceived: System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at QlikTelegram.Bot.<ProcessConversationResponse>d__45.MoveNext() in C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikTelegram\Bot.cs:line 791
+2017-12-11 01:01:22:	logInfo	Sent text message <I do not understand you, could you try again with other question?> to ChatID 382410116
+2017-12-11 01:01:27:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
+2017-12-11 01:01:32:	logError	BotOnReceiveError: Telegram.Bot.Args.ReceiveErrorEventArgs
