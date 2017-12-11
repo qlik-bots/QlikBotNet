@@ -774,8 +774,7 @@ namespace QlikTelegram
                     for (int i = 0; i < Resp.Options.Count(); i++)
                     {
                         string ButtonData = Resp.Options[i].Action.ToString() + "#" + Resp.Options[i].ID;
-                        //zhu
-                        //var b = new InlineKeyboardButton(Resp.Options[i].Title, ButtonData);
+                        var b = ButtonData;
                         if (i % 2 == 0)
                         {
                             r++;
@@ -784,11 +783,9 @@ namespace QlikTelegram
                             else
                                 rows[r] = new InlineKeyboardButton[2];  // new row, two buttons
 
-                            //rows[r][0] = b;
-                            rows[r][0] = Resp.Options[i].Title;
+                            rows[r][0] = b;
                         }
-                        //else rows[r][1] = b;
-                        rows[r][1] = Resp.Options[i].Title;
+                        else rows[r][1] = b;
                     }
 
                     var keyboard = new InlineKeyboardMarkup(rows);
