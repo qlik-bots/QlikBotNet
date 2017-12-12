@@ -1,18 +1,24 @@
 # Telegram chatbot for Qlik Sense
 
-This is example source code for QlikBotNet, a Qlik sense chatbot for use with the Telegram messaging platform.
-QlikBotNet is the middle layer between Telegram and Qlik products which enables users to perform analytics easily on any devices.
+This is example source code for QlikBotNet, a Qlik Sense chatbot for use with the Telegram messaging platform.
+QlikBotNet is the middle layer between Telegram and Qlik products which enable users to perform analytics from any devices.
 
 ![Bot Basics](https://raw.githubusercontent.com/qlik-bots/QlikBotNet/master/Documentation/Bot%20Basics.PNG)
 
 ## Current Feature List
-* Natural Language Processing (NLP) for querying Qlik Sense
+* Natural Language Query
 * Get KPI values
-* Get Charts
+* List Measures and get current values
+* List Dimensions and get KPIs based on selected dimension
+* Get related charts
+* Get Reports
+* Speak in English, Spanish, Portuguese, Italian, Russian and French
 
 ## Planned Feature List
-* Get Reports
 * Set Alarms
+* Get related news
+* Integrate Natural Language Generation
+* Port to other messaging platforms
 
 # Getting Started
 
@@ -23,7 +29,7 @@ QlikBotNet is the middle layer between Telegram and Qlik products which enables 
 | ------- | -------- | ---- |
 | Help | Shows available commands | |
 | Kpi | Shows some buttons with Measures from the master items. At the end, the Bot will show an Analysis button with access to the app in the Qlik Sense Hub. | This is a way to show a quick access to the most used measures. And to jump to the hub to have all the analytic capabilities from Qlik Sense. The last used measures will appear first. |
-| Kpi &lt;measure&gt; | Shows the value of measure | Current filters are applied. Geo The Bot will filter the data based on the user location. It works, but it needs special configuration parameters. Work in progress to be easier. | 
+| Kpi &lt;measure&gt; | Shows the value of measure | Current filters are applied. | 
 | Reports | Shows all available NPrinting reports to the user. Then the user will be able to download any of them, and open it directly in Telegram. | The Bot will show all the PDF files available in the Report folder. |
 | Dimensions | Shows with buttons all the dimensions included in master items. When one of them is selected, the Bot sends a message with an analysis of the dimension by the last measure used. | The Bot maintains the context during the conversation, and uses the last measure asked. |
 | Measures | Shows with buttons all the measures included in master items. When one of them is selected, the Bot sends a message with its value. | It shows the total value for this measure, with no filters. Change App The Bot shows the applications published in the Qlik Sense Streams defined in the config file. When the user selects one app, the Bot will close the current one and open the new one. Every user could be connected to different apps. |
@@ -50,12 +56,10 @@ For developers, please make sure you have completed all of the steps at ![Open S
 
 ![Bot Modules](https://raw.githubusercontent.com/qlik-bots/QlikBotNet/master/Documentation/Bot%20Modules.PNG)
 
-![Developer Guide]()
+![Developer Wiki](https://github.com/qlik-bots/QlikBotNet/wiki)
 
 ## Prerequisites
 This Bot is built with .Net framework, make sure all of the Nuget packages are correctly referenced. Below is a class diagram describing the dependencies between all classes.
-
-![Class Diagram](https://raw.githubusercontent.com/qlik-bots/QlikBotNet/master/Documentation/class%diagram.PNG) *Missing!*
 
 
 ## Tips on modifying QlikSense chatbot
@@ -85,7 +89,7 @@ This Bot is built with .Net framework, make sure all of the Nuget packages are c
 	* More reliable
 	* Estimated day of completion
 		* It is an ongoing project so there is no fixed deadline
-	* Your help is welcome, please join our developer community
+	* Your help is welcome, please join our development team on [Qlik Community](https://community.qlik.com/groups/qlik-chatbots) or on [Qlik Branch Slack](http://branch.qlik.com/slack)
 
 ## Acknowledgments
 *Credit and special thanks to **Juan Gerardo Cabeza** and others for all of their hard work in version 1.0 and 2.1.*
@@ -95,7 +99,7 @@ Copyright 2017 QlikTech International AB
 
 Licensed under the Apache License, Version 2.0 (the "License");you may not use this file except in compliance with the License.You may obtain a copy of the License at    
 
-http://www.apache.org/licenses/LICENSE-2.0
+![http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
 Unless required by applicable law or agreed to in writing, softwaredistributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions andlimitations under the License.
 
