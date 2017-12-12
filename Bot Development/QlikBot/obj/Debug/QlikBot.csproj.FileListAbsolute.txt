@@ -125,3 +125,4 @@ C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikBot\bin\Debug\Qlik.
 C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikBot\bin\Debug\Qlik.Sense.Client.xml
 C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikBot\bin\Debug\Qlik.Sense.JsonRpc.xml
 C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikBot\obj\Debug\QlikBot.csprojResolveAssemblyReference.cache
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikBot\bin\Debug\Telegram.Bot.xml

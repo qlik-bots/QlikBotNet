@@ -158,3 +158,4 @@ C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikTelegram\obj\Debug\
 C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikTelegram\obj\Debug\QlikTelegram.csproj.GenerateResource.Cache
 C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikTelegram\obj\Debug\QlikTelegram.dll
 C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikTelegram\obj\Debug\QlikTelegram.pdb
+C:\Users\baz\Documents\GitHub\QlikBotNet\Bot Development\QlikTelegram\bin\Debug\Telegram.Bot.xml
