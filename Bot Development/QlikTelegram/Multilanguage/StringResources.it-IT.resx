@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="alertAdknowledge" xml:space="preserve">
+    <value>OK {0}, don't worry, I will notify you if {1}</value>
+  </data>
+  <data name="alertDocMessage" xml:space="preserve">
+    <value>And I have found this report with more detailed information.</value>
+  </data>
+  <data name="alertInputError" xml:space="preserve">
+    <value>Check the alert format, it should be something like: /alert Sales 3%</value>
+  </data>
+  <data name="alertSendMessage" xml:space="preserve">
+    <value>Attention! I have just seen that</value>
+  </data>
+  <data name="appOpenAppError" xml:space="preserve">
+    <value>The app with Id {0} could not been opened</value>
+  </data>
+  <data name="appOpenedApp" xml:space="preserve">
+    <value>I am now using the app {0}</value>
+  </data>
+  <data name="appSelectApp" xml:space="preserve">
+    <value>Choose an application</value>
+  </data>
+  <data name="bsButtonNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="bsButtonYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="bsFoundNews" xml:space="preserve">
+    <value>I have found some news about {0}:</value>
+  </data>
+  <data name="bsWantToSearch" xml:space="preserve">
+    <value>Do you also want to search news about {0}?</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>by</value>
+  </data>
+  <data name="Bye" xml:space="preserve">
+    <value>Bye</value>
+  </data>
+  <data name="cnvAnalysisError" xml:space="preserve">
+    <value>There was an error creating the analysis sheet</value>
+  </data>
+  <data name="cnvAnalysisNoRights" xml:space="preserve">
+    <value>You have no rights to create a sheet in this app :-(</value>
+  </data>
+  <data name="cnvAnalysisResult" xml:space="preserve">
+    <value>{0}, I have prepared this &lt;a href="{1}"&gt;Analysis sheet&lt;/a&gt; for you. I hope you like it.</value>
+  </data>
+  <data name="cnvAnalysisSheetDescription" xml:space="preserve">
+    <value>Sheet for Bot user {0}</value>
+  </data>
+  <data name="cnvAnalysisSheetTextboxText" xml:space="preserve">
+    <value>This is the analysis the Qlik Sense Bot made based on your preferences</value>
+  </data>
+  <data name="cnvAnalysisSheetTextboxTitle" xml:space="preserve">
+    <value>Analysis made by the Qlik Sense Bot</value>
+  </data>
+  <data name="cnvAnalysisSheetTitle" xml:space="preserve">
+    <value>Analysis prepared by the Qlik Sense Bot for {0}</value>
+  </data>
+  <data name="cnvBadwords" xml:space="preserve">
+    <value>:-(
+I prefer not to answer this type of questions. I am a robot, but I have my litte heart.</value>
+  </data>
+  <data name="cnvContactQlik" xml:space="preserve">
+    <value>{0}, I think the best way is to go &lt;a href="{1}"&gt;here&lt;/a&gt;</value>
+  </data>
+  <data name="cnvCreateChartError" xml:space="preserve">
+    <value>There was an error creating the chart</value>
+  </data>
+  <data name="cnvCreateChartNoRights" xml:space="preserve">
+    <value>You have no rights to create a chart in this app :-(</value>
+  </data>
+  <data name="cnvCreateChartResult" xml:space="preserve">
+    <value>{0}, I have prepared this &lt;a href="{1}"&gt;Chart&lt;/a&gt; for you. I hope you like it.</value>
+  </data>
+  <data name="cnvCreateChartSheetDescription" xml:space="preserve">
+    <value>Sheet for Bot user {0}</value>
+  </data>
+  <data name="cnvCreateChartSheetTitle" xml:space="preserve">
+    <value>Analysis prepared by the Qlik Sense Bot for {0}</value>
+  </data>
+  <data name="cnvCurrentSelections" xml:space="preserve">
+    <value>The current selections are: {0}</value>
+  </data>
+  <data name="cnvCurrentSelectionsEmpty" xml:space="preserve">
+    <value>There is no filters at this moment</value>
+  </data>
+  <data name="cnvMeasure4ElementNewsSearch" xml:space="preserve">
+    <value>{0} for {1} with {2}</value>
+  </data>
+  <data name="cnvPersonalInformation" xml:space="preserve">
+    <value>{0}, if you want to know more about myself, I suggest you go &lt;a href="{1}"&gt;here&lt;/a&gt;</value>
+  </data>
+  <data name="cnvShowChartNewsSearch" xml:space="preserve">
+    <value>{0} for {1}</value>
+  </data>
+  <data name="DemoActivated" xml:space="preserve">
+    <value>Demo mode activated. Only my creator will be able to use me.</value>
+  </data>
+  <data name="gasAccessLocation" xml:space="preserve">
+    <value>Now I need your location</value>
+  </data>
+  <data name="gasButtonLocation" xml:space="preserve">
+    <value>Allow send location to Bot</value>
+  </data>
+  <data name="gasError" xml:space="preserve">
+    <value>I'm sorry, some problem happened when looking for petrol stations</value>
+  </data>
+  <data name="gasSeeAll" xml:space="preserve">
+    <value>Do you want to see all before choosing?</value>
+  </data>
+  <data name="gasSorryNoLocation" xml:space="preserve">
+    <value>Sorry, I have no location, so I cannot get the closest petrol stations.</value>
+  </data>
+  <data name="gasWhichDistance" xml:space="preserve">
+    <value>Which distance to search from your location?</value>
+  </data>
+  <data name="geoElementNotFound" xml:space="preserve">
+    <value>I couldn't find any {0} in {1} Km around</value>
+  </data>
+  <data name="geoGotoAnalysisSheet" xml:space="preserve">
+    <value>{0}, you can go to this &lt;a href="{1}"&gt;Analysis Sheet&lt;/a&gt; if you want more information.</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Hello</value>
+  </data>
+  <data name="kpiAnalysis" xml:space="preserve">
+    <value>Analysis</value>
+  </data>
+  <data name="kpiChartWithoutDimension" xml:space="preserve">
+    <value>I think you want a chart, but I don't know which dimension to use, so I will better show you: </value>
+  </data>
+  <data name="kpiCost" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="kpiHasChangedMoreThan" xml:space="preserve">
+    <value>has changed by</value>
+  </data>
+  <data name="kpiM4EWithoutElement" xml:space="preserve">
+    <value>I think you want a particular data, but I don't know for which element, so I will better show you: </value>
+  </data>
+  <data name="kpiMargin" xml:space="preserve">
+    <value>Margin</value>
+  </data>
+  <data name="kpiNoMeasuresDefined" xml:space="preserve">
+    <value>I am sorry, but there are not KPIs defined</value>
+  </data>
+  <data name="kpiSales" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="kpiSalesAcum" xml:space="preserve">
+    <value>Sales Acum</value>
+  </data>
+  <data name="kpiSelectDimension" xml:space="preserve">
+    <value>Choose a dimension</value>
+  </data>
+  <data name="kpiSelectMeasure" xml:space="preserve">
+    <value>Choose a measure</value>
+  </data>
+  <data name="kpiSelectSheet" xml:space="preserve">
+    <value>Choose a Sheet</value>
+  </data>
+  <data name="kpiSelectStory" xml:space="preserve">
+    <value>Choose a Story</value>
+  </data>
+  <data name="kpiShowAnalysis" xml:space="preserve">
+    <value>{0}, &lt;a href='{1}'&gt;Here&lt;/a&gt; you have a link to analyze all the information freely.</value>
+  </data>
+  <data name="kpiShowSheet" xml:space="preserve">
+    <value>{0}, &lt;a href='{1}'&gt;Here&lt;/a&gt; you have a link to open the Sheet.</value>
+  </data>
+  <data name="kpiShowStory" xml:space="preserve">
+    <value>{0}, &lt;a href='{1}'&gt;Here&lt;/a&gt; you have a link to open the Story.</value>
+  </data>
+  <data name="kpiSummary" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="kpiSummaryMessage" xml:space="preserve">
+    <value>Current sales are {0}, with a 3,2% increment over last week.
+The fulfillment is 43% over the weekly goal.</value>
+  </data>
+  <data name="kpiUnknownMessage" xml:space="preserve">
+    <value>Current {0} value is unknown</value>
+  </data>
+  <data name="kpiValueMessage" xml:space="preserve">
+    <value>Current {0} value is {1}</value>
+  </data>
+  <data name="nlAnd" xml:space="preserve">
+    <value>and</value>
+  </data>
+  <data name="nlClearFilters" xml:space="preserve">
+    <value>OK, all filters removed</value>
+  </data>
+  <data name="nlClearOneFilter" xml:space="preserve">
+    <value>OK, I have removed the filter by {0}</value>
+  </data>
+  <data name="nlFilterApplied" xml:space="preserve">
+    <value>I have filtered now {0} to {1}</value>
+  </data>
+  <data name="nlGetChart" xml:space="preserve">
+    <value>I have found a chart that could be useful to analyse this information:
+The chart is called "{0}"
+and you can open it here: {1}</value>
+  </data>
+  <data name="nlGetChartNotFound" xml:space="preserve">
+    <value>Sorry, I have not found fields for a chart that meets your request. Try other measure and/or dimension</value>
+  </data>
+  <data name="nlGetElement" xml:space="preserve">
+    <value>I think you want to know {0} when {1}.
+In that case, the {2} is {3}</value>
+  </data>
+  <data name="nlGetElementMoreFilter" xml:space="preserve">
+    <value>{0} is equal to {1}</value>
+  </data>
+  <data name="nlGetElementNotFound" xml:space="preserve">
+    <value>Sorry, I have not found fields for an element that meets your request. Try other measure and/or dimension</value>
+  </data>
+  <data name="nlgInterpretDataAscending" xml:space="preserve">
+    <value>Total {0} is {1}. The lowest {2} is {3} with {0} of {4}</value>
+  </data>
+  <data name="nlgInterpretDataDescending" xml:space="preserve">
+    <value>Total {0} is {1}. The highest {2} is {3} with {0} of {4}</value>
+  </data>
+  <data name="nlgInterpretDataNextAscending" xml:space="preserve">
+    <value>The next one is {0} with {1}, that is {2} higher.</value>
+  </data>
+  <data name="nlgInterpretDataNextDescending" xml:space="preserve">
+    <value>The next one is {0} with {1}, that is {2} lower.</value>
+  </data>
+  <data name="nlgInterpretDataRankingAscending" xml:space="preserve">
+    <value>The bottom {0} by {1} are:</value>
+  </data>
+  <data name="nlgInterpretDataRankingDescending" xml:space="preserve">
+    <value>The top {0} by {1} are:</value>
+  </data>
+  <data name="nlgInterpretDataRankingList" xml:space="preserve">
+    <value>{0} with {1} of {2}</value>
+  </data>
+  <data name="nlMeasureNotFound" xml:space="preserve">
+    <value>I think you want to know a kpi value, but I do not understand which one</value>
+  </data>
+  <data name="nlMessageNotManaged" xml:space="preserve">
+    <value>I do not understand you, could you try again with other question?</value>
+  </data>
+  <data name="nlNoFilterToApply" xml:space="preserve">
+    <value>No filter to apply</value>
+  </data>
+  <data name="nlNoFilterToClear" xml:space="preserve">
+    <value>There is no filter by {0}</value>
+  </data>
+  <data name="nlTotalFilters" xml:space="preserve">
+    <value>So, now we are analyzing {0}</value>
+  </data>
+  <data name="nlWith" xml:space="preserve">
+    <value>with</value>
+  </data>
+  <data name="ObjectWithNoTitle" xml:space="preserve">
+    <value>No title</value>
+  </data>
+  <data name="Receivedchooseninlineresult" xml:space="preserve">
+    <value>Received choosen inline result:</value>
+  </data>
+  <data name="reportHereYourReport" xml:space="preserve">
+    <value>{0}, here you have your report {1}</value>
+  </data>
+  <data name="reportSelectReport" xml:space="preserve">
+    <value>Choose a report</value>
+  </data>
+  <data name="secUserNotAllowed" xml:space="preserve">
+    <value>I am sorry, but you are not allowed to use this Bot</value>
+  </data>
+  <data name="SelectKPI" xml:space="preserve">
+    <value>Select the KPI you want to know</value>
+  </data>
+  <data name="SorryDemoMode" xml:space="preserve">
+    <value>I am sorry, but now I am in demo mode and only take orders from my lord and master ;-)</value>
+  </data>
+  <data name="SorryNoLocation" xml:space="preserve">
+    <value>Sorry, but I don't know where are you.</value>
+  </data>
+  <data name="ThankYou" xml:space="preserve">
+    <value>Thank you</value>
+  </data>
+  <data name="urlGasMapAfter" xml:space="preserve">
+    <value>'&gt;closest Petrol Stations&lt;/a&gt;</value>
+  </data>
+  <data name="urlGasMapBefore" xml:space="preserve">
+    <value>Hi {0}, here you have the &lt;a href='</value>
+  </data>
+  <data name="urlGasMapInlineAfter" xml:space="preserve">
+    <value>'&gt;closest Petrol Stations&lt;/a&gt;</value>
+  </data>
+  <data name="urlGasMapInlineBefore" xml:space="preserve">
+    <value>@{0}, here you also have the &lt;a href='</value>
+  </data>
+  <data name="urlGasTableAfter" xml:space="preserve">
+    <value>'&gt;Prices&lt;/a&gt;</value>
+  </data>
+  <data name="urlGasTableBefore" xml:space="preserve">
+    <value>And here you have also a table with the last &lt;a href='</value>
+  </data>
+  <data name="UsageInstructions" xml:space="preserve">
+    <value>Usage:
+        @QlikSenseBot [search data]
+        kpi                           - show a KPI
+        geo                          - look for petrol stations (only Spain)
+        language                - change the language
+        reports                    - download a report
+        measures                - all measures defined in the app
+
+Or try asking for the information directly, I'll try to understand you</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Hi {0}, How are you doing?
+Tell me how can I help you. (type help for options)</value>
+  </data>
+  <data name="YoureWelcome" xml:space="preserve">
+    <value>You are welcome</value>
+  </data>
+  <data name="urlCreateGroup" xml:space="preserve">
+    <value>&lt;a href="{0}"&gt;Click here to create a group to collaborate with other people&lt;/a&gt;</value>
+  </data>
+  <data name="cnvCreateGroupNoChart" xml:space="preserve">
+    <value>Sorry but I do not know wich analysis to talk about with other people. Ask for a chart first, and then we can join a group to discuss about it.</value>
+  </data>
+  <data name="cnvCreateGroupWelcome" xml:space="preserve">
+    <value>Hello all, I have been invited by {0} to join this group. Here you have the last chart we were talking, and that we want to share with you. Just write a / at the begining of any sentence if you want me to interpret it.</value>
+  </data>
+</root>
